@@ -273,4 +273,4 @@
 \newcommand{\showReferences}{ 
 \addcontentsline{toc}{section}{References}
 \bibliographystyle{unsrt}%{brief}%{alpha}%{unsrt}
-\bibliography{\ourbibfile}}
+\bibliography{\article_file}}

@@ -9,8 +9,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{HZNUMCM}[2019/01/19]
 \typeout{HZNUMCM,version 2.0}
-  
-
 \RequirePackage{pdfpages}
 
 
@@ -23,7 +21,7 @@
 \RequirePackage[perpage]{footmisc}  
 \RequirePackage{ifthen}                     % 逻辑结构宏包（仅模板文件用到）
 \RequirePackage{lastpage}                   % 获得最后一面页码的宏包（生成"Page X of XX"）
-\RequirePackage{paralist}                   % 用以修改itemize各项间距的宏包 
+\RequirePackage{paralist}                   % 用以修改itemize各项间距的宏包
 % 附录和程序
 \RequirePackage{listings} 
 \lstset{
@@ -63,6 +61,7 @@
     escapechar={:},
     emphstyle={[2]{\bfseries\color{Sienna2}}},
 }
+
 
 
 % 代码环境宏包
@@ -228,8 +227,6 @@
 
 %=====摘要页=====
 \def\showSummarySheet{ %生成sheet头命令的定义
-    %\null
-    %\vskip 1em % 以上两条命令留出了sheet头和顶部的间距，若不要这个间距（比如摘要放不下）请注释掉这两条命令
     \begingroup
     \fontfamily{fvs}\fontseries{m}\selectfont  %字体设置
     % 左边的列表
@@ -251,14 +248,15 @@
    % \vspace*{1ex}   % 留出一点空
     \vskip 0.4em  
     \noindent\rule{\textwidth}{0.5pt}   % 插入一条线
-    \null
+    % \null
     % \vskip -1em
     \begin{center}
-    \large\bf\ourpapertitle    % 插入论文标题，注意字号可自己修改
+    \Large\bf\ourpapertitle    % 插入论文标题，注意字号可自己修改
     \end{center}
     \endgroup
+
     %摘要标题
-     \par\centerline{\large\bf Summary}\vskip3pt\par
+     \par\centerline{\normalsize\bf Summary}\vskip3pt\par
      %摘要内容 
       {\fontsize{12pt}{14pt}\selectfont \oursummary}
      \par
@@ -273,4 +271,4 @@
 \newcommand{\showReferences}{ 
 \addcontentsline{toc}{section}{References}
 \bibliographystyle{unsrt}%{brief}%{alpha}%{unsrt}
-\bibliography{\ourbibfile}}
+\bibliography{article_file}}
