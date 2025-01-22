@@ -2,12 +2,12 @@
 
 \bibitem{example1}
 John Doe.
-\newblock An example article.
+\newblock "an example article".
 \newblock {\em Journal of Examples}, 1:1--10, 2020.
 
 \bibitem{rosenow1983drought}
 DT~Rosenow et~al.
-\newblock Drought tolerant sorghum and cotton germplasm.
+\newblock "drought tolerant sorghum and cotton germplasm".
 \newblock {\em Agricultural Water Management}, 7(1-3):207--222, 1983.
 
 \end{thebibliography}
