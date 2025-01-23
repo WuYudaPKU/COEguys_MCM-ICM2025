@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.12)  22 JAN 2025 20:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.12)  23 JAN 2025 15:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -768,19 +768,26 @@ enddocument/afterlastpage: lastpage setting LastPage.
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
  ***********
-Package rerunfilecheck Info: File `article_file.out' has not changed.
-(rerunfilecheck)             Checksum: 68DD6AD250127AD2F5639D73826906C2;1844.
+
+
+Package rerunfilecheck Warning: File `article_file.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `article_file.out':
+(rerunfilecheck)             Before: 68DD6AD250127AD2F5639D73826906C2;1844
+(rerunfilecheck)             After:  14E153DD2D028871AF943E48B7DD0464;1788.
  ) 
 Here is how much of TeX's memory you used:
  17270 strings out of 473362
  269632 string characters out of 5725050
- 685718 words of memory out of 5000000
+ 684718 words of memory out of 5000000
  40012 multiletter control sequences out of 15000+600000
  597989 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  87i,12n,93p,2304b,576s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/texlive/2024/texmf-dist/fonts/type1/public/bera/fvsb8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/bera/fvsr8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on article_file.pdf (4 pages, 390950 bytes).
+Output written on article_file.pdf (4 pages, 390755 bytes).
 PDF statistics:
  203 PDF objects out of 1000 (max. 8388607)
  140 compressed objects within 2 object streams

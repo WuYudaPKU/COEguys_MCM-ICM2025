@@ -4,7 +4,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # 设置 Seaborn 风格
-sns.set(style='darkgrid')
+sns.set(style='whitegrid')
 
 # 设置全局字体为 Times New Roman
 plt.rcParams['font.family'] = 'Times New Roman'
@@ -14,7 +14,7 @@ tips = pd.read_csv(r'D:\2025_PKUCOE_MCM\files_for_practice\seaborn(python)\datas
 
 # 自定义调色板
 color_science = [
-    (153, 55, 153),  # #993799
+    (153, 55, 153),   # #993799
     (254, 136, 0),    # #FE8800
     (50, 90, 160),    # #325AA0
     (100, 100, 100),  # #646464
@@ -34,7 +34,7 @@ g = sns.relplot(
     hue='day', 
     palette=color_science_normalized,
     marker='o',
-    s=250
+    s=250,
     )
 
 # 设置标签
@@ -47,10 +47,7 @@ g.legend.set_title("Day of the Week")
 
 # 使用 plt.setp 调整图例字体大小
 plt.setp(g.legend.get_texts(), fontsize=25)  # 调整图例字体大小
-plt.setp(g.legend.get_title(), fontsize=30)  # 调整图例标题字体大小
-
-# 显示图形前添加四框线
-sns.despine(trim=False)  # 确保坐标轴在0点处不间断
+plt.setp(g.legend.get_title(), fontsize=28)  # 调整图例标题字体大小
 
 # 设置坐标轴范围和刻度标签，确保只有一个0点
 plt.gca().set_xlim(left=0)
@@ -71,6 +68,23 @@ plt.gca().set_yticks(yticks)
 plt.tick_params(axis='both', which='major', labelsize=25)  # 设置所有刻度的字体大小
 plt.xlabel("Total Bill ($)", fontsize=30)  # X 轴标签的字体大小
 plt.ylabel("Tip ($)", fontsize=30)  # Y 轴标签的字体大小
+
+for ax in g.axes.flat:
+    ax.spines['top'].set_visible(True)
+    ax.spines['top'].set_color('black')
+    ax.spines['top'].set_linewidth(2)
+
+    ax.spines['right'].set_visible(True)
+    ax.spines['right'].set_color('black')
+    ax.spines['right'].set_linewidth(2)
+
+    ax.spines['left'].set_visible(True)
+    ax.spines['left'].set_color('black')
+    ax.spines['left'].set_linewidth(2)
+
+    ax.spines['bottom'].set_visible(True)
+    ax.spines['bottom'].set_color('black')
+    ax.spines['bottom'].set_linewidth(2)
 
 # 显示图形
 plt.show()
