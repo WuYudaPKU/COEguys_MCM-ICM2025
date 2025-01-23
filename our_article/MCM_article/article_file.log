@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.12)  23 JAN 2025 15:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.12)  23 JAN 2025 20:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -727,70 +727,36 @@ Overfull \hbox (1.98428pt too wide) in paragraph at lines 17--17
 
 
 
-[2]
-<images/scatter.pdf, id=93, 1387.58403pt x 703.1871pt>
-File: images/scatter.pdf Graphic file (type pdf)
-<use images/scatter.pdf>
-Package pdftex.def Info: images/scatter.pdf  used on input line 48.
-(pdftex.def)             Requested size: 455.24411pt x 230.70052pt.
-<images/peaks.png, id=94, 656.4525pt x 630.85687pt>
-File: images/peaks.png Graphic file (type png)
-<use images/peaks.png>
-Package pdftex.def Info: images/peaks.png  used on input line 57.
-(pdftex.def)             Requested size: 148.036pt x 142.26378pt.
-<images/courses.png, id=96, 794.2172pt x 621.07031pt>
-File: images/courses.png Graphic file (type png)
-<use images/courses.png>
-Package pdftex.def Info: images/courses.png  used on input line 64.
-(pdftex.def)             Requested size: 181.92686pt x 142.26378pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-(./article_file.bbl
+[2] (./article_file.bbl)
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.8 \bibitem{rosenow1983drought}
-                                 [1{d:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}])
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
 l.96 \end{document}
-                    [2 <./images/scatter.pdf> <./images/peaks.png> <./images/courses.png>] 
+                    [1{d:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./article_file.aux)
  ***********
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
  ***********
-
-
-Package rerunfilecheck Warning: File `article_file.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `article_file.out':
-(rerunfilecheck)             Before: 68DD6AD250127AD2F5639D73826906C2;1844
-(rerunfilecheck)             After:  14E153DD2D028871AF943E48B7DD0464;1788.
+Package rerunfilecheck Info: File `article_file.out' has not changed.
+(rerunfilecheck)             Checksum: 074FF284F2465B65633195BBEC6DC38C;1883.
  ) 
 Here is how much of TeX's memory you used:
- 17270 strings out of 473362
- 269632 string characters out of 5725050
- 684718 words of memory out of 5000000
- 40012 multiletter control sequences out of 15000+600000
+ 17226 strings out of 473362
+ 268653 string characters out of 5725050
+ 683494 words of memory out of 5000000
+ 39971 multiletter control sequences out of 15000+600000
  597989 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,12n,93p,2304b,576s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 87i,12n,93p,2304b,445s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/texlive/2024/texmf-dist/fonts/type1/public/bera/fvsb8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/bera/fvsr8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on article_file.pdf (4 pages, 390755 bytes).
+Output written on article_file.pdf (3 pages, 126657 bytes).
 PDF statistics:
- 203 PDF objects out of 1000 (max. 8388607)
- 140 compressed objects within 2 object streams
- 22 named destinations out of 1000 (max. 500000)
- 136 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 149 PDF objects out of 1000 (max. 8388607)
+ 125 compressed objects within 2 object streams
+ 19 named destinations out of 1000 (max. 500000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
