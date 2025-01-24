@@ -2,7 +2,7 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{subcaption}
-\definecolor{customcolor}{HTML}{325AA0}
+\definecolor{customcolor}{HTML}{429938}
 
 \setControlNumber{888888}
 \setContestType{MCM}
@@ -22,14 +22,49 @@
     \subsection{Problem Analysis}
     \subsection{Our Work}
     \begin{itemize}
-      \item work1
-      \item work2
-      \item work3
+      \item 1
+      \item 2
+      \item 3
     \end{itemize}
 
-  \section{Assumptions and Notation}
+  \section{Assumptions and Notations}
     \subsection{Assumptions and Explanation}
-    \subsection{Notations}
+      \begin{itemize}
+        \item \textbf{Geographic Applicability Assumption}: The model assumes that the applicable region is Southeast Asia.
+
+        \textbf{Explanation}: The climate of Southeast Asia is simple, with only two seasons—rainy and dry. Additionally, the temperature variation within a year is minimal.
+        \item \textbf{Planting Pattern Assumption}: The model assumes that two crops of rice are planted each year in the farmland.
+  
+        \textbf{Explanation}: This aligns with the planting patterns commonly observed in Southeast Asia, and the simplicity of crop types makes the model easier to establish.
+        \item \textbf{Stable Growth Environment Assumption}: The model assumes that no natural disasters, which could significantly impact the agricultural ecosystem, will occur during the time frame considered.
+  
+        \textbf{Explanation}: Natural disasters are considered low-probability events in agricultural activities. To ensure the generalizability of the model, natural disasters should not be considered.
+      \end{itemize}
+        \subsection{Notations}
+      % table
+      \begin{table}[h]
+        \centering
+        % \caption{An example of a three-line table.}
+        \begin{tabular}{cc}
+          \toprule
+          \rowcolor{customcolor!40} % 设置背景颜色
+          Symbols & Description\\
+          \midrule
+          $\mathbf{X}$ & Vector $[N_w,N_c,N_p,N_b,N_B,C_{hc},C_{pc}]^T$,etc. \\
+          $w$ & Subscription for weeds \\
+          $c$ & Subscription for crops \\
+          $p$ & Subscription for pest \\
+          $bir$ & Subscription for birds \\
+          $bat$ & Subscription for bats \\
+          $hc$ & Subscription for herbicide \\
+          $pc$ & Subscription for pesticide \\
+          $C_i$ & Concentration of certain chemical \\
+          $N_i$ & Numbers of certain species \\
+          $\alpha$ & $abc$ \\
+          \bottomrule
+        \end{tabular}
+        \label{tab:example}
+      \end{table}
 
   \section{Models}
 

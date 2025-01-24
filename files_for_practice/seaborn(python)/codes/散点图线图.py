@@ -10,7 +10,7 @@ sns.set(style='whitegrid')
 plt.rcParams['font.family'] = 'Times New Roman'
 
 # 读取数据
-tips = pd.read_csv(r'D:\2025_PKUCOE_MCM\files_for_practice\seaborn(python)\datasets\datasets\tips.csv')
+tips = pd.read_csv(r'datasets\datasets\tips.csv')
 
 # 自定义调色板
 color_science = [
