@@ -71,7 +71,7 @@
       \end{itemize}
         \subsection{Notations}
       % table
-      \begin{table}[h]
+      \begin{table}[H]
         \centering
         % \caption{An example of a three-line table.}
         \begin{tabular}{cc}
@@ -79,30 +79,39 @@
           \rowcolor{customcolor!40} % 设置背景颜色
           Symbols & Description\\
           \midrule
-          $\mathbf{X}$ & Vector $[N_w,N_c,N_p,N_b,N_B,C_{hc},C_{pc}]^T$,etc. \\
-          $w$ & Subscription for weeds \\
-          $c$ & Subscription for crops \\
-          $p$ & Subscription for pest \\
-          $bir$ & Subscription for birds \\
-          $bat$ & Subscription for bats \\
-          $hc$ & Subscription for herbicide \\
-          $pc$ & Subscription for pesticide \\
+          $\mathbf{X}$ & Vector $[N_w,N_c,N_p,N_b,N_B,C_{hc},C_{pc}]^T$ to describe the system,etc. \\
+          $wd$ & Subscription for weeds \\
+          $crp$ & Subscription for crops \\
+          $pst$ & Subscription for pest(who consumes crops) \\
+          $ins$ & Subscription for other insects(who consume weeds) \\
+          $bd$ & Subscription for small birds(herbivorous) \\
+          $Bd$ & Subscription for huge birds(carnivorous) \\
+          $bt$ & Subscription for bats \\
+          $snk$ & Subscription for snake \\
+          $frg$ & Subscription for frog \\
+          $HC$ & Subscription for herbicide \\
+          $PC$ & Subscription for pesticide \\
           $C_i$ & Concentration of certain chemical \\
           $N_i$ & Numbers of certain species \\
-          $\alpha$ & $abc$ \\
+          $r_i$ & Natural growth gate of certain species\\
+          $K_i$ & Carrying capacity of certain species\\
+          $\alpha$ & The effect of chemical concentration on growth rate\\
+          $\beta$ & Interspecific competition factor\\
+          $\gamma$ & Activity of decomposer\\
+          
           \bottomrule
         \end{tabular}
         \label{tab:example}
       \end{table}
 
-  \section{Models}
-        % figure
-    \begin{figure}[ht]
-      \centering
-      \includegraphics[width=0.5\linewidth]{images/energy_flow.png} % 替换为你的第一张图片路径
-      \caption{Energy Flow}
-      \label{fig:EnergyFlow}
-    \end{figure}
+  % \section{Models}
+  %       % figure
+  %   \begin{figure}[ht]
+  %     \centering
+  %     \includegraphics[width=0.5\linewidth]{images/energy_flow.png} % 替换为你的第一张图片路径
+  %     \caption{Energy Flow}
+  %     \label{fig:EnergyFlow}
+  %   \end{figure}
 
   \section{Application of the Models}
 
