@@ -10,7 +10,7 @@ sns.set(style='whitegrid')
 plt.rcParams['font.family'] = 'Times New Roman'
 
 # 读取数据
-tips = pd.read_csv(r'datasets\datasets\tips.csv')
+tips = pd.read_csv(r'datasets\datasets\temperature.csv')
 
 # 自定义调色板
 color_science = [

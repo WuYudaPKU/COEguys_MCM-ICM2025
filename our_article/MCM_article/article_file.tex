@@ -2,11 +2,12 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{subcaption}
+\usepackage{float}
 \definecolor{customcolor}{HTML}{429938}
 
-\setControlNumber{888888}
+\setControlNumber{2511940}
 \setContestType{MCM}
-\setProblemLetter{A}
+\setProblemLetter{E}
 \setPaperTitle{Our Article}
 
 %summary
@@ -51,7 +52,13 @@
         \textbf{Explanation}: The data used in the model are sourced from official databases, and we believe the data to be accurate and reliable.
         \item \textbf{Geographic Applicability Assumption}: The model assumes that the applicable region is Southeast Asia.
 
-        \textbf{Explanation}: The climate of Southeast Asia is simple, with only two seasons—rainy and dry. Additionally, the temperature variation within a year is minimal.
+        \textbf{Explanation}: The climate of Southeast Asia is simple, with only two seasons—rainy and dry. Additionally, as is shown in \figurename~\ref{fig:Temperature},the temperature variation within a year is minimal,which leads to trivial effect on the ecosystem.Consequently,temperature can be considered as a constant.
+        \begin{figure}[H]
+          \centering
+          \includegraphics[width=\linewidth]{images/AverTemper.png}
+          \caption{Mean Temperature from 1991 to 2020 in Southeast Asia}
+          \label{fig:Temperature}
+        \end{figure}
         \item \textbf{Planting Pattern Assumption}: The model assumes that two crops of rice are planted each year in the farmland.
   
         \textbf{Explanation}: This aligns with the planting patterns commonly observed in Southeast Asia, and the simplicity of crop types makes the model easier to establish.
@@ -89,6 +96,13 @@
       \end{table}
 
   \section{Models}
+        % figure
+    \begin{figure}[ht]
+      \centering
+      \includegraphics[width=0.5\linewidth]{images/energy_flow.png} % 替换为你的第一张图片路径
+      \caption{Energy Flow}
+      \label{fig:EnergyFlow}
+    \end{figure}
 
   \section{Application of the Models}
 
