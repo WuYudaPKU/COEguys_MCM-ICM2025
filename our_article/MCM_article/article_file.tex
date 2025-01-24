@@ -19,6 +19,22 @@
 
   \section{Introduction}
     \subsection{Background}
+      \begin{figure}[ht]
+      \centering
+        \begin{minipage}[b]{0.45\linewidth}
+            \centering
+            \includegraphics[height=4cm, keepaspectratio]{images/deforestation1.jpg} % 替换为你的第一张图片路径
+            \caption{Deforestation for Farming}
+            \label{fig:deforestation1}
+        \end{minipage}
+      \hspace{0.05\linewidth}
+        \begin{minipage}[b]{0.45\linewidth}
+            \centering
+            \includegraphics[height=4cm, keepaspectratio]{images/deforestation2.jpg} % 替换为你的第二张图片路径
+            \caption{Deforested Forest}
+            \label{fig:deforestation2}
+        \end{minipage}
+      \end{figure}
     \subsection{Problem Analysis}
     \subsection{Our Work}
     \begin{itemize}
@@ -28,14 +44,20 @@
     \end{itemize}
 
   \section{Assumptions and Notations}
-    \subsection{Assumptions and Explanation}
+    \subsection{Assumptions and Explanations}
       \begin{itemize}
+        \item \textbf{Accurate Data Assumption}: The model assumes that the data used are accurate.
+
+        \textbf{Explanation}: The data used in the model are sourced from official databases, and we believe the data to be accurate and reliable.
         \item \textbf{Geographic Applicability Assumption}: The model assumes that the applicable region is Southeast Asia.
 
         \textbf{Explanation}: The climate of Southeast Asia is simple, with only two seasons—rainy and dry. Additionally, the temperature variation within a year is minimal.
         \item \textbf{Planting Pattern Assumption}: The model assumes that two crops of rice are planted each year in the farmland.
   
         \textbf{Explanation}: This aligns with the planting patterns commonly observed in Southeast Asia, and the simplicity of crop types makes the model easier to establish.
+        \item \textbf{Stable Lighting Conditions Assumption}: The model assumes that the region under study experiences stable lighting conditions throughout the four seasons.
+  
+        \textbf{Explanation}: Since the model focuses on tropical regions, the variation in daylight duration across different months within a year is minimal, thus the lighting conditions are treated as constant in the model.
         \item \textbf{Stable Growth Environment Assumption}: The model assumes that no natural disasters, which could significantly impact the agricultural ecosystem, will occur during the time frame considered.
   
         \textbf{Explanation}: Natural disasters are considered low-probability events in agricultural activities. To ensure the generalizability of the model, natural disasters should not be considered.
