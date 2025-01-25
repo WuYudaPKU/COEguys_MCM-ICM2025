@@ -3,6 +3,9 @@
 \usepackage{hyperref}
 \usepackage{subcaption}
 \usepackage{float}
+\usepackage{svg}
+\usepackage{mathrsfs}
+
 \definecolor{customcolor}{HTML}{429938}
 
 \setControlNumber{2511940}
@@ -20,7 +23,14 @@
 
   \section{Introduction}
     \subsection{Background}
-      \begin{figure}[ht]
+    In the past few decades, with the rapid population growth, 
+    food supply has become one of the most pressing global issues. 
+    Under the conditions where scientific and technological advancements have not been fully adopted, 
+    the existing arable land area is insufficient to meet the food demand. 
+    As a result, many regions have resorted to deforestation for land conversion, 
+    as shown in \figurename~\ref{fig:deforestation1}. \figurename~\ref{fig:deforestation2} illustrates that when the forest ecosystem is artificially disrupted, 
+    its complex spatial structure is destroyed.
+    \begin{figure}[H]
       \centering
         \begin{minipage}[b]{0.45\linewidth}
             \centering
@@ -36,7 +46,30 @@
             \label{fig:deforestation2}
         \end{minipage}
       \end{figure}
+    Therefore, the converted forest area must undergo a long process of ecological reconstruction. 
+    However, due to the influence of human activities during this process, 
+    the post-clearing forest ecosystem can no longer return to its original state, 
+    but instead continuously undergoes succession into a stable agricultural ecosystem. 
+    To achieve both economic and ecological benefits and fulfill sustainable development goals, 
+    it is necessary to examine the ecological succession from converted forest to agricultural ecosystems and explore how green agriculture can bring dual benefits in terms of economic and ecological indicators.
+      
     \subsection{Problem Analysis}
+      The basic requirements of the project are to establish a model that reflects the ecological succession process from a converted forest area to a mature agricultural ecosystem over time. 
+      The model should incorporate both natural processes and human agricultural activities. 
+      Specifically, the requirements are as follows:
+      \begin{itemize}
+        \item \textbf{Develop an ecological model} for the converted forest area, particularly:
+          \begin{itemize}
+            \item \textbf{Food web construction}: The model should include at least producers (e.g., plants) and consumers (e.g., herbivores and predators) and their interactions.
+            \item \textbf{Consideration of agricultural cycles and seasonality}: The impact of seasonal and cyclical agricultural activities should be taken into account.
+            \item \textbf{Impact of chemicals}: The model should account for the effects of chemicals such as herbicides and pesticides on plants, insects, bats, birds, and the stability of the ecosystem.
+          \end{itemize}
+        \item \textbf{Reemergence of species during ecosystem maturation}: As the ecosystem matures, the model should consider the reemergence of two species and their impact on the ecosystem.
+        \item \textbf{Impact of removing chemicals}: After the ecosystem matures, humans will attempt to remove chemicals. The model should assess the stability of the ecosystem after herbicides are removed, with the effects reflected through producers and consumers.
+        \item \textbf{Introduction of bats into the food web}: The model should examine how bats, as insectivores and pollinators, interact with plants, insects, and predators, and how their inclusion influences the stability of the ecosystem. Additionally, the model should identify another species that could benefit the ecosystem and compare the effects of different species.
+        \item \textbf{Analysis of the impact of organic farming}: The model should assess the impact of adopting organic farming practices, considering various scenarios and components. The evaluation should include the effects on the overall ecosystem and individual elements, such as pest control, crop health, plant reproduction, biodiversity, long-term sustainability, and cost-effectiveness. The model should analyze the impact of organic practices on pest management, soil health, and biodiversity, while weighing the economic costs and benefits. A comprehensive ecological and economic trade-off analysis should be provided to assess the feasibility of organic farming.
+      \end{itemize}
+
     \subsection{Our Work}
     \begin{itemize}
       \item 1
@@ -66,7 +99,7 @@
           \label{fig:Temperature}
         \end{figure}
 
-        \item \textbf{Stable Trait Assumption}: The model assumes that the traits of all organisms remain stable..\\
+        \item \textbf{Stable Trait Assumption}: The model assumes that the traits of all organisms remain stable.\\
         \textbf{Explanation}:Since the time span considered in the model is much shorter than the time required for evolutionary changes or mutations to occur,
          the traits of organisms are assumed to remain stable. This assumption also helps simplify the model.
         
@@ -84,7 +117,7 @@
       % table
       \begin{table}[H]
         \centering
-        % \caption{An example of a three-line table.}
+        \caption{Notations}
         \begin{tabular}{cc}
           \toprule
           \rowcolor{customcolor!40} % 设置背景颜色
@@ -105,46 +138,68 @@
           $C_i$ & Concentration of certain chemical \\
           $N_i$ & Numbers of certain species \\
           $W_i$ & Biomass of certain species \\
-          $w_i$ & Mass of individuals \\
-          $r_i$ & Natural growth gate of certain species\\
-          $K_i$ & Carrying capacity of certain species\\
+          $w_i$ & Average mass of individuals of certain individuals \\
+          $r_i$ & Natural growth gate of certain population\\
+          $\mathscr{K}_i$ & Carrying capacity of certain population\\
           $\alpha$ & The effect of chemical concentration on growth rate\\
-          $\beta$ & Interspecific competition factor\\
+          $\beta_{i \rightarrow j}$ & Interspecific competition factor\\
           $\gamma$ & Activity of decomposer\\
-          
+          $A_i,B_i$ & Effect of the predator-prey relationship on population $i$ (specified coefficient).\\
+          $N,P,K$ & Chemical elements\\
           \bottomrule
         \end{tabular}
-        \label{tab:example}
+        \label{tab:Notations}
       \end{table}
 
   \section{Models}
-    %     % figure
-    % \begin{figure}[ht]
-    %   \centering
-    %   \includegraphics[width=0.5\linewidth]{images/energy_flow.png} % 替换为你的第一张图片路径
-    %   \caption{Energy Flow}
-    %   \label{fig:EnergyFlow}
-    % \end{figure}
-    \subsection{NGLG(Natrual Growth Leslie-Gower) Model}
-      \subsubsection{Leslie-Gower Model}
-        Ecosystem components are complex and interdependent. 
-        In the simplest case, when climate, soil, and other conditions are favorable, only biological factors shuold be considered. 
-        If the population sizes of producers, primary consumers, and secondary consumers are used to describe the entire system, 
-        the Leslie-Gower Model, as described by \cite{GUO20142850}, can be applied.
-        \begin{equation}
-          \left\{ \begin{array}{c}
-            \frac{\mathrm{d}N_1\left( T \right)}{\mathrm{d}T}=r_1N_1\left( T \right) \left( 1-\frac{N_1\left( T \right)}{K_1} \right) -\alpha _1N_2\left( T \right) ,\\
-            \frac{\mathrm{d}N_2\left( T \right)}{\mathrm{d}T}=r_2N_2\left( T \right) \left( 1-\frac{N_2\left( T \right)}{c_1X\left( T-\tau _1 \right)} \right) -\alpha _2Z\left( T \right) ,\\
-            \frac{\mathrm{d}N_3\left( T \right)}{\mathrm{d}T}=r_3N_3\left( T \right) \left( 1-\frac{N_3\left( T \right)}{c_2N_2\left( T-\tau _2 \right)} \right)\\
-          \end{array} \right. 
-        \end{equation}
-        In the equations,$N_1,N_2,N_3$ represents producers, primary consumers, and secondary consumers, respectively; 
-        $c_1>0$ and $c_2>0$ are the measure of food quality measure that prey provides for conversion into the births of consumer and predator; 
-        the positive parameters $a_1$ and $a_2$ are the predation rate of consumer and predator; 
-        two delays $\tau_1, \tau_2>0$ are introduced for digestion periods corresponding to consumer-eat-resource and predator-eat-consumer, 
-        which are called the resource digestion delay (RDD) and consumer digestion delay (CDD), respectively.
-        It is a schematic diagram of this model.
+    \subsection{LVLG(Lokta-Volterra and Leslie-Gower) Model}
+      The components of an ecosystem are complex and interdependent. 
+      However, in a converted forest area, the ecosystem could be rather simple.
+      Set February-when rice has just been planted-as the start time.
+      Around the start time, in the simplest case, when climate, soil, and other conditions are favorable, 
+      only biological factors should be considered.
+      If the population sizes of producers and primary consumers are used to describe the entire system, 
+      the Lotka-Volterra Model\cite{wangersky1978lotka} and Leslie-Gower Model\cite{GUO20142850} can be applied as follows:
+      \begin{equation}
+        \begin{aligned}
+          \frac{\mathrm{d}W_{crp}}{\mathrm{d}t}&=r_{crp}W_{crp}\left( 1-\frac{W_{crp}+\beta _{w\rightarrow c}W_{wd}}{\mathscr{K} _{crp}} \right) -\frac{A_{crp}W_{crp}W_{ins}}{1+B_{crp}W_{crp}}\\
+          \frac{\mathrm{d}W_{wd}}{\mathrm{d}t}&=r_{wd}W_{wd}\left( 1-\frac{W_{wd}+\beta _{c\rightarrow w}W_{crp}}{\mathscr{K} _{wd}} \right) -\frac{A_{wd}W_{wd}W_{ins}}{1+B_{wd}W_{wd}}\\
+          \frac{\mathrm{d}W_{ins}}{\mathrm{d}t}&=r_{ins}W_{ins}\left[ 1-\frac{D_{ins}W_{ins}}{1+E_{ins}\left( 0.6W_{crp}+0.4W_{wd} \right)} \right] -\frac{A_{ins}W_{ins}W_{bd}}{1+B_{ins}W_{ins}}\\
+          \frac{\mathrm{d}W_{bd}}{\mathrm{d}t}&=r_{bd}W_{bd}\left( 1-\frac{D_{bd}W_{bd}}{1+E_{bd}W_{ins}} \right)\\
+        \end{aligned} 
+      \end{equation}
+      
+      The notations can be seen in Table \ref{tab:Notations},ans the following points provide explanations of the model.
+
+      First, biomass is chosen over population density because rice, 
+      as the primary producer in the agricultural ecosystem, 
+      has its population density artificially determined (i.e., it does not reproduce). 
+      Only the changes in its total biomass can reflect the developmental trend of the rice population.
+      
+      Second, regarding interspecific competition, since the agricultural ecosystem is relatively simple at this stage, 
+      for the sake of model simplification, only interspecific competition between rice and weeds is considered. 
+      The model presented later similarly assumes this.
+
+      Next, for the purpose of further simplifying the model, some parameters are combined. 
+      For example, the predation rate is incorporated into the predation coefficient of the prey species, denoted as \(A\).
+      
+      Finally, since consumers are in a natural reproductive state with a relatively fixed age structure, the average individual biomass can be assumed to be constant. Therefore, biomass is directly proportional to the number of individuals in the population, and this assumption applies similarly in the following sections.
+      
+      It should be noted that at the start time, all the variations and coefficients mentioned above are positive real numbers.
+      \subsection{NGLG(Natrual Growth Leslie-Gower) Model}
       \subsubsection{NGLG Model}
+      \begin{figure}[H]
+        \centering
+          \includegraphics[width=0.5\linewidth]{images/init_crop_field.png} 
+          \caption{Crop Field for LG Model}
+          \label{fig:LG_Field}
+      \end{figure}
+      \begin{figure}[H]
+          \centering
+          \includegraphics[width=0.8\linewidth]{images/food_web.pdf}
+          \caption{Food web for NGLG Model}
+          \label{fig:NGLG_FoodWeb}
+      \end{figure}
         
   \section{Application of the Models}
 
@@ -156,51 +211,10 @@
 
   \section{Conclusion}
 
-  % % figure
-  % \begin{figure}[ht]
-  %   \centering
-  %   \includegraphics[width=\linewidth]{images/scatter.pdf} % 替换为你的第一张图片路径
-  %   \caption{the scatter}
-  %   \label{fig:image1}
-  % \end{figure}
-
-  % \begin{figure}[ht]
-  %     \centering
-  %     \begin{minipage}[b]{0.45\linewidth}
-  %         \centering
-  %         \includegraphics[height=5cm, keepaspectratio]{images/peaks.png} % 替换为你的第一张图片路径
-  %         \caption{First Image}
-  %         \label{fig:image2}
-  %     \end{minipage}
-  %     \hspace{0.05\linewidth}
-  %     \begin{minipage}[b]{0.45\linewidth}
-  %         \centering
-  %         \includegraphics[height=5cm, keepaspectratio]{images/courses.png} % 替换为你的第二张图片路径
-  %         \caption{Second Image}
-  %         \label{fig:image3}
-  %     \end{minipage}
-  % \end{figure}
-
   %%citation
   % as \figurename~\ref{fig:image1} shows,this is a picture.
   % ...\cite{example1}
   % 123123123\cite{rosenow1983drought}
-
-  % % table
-  % \begin{table}[h]
-  %   \centering
-  %   \caption{An example of a three-line table.}
-  %   \begin{tabular}{lccc}
-  %     \toprule
-  %     \rowcolor{customcolor!50} % 设置背景颜色
-  %     Column 1 & Column 2 & Column 3 & Column 4 \\
-  %     \midrule
-  %     Data 1 & Data 2 & Data 3 & Data 4 \\
-  %     Data 4 & Data 5 & Data 6 & Data 8 \\
-  %     \bottomrule
-  %   \end{tabular}
-  %   \label{tab:example}
-  % \end{table}
 
   \addcontentsline{toc}{section}{References}
   \bibliographystyle{unsrt}%{brief}%{alpha}%{unsrt}
