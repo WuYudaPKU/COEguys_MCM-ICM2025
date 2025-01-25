@@ -6,9 +6,13 @@
 \contentsline {subsection}{\numberline {2.1}Assumptions and Explanations}{2}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Notations}{4}{subsection.2.2}%
 \contentsline {section}{\numberline {3}Models}{4}{section.3}%
-\contentsline {subsection}{\numberline {3.1}LVLG(Lokta-Volterra and Leslie-Gower) Model}{4}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}NGLG(Natrual Growth Leslie-Gower) Model}{6}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}NGLG Model}{6}{subsubsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.1}Model Development Explanation and Sequence}{4}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Notes for Models}{4}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Sequence}{5}{subsubsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.2}Model I: LVLG(Lokta-Volterra and Leslie-Gower) Model}{5}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Model II: }{7}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Model III: }{7}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Model IV: }{7}{subsection.3.5}%
 \contentsline {section}{\numberline {4}Application of the Models}{7}{section.4}%
 \contentsline {section}{\numberline {5}Sensitivity Analysis}{7}{section.5}%
 \contentsline {section}{\numberline {6}Evaluation of the Model}{7}{section.6}%

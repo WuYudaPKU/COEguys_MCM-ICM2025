@@ -87,16 +87,23 @@
          where two crops of rice are planted each year in the farmland.\\
         \textbf{Explanation}: The climate of Southeast Asia is rather simple, 
         with only two seasons-rainy and dry. Additionally, as is shown in \figurename~\ref{fig:Temperature},
-        the temperature variation within a year is minimal,which has a trivial effect on the ecosystem.
-        Consequently,temperature can be considered as a constant.
-        Due to such weather pattern,it aligns with the planting patterns commonly observed in Southeast Asia to plant two crops of rice each year,
+        the temperature variation within a year is minimal, which has a trivial effect on the ecosystem.
+        Consequently, temperature can be considered as a constant.
+        Due to such weather pattern, it aligns with the planting patterns commonly observed in Southeast Asia to plant three crops of rice each year(showed in \figurename~\ref{fig:PlantMode}),
          and the simplicity of crop types makes the model easier to establish.
         
         \begin{figure}[H]
           \centering
           \includegraphics[width=\linewidth]{images/AverTemper.png}
-          \caption{Temperature data in Southeast Asia\cite{IndoTemper}}
+          \caption{Temperature Data in Southeast Asia\cite{IndoTemper}}
           \label{fig:Temperature}
+        \end{figure}
+
+        \begin{figure}[H]
+          \centering
+          \includegraphics[width=0.75\linewidth]{images/PlantMode.jpg}
+          \caption{Agricultural Cycle in Southeast Asia}
+          \label{fig:PlantMode}
         \end{figure}
 
         \item \textbf{Stable Trait Assumption}: The model assumes that the traits of all organisms remain stable.\\
@@ -152,9 +159,75 @@
       \end{table}
 
   \section{Models}
-    \subsection{LVLG(Lokta-Volterra and Leslie-Gower) Model}
-      The components of an ecosystem are complex and interdependent. 
-      However, in a converted forest area, the ecosystem could be rather simple.
+    \subsection{Model Development Explanation and Sequence}
+      \subsubsection{Notes for Models}
+        Before building all the models, here are some notes for all the models.
+        
+        First, biomass is chosen over population density. This is because rice, 
+        as the primary producer in the agricultural ecosystem, 
+        has its population density artificially determined (i.e., it does not reproduce). 
+        Only the changes in its total biomass can reflect the developmental trend of the rice population.
+        
+        Second, regarding interspecific competition, since the agricultural ecosystem is relatively simple compared to others, 
+        for the sake of model simplification, only interspecific competition between rice and weeds is considered. 
+
+        Next, for the purpose of further simplifying the model, some parameters are combined. 
+        For example, the predation rate is incorporated into the predation coefficient of the prey species, denoted as \(A\).
+        
+        Finally, since consumers are in a natural reproductive state with a relatively fixed age structure, 
+        the average individual biomass can be assumed to be constant. 
+        Therefore, biomass is directly proportional to the number of individuals in the population.
+        
+        It should be noted that at the start time, all the variations and coefficients mentioned above are positive real numbers.
+      \subsubsection{Sequence}  
+        Based on the conditions outlined above, we will gradually develop the model. 
+        Given the numerous factors involved in the final model, we adopt a step-by-step approach, 
+        starting from the simplest and progressing to more complex structures.
+        
+        Initially, we will construct Model I: LVLG Model, based on the Lotka-Volterra model and the Leslie-Gower model, 
+        under the simplest food web conditions. This model will consider only producers, primary consumers, and secondary consumers.
+
+        Subsequently, as the ecosystem gradually develops, we will build Model II. 
+        In this model, we will incorporate the agricultural cycle (three crops per year), 
+        seasonal rotation (rainy and dry seasons), and the use of chemicals (herbicides and pesticides).
+        
+        Next, we will consider the re-colonization of species and develop a more complex food web to form Model III. 
+        In this model, we will retain the features of Model II while considering the intricate interactions between multiple species and between species and the environment.
+
+        Finally, after the agricultural ecosystem matures, we will introduce human agricultural decisions, 
+        such as the removal of pesticides and the intentional introduction of new populations, to construct Model IV.
+    
+    \subsection{Model I: LVLG(Lokta-Volterra and Leslie-Gower) Model}
+      We will first discuss the initial conditions of the model from the perspective of biological populations. 
+      The vertical structure of tropical forests is typically divided into several layers, including the canopy layer, understory, shrub layer, and ground layer. 
+      Each layer not only supports different plant species but also provides habitat and food sources for various animals. 
+      Deforestation will severely disrupt the vertical structure of the tropical rainforest food web. 
+      Therefore, our model assumes that at the initial time point following deforestation, 
+      the vertical structure of the ecosystem above the ground retains only a portion of the ground layer. 
+      All populations that previously depended on the canopy, understory, and shrub layers for habitat and food sources will have migrated out of the ecosystem.
+
+      Based on this assumption, the agricultural ecosystem in its initial food web retains only the following populations: plants, insects, and birds. 
+      First, to preserve interspecific competition and align with reality as closely as possible, we divide plants into two populations: rice and weeds. 
+      Second, although insects may exhibit food preferences, for simplicity, we assume that there is only one insect species that feeds on both crops and weeds. 
+      Finally, based on the feeding habits of birds in real life, we assume that birds feed on both insects and the two plant species. 
+      \figurename~\ref{fig:LGVGField} presents a schematic diagram of the ecosystem, and \figurename~\ref{fig:SimpleFoodWeb} shows the initial food web of the ecosystem.
+
+      \begin{figure}[H]
+        \centering
+          \begin{minipage}[b]{0.45\linewidth}
+              \centering
+              \includegraphics[height=5.5cm, keepaspectratio]{images/LGVGField.pdf} % 替换为你的第一张图片路径
+              \caption{Schematic map for LGVG Model}
+              \label{fig:LGVGField}
+          \end{minipage}
+        \hspace{0.05\linewidth}
+          \begin{minipage}[b]{0.45\linewidth}
+              \centering
+              \includegraphics[height=5.5cm, keepaspectratio]{images/SimpleFoodWeb.pdf} % 替换为你的第二张图片路径
+              \caption{Food web in LGVG Model}
+              \label{fig:SimpleFoodWeb}
+          \end{minipage}
+        \end{figure}
       Set February-when rice has just been planted-as the start time.
       Around the start time, in the simplest case, when climate, soil, and other conditions are favorable, 
       only biological factors should be considered.
@@ -165,42 +238,41 @@
           \frac{\mathrm{d}W_{crp}}{\mathrm{d}t}&=r_{crp}W_{crp}\left( 1-\frac{W_{crp}+\beta _{w\rightarrow c}W_{wd}}{\mathscr{K} _{crp}} \right) -\frac{A_{crp}W_{crp}W_{ins}}{1+B_{crp}W_{crp}}\\
           \frac{\mathrm{d}W_{wd}}{\mathrm{d}t}&=r_{wd}W_{wd}\left( 1-\frac{W_{wd}+\beta _{c\rightarrow w}W_{crp}}{\mathscr{K} _{wd}} \right) -\frac{A_{wd}W_{wd}W_{ins}}{1+B_{wd}W_{wd}}\\
           \frac{\mathrm{d}W_{ins}}{\mathrm{d}t}&=r_{ins}W_{ins}\left[ 1-\frac{D_{ins}W_{ins}}{1+E_{ins}\left( 0.6W_{crp}+0.4W_{wd} \right)} \right] -\frac{A_{ins}W_{ins}W_{bd}}{1+B_{ins}W_{ins}}\\
-          \frac{\mathrm{d}W_{bd}}{\mathrm{d}t}&=r_{bd}W_{bd}\left( 1-\frac{D_{bd}W_{bd}}{1+E_{bd}W_{ins}} \right)\\
+          \frac{\mathrm{d}W_{bd}}{\mathrm{d}t} &= r_{bd}W_{bd} \left[ 1 - \frac{D_{bd}W_{bd}}{1 + E_{bd}(0.2W_{ins} + 0.2W_{wd} + 0.6W_{crp})} \right]\\
         \end{aligned} 
       \end{equation}
-      
-      The notations can be seen in Table \ref{tab:Notations},ans the following points provide explanations of the model.
+      In general, these four equations introduce the natural growth term 
+      \begin{equation}
+        r_i W_i
+      \end{equation}
+      for population growth. 
+      The first two equations incorporate the interspecific competition term 
+      \begin{equation}
+        \beta_{i \rightarrow j} W_i,
+      \end{equation}
+      the larger this term, the more intense the interspecific competition, and the slower the biomass growth rate of population $i$. 
+      The first three equations consider the effect of predation through the term(e.g. the first one) 
+      \begin{equation}
+        \frac{A_{crp} W_{crp} W_{ins}}{1 + B_{crp} W_{crp}}. 
+      \end{equation}
+      The last two equations(e.g. the third one) include the term 
+      \begin{equation}
+        \frac{D_{ins} W_{ins}}{1 + E_{ins} \left( 0.6 W_{crp} + 0.4 W_{wd} \right)},
+      \end{equation}
+      which represents biomass reduction due to food scarcity. 
+      In the denominator, one factor is weighted according to the predation ratio: the less food available, 
+      the more predators there are, resulting in a slower growth rate of the predator population.
 
-      First, biomass is chosen over population density because rice, 
-      as the primary producer in the agricultural ecosystem, 
-      has its population density artificially determined (i.e., it does not reproduce). 
-      Only the changes in its total biomass can reflect the developmental trend of the rice population.
       
-      Second, regarding interspecific competition, since the agricultural ecosystem is relatively simple at this stage, 
-      for the sake of model simplification, only interspecific competition between rice and weeds is considered. 
-      The model presented later similarly assumes this.
-
-      Next, for the purpose of further simplifying the model, some parameters are combined. 
-      For example, the predation rate is incorporated into the predation coefficient of the prey species, denoted as \(A\).
-      
-      Finally, since consumers are in a natural reproductive state with a relatively fixed age structure, the average individual biomass can be assumed to be constant. Therefore, biomass is directly proportional to the number of individuals in the population, and this assumption applies similarly in the following sections.
-      
-      It should be noted that at the start time, all the variations and coefficients mentioned above are positive real numbers.
-      \subsection{NGLG(Natrual Growth Leslie-Gower) Model}
-      \subsubsection{NGLG Model}
-      \begin{figure}[H]
-        \centering
-          \includegraphics[width=0.5\linewidth]{images/init_crop_field.png} 
-          \caption{Crop Field for LG Model}
-          \label{fig:LG_Field}
-      \end{figure}
+      \subsection{Model II: }
       \begin{figure}[H]
           \centering
-          \includegraphics[width=0.8\linewidth]{images/food_web.pdf}
+          \includegraphics[width=0.5\linewidth]{images/food_web.pdf}
           \caption{Food web for NGLG Model}
           \label{fig:NGLG_FoodWeb}
       \end{figure}
-        
+      \subsection{Model III: }
+      \subsection{Model IV: }
   \section{Application of the Models}
 
   \section{Sensitivity Analysis}
