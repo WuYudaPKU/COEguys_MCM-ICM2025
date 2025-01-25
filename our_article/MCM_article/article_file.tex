@@ -90,7 +90,7 @@
           \rowcolor{customcolor!40} % 设置背景颜色
           Symbols & Description\\
           \midrule
-          $\mathbf{X}$ & Vector $[N_w,N_c,N_p,N_b,N_B,C_{hc},C_{pc}]^T$ to describe the system,etc. \\
+          $\mathbf{X}$ & Vector $[N_{wd},N_{crp},N_{pst},N_{ins},...,C_{hc},C_{pc}]^T$ to describe the system,etc. \\
           $wd$ & Subscription for weeds \\
           $crp$ & Subscription for crops \\
           $pst$ & Subscription for pest(who consumes crops) \\
@@ -117,15 +117,35 @@
         \label{tab:example}
       \end{table}
 
-  % \section{Models}
-  %       % figure
-  %   \begin{figure}[ht]
-  %     \centering
-  %     \includegraphics[width=0.5\linewidth]{images/energy_flow.png} % 替换为你的第一张图片路径
-  %     \caption{Energy Flow}
-  %     \label{fig:EnergyFlow}
-  %   \end{figure}
-
+  \section{Models}
+    %     % figure
+    % \begin{figure}[ht]
+    %   \centering
+    %   \includegraphics[width=0.5\linewidth]{images/energy_flow.png} % 替换为你的第一张图片路径
+    %   \caption{Energy Flow}
+    %   \label{fig:EnergyFlow}
+    % \end{figure}
+    \subsection{NGLG(Natrual Growth Leslie-Gower) Model}
+      \subsubsection{Leslie-Gower Model}
+        Ecosystem components are complex and interdependent. 
+        In the simplest case, when climate, soil, and other conditions are favorable, only biological factors shuold be considered. 
+        If the population sizes of producers, primary consumers, and secondary consumers are used to describe the entire system, 
+        the Leslie-Gower Model, as described by \cite{GUO20142850}, can be applied.
+        \begin{equation}
+          \left\{ \begin{array}{c}
+            \frac{\mathrm{d}N_1\left( T \right)}{\mathrm{d}T}=r_1N_1\left( T \right) \left( 1-\frac{N_1\left( T \right)}{K_1} \right) -\alpha _1N_2\left( T \right) ,\\
+            \frac{\mathrm{d}N_2\left( T \right)}{\mathrm{d}T}=r_2N_2\left( T \right) \left( 1-\frac{N_2\left( T \right)}{c_1X\left( T-\tau _1 \right)} \right) -\alpha _2Z\left( T \right) ,\\
+            \frac{\mathrm{d}N_3\left( T \right)}{\mathrm{d}T}=r_3N_3\left( T \right) \left( 1-\frac{N_3\left( T \right)}{c_2N_2\left( T-\tau _2 \right)} \right)\\
+          \end{array} \right. 
+        \end{equation}
+        In the equations,$N_1,N_2,N_3$ represents producers, primary consumers, and secondary consumers, respectively; 
+        $c_1>0$ and $c_2>0$ are the measure of food quality measure that prey provides for conversion into the births of consumer and predator; 
+        the positive parameters $a_1$ and $a_2$ are the predation rate of consumer and predator; 
+        two delays $\tau_1, \tau_2>0$ are introduced for digestion periods corresponding to consumer-eat-resource and predator-eat-consumer, 
+        which are called the resource digestion delay (RDD) and consumer digestion delay (CDD), respectively.
+        It is a schematic diagram of this model.
+      \subsubsection{NGLG Model}
+        
   \section{Application of the Models}
 
   \section{Sensitivity Analysis}

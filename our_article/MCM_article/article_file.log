@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.12)  25 JAN 2025 09:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.12)  25 JAN 2025 11:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -736,17 +736,17 @@ Overfull \hbox (1.98428pt too wide) in paragraph at lines 18--18
 
 
 [2]
-<images/deforestation1.jpg, id=87, 1606.0pt x 903.375pt>
+<images/deforestation1.jpg, id=107, 1606.0pt x 903.375pt>
 File: images/deforestation1.jpg Graphic file (type jpg)
 <use images/deforestation1.jpg>
 Package pdftex.def Info: images/deforestation1.jpg  used on input line 27.
 (pdftex.def)             Requested size: 202.31786pt x 113.81102pt.
-<images/deforestation2.jpg, id=88, 647.41875pt x 364.36125pt>
+<images/deforestation2.jpg, id=108, 647.41875pt x 364.36125pt>
 File: images/deforestation2.jpg Graphic file (type jpg)
 <use images/deforestation2.jpg>
 Package pdftex.def Info: images/deforestation2.jpg  used on input line 34.
 (pdftex.def)             Requested size: 202.21907pt x 113.81102pt.
-<images/AverTemper.png, id=90, 1387.584pt x 703.1871pt>
+<images/AverTemper.png, id=110, 1387.584pt x 703.1871pt>
 File: images/AverTemper.png Graphic file (type png)
 <use images/AverTemper.png>
 Package pdftex.def Info: images/AverTemper.png  used on input line 64.
@@ -765,9 +765,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has b
 <to be read again> 
                    \relax 
 l.119 
-       [2 <./images/AverTemper.png>] (./article_file.bbl)
+       [2 <./images/AverTemper.png>]
 
-[3] 
+[3] (./article_file.bbl)
+
+[4] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./article_file.aux)
  ***********
@@ -775,21 +777,21 @@ LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
  ***********
 Package rerunfilecheck Info: File `article_file.out' has not changed.
-(rerunfilecheck)             Checksum: 185DDD63A6766DB3546632F8524B4194;1819.
+(rerunfilecheck)             Checksum: D4DBBD168D2EC779E0B46B35E8A487B1;2443.
  ) 
 Here is how much of TeX's memory you used:
- 17324 strings out of 473362
- 270613 string characters out of 5725050
- 689371 words of memory out of 5000000
- 40062 multiletter control sequences out of 15000+600000
+ 17339 strings out of 473362
+ 270898 string characters out of 5725050
+ 694334 words of memory out of 5000000
+ 40072 multiletter control sequences out of 15000+600000
  597989 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  87i,12n,93p,2304b,559s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/bera/fvsb8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/bera/fvsr8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on article_file.pdf (5 pages, 1242927 bytes).
+<d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/bera/fvsb8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/bera/fvsr8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on article_file.pdf (6 pages, 1290471 bytes).
 PDF statistics:
- 182 PDF objects out of 1000 (max. 8388607)
- 144 compressed objects within 2 object streams
- 22 named destinations out of 1000 (max. 500000)
- 128 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 234 PDF objects out of 1000 (max. 8388607)
+ 185 compressed objects within 2 object streams
+ 27 named destinations out of 1000 (max. 500000)
+ 160 words of extra memory for PDF output out of 10000 (max. 10000000)
 

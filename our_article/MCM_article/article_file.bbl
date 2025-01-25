@@ -1,13 +1,10 @@
 \begin{thebibliography}{1}
 
-\bibitem{example1}
-John Doe.
-\newblock An example article.
-\newblock {\em Journal of Examples}, 1:1--10, 2020.
-
-\bibitem{rosenow1983drought}
-Rosenow D.T. et~al.
-\newblock Drought tolerant sorghum and cotton germplasm.
-\newblock {\em Agricultural Water Management}, 7(1):207--222, 1983.
+\bibitem{GUO20142850}
+Lei Guo, Zi-Gen Song, and Jian Xu.
+\newblock Complex dynamics in the leslie–gower type of the food chain system
+  with multiple delays.
+\newblock {\em Communications in Nonlinear Science and Numerical Simulation},
+  19(8):2850--2865, 2014.
 
 \end{thebibliography}
