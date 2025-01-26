@@ -225,6 +225,7 @@
       only biological factors should be considered.
       If the population sizes of producers and primary consumers are used to describe the entire system, 
       the Lotka-Volterra Model\cite{wangersky1978lotka} and Leslie-Gower Model\cite{GUO20142850} can be applied as follows:
+
       \begin{equation}
         \begin{aligned}
           \frac{\mathrm{d}W_{crp}}{\mathrm{d}t}&=r_{crp}W_{crp}\left( 1-\frac{W_{crp}+\beta _{w\rightarrow c}W_{wd}}{\mathscr{K} _{crp}} \right) -\frac{A_{crp}W_{crp}W_{ins}}{1+B_{crp}W_{crp}}\\
@@ -233,6 +234,7 @@
           \frac{\mathrm{d}W_{bd}}{\mathrm{d}t} &= r_{bd}W_{bd} \left[ 1 - \frac{D_{bd}W_{bd}}{1 + E_{bd}(0.2W_{ins} + 0.2W_{wd} + 0.6W_{crp})} \right]\\
         \end{aligned} 
       \end{equation}
+
       In general, these four equations introduce the natural growth term $r_i W_i$ for population growth. 
       The first two equations incorporate the interspecific competition term $\beta_{i \rightarrow j} W_i$, 
       the larger this term, the more intense the interspecific competition, and the slower the biomass growth rate of population $i$. 
@@ -246,12 +248,12 @@
       In the denominator, one factor is weighted according to the predation ratio: the less food available, 
       the more predators there are, resulting in a slower growth rate of the predator population.
     \subsection{Model II: CAGED Model}
-      CAGED Model represents Conprehensive Agro-Ecosystem Dynamics Model.
+      CAGED Model represents Conprehensive Agro-Ecosystem Dynamics Model, and it is the core model of the hole article.
       Model I is quite simple and aims to construct a basic short-term model. 
       Considering the impact of long-term environmental factors, 
       in order to better simulate the long-term evolutionary behavior of the ecosystem model, 
       we will progressively introduce the effects of simplified agricultural cycles, 
-      seasonality, soil fertility, and random factors on the system dynamics model. 
+      seasonality, soil fertility, pollination, random factors and multiple digestion delays on the system dynamics model. 
       Furthermore, we will consider the impact of chemical use, 
       specifically the application of herbicides and pesticides, on the system, 
       building upon this natural agricultural ecosystem model.
@@ -289,13 +291,16 @@
         Since $t=0$ corresponds to the start of the first planting season, with one year assumed to have 52 weeks, 
         and each week being a time step, based on the rice production pattern \figurename~\ref{fig:PlantModePlus}, 
         we define the step moments at week 0, week 17, and week 34 of each year. The biomass of rice at these times follows:
+
         \begin{equation}
         W_{crp}|_{t=n}=0.1W_{crp}|_{t=n-1}, \quad n = 52k, 52k+17, 52k+34, \quad (year\, k \geqslant 0, \, week\, n \geqslant 1)
         \end{equation}
+
         When considering the impact of rice straw on insect biomass, 
         we treat rice straw as the 'prey' of insects and use the modified Lotka-Volterra (LG) predator-prey model to characterize this effect. 
         At each step moment, rice straw enters the food web model with an initial biomass of $0.09W_{crp}$, and $r_{stw} = 0$. 
         Thus, the rice straw-insect model is established as:
+
         \begin{equation}
           \frac{\mathrm{d}W_{stw}}{\mathrm{d}t} = \frac{A_{stw} W_{stw} W_{ins}}{1 + B_{stw} W_{stw}} \quad (t \neq n)
         \end{equation}
@@ -307,22 +312,27 @@
         \begin{equation}
           \frac{\mathrm{d}W_{ins}}{\mathrm{d}t} = r_{ins} W_{ins} \left[ 1 - \frac{D_{ins} W_{ins}}{1 + E_{ins} \left( 0.6 W_{crp} + 0.4 W_{wd} + W_{stw} \right)} \right] - \frac{A_{ins} W_{ins} W_{bd}}{1 + B_{ins} W_{ins}}
         \end{equation}
+
       \subsubsection{Seasonality}
         The seasonal influences primarily include factors such as light, 
         climate (temperature, precipitation), and biological habits, 
         all of which have significant direct effects on both $r$ and $\mathscr{K}$ within populations. 
         Considering that many of these factors are difficult to quantify precisely, 
         we set sinusoidal perturbations in the periodic parameter $p(T)$ as follows\cite{GAKKHAR20061239}:
+
         \begin{equation}
           p(t) = \bar{p} \left[ 1 + \epsilon \sin (\Omega t + \phi) \right]
         \end{equation}
+
         Specifically, in the LV-LG model mentioned above, 
         for population $i$, the values of $r_i$ and $K_i$ are defined as follows:
+
         \begin{align}
           r_i &= \bar{r}_i \left[ 1 + \epsilon_i \sin \left( \Omega_i t + \phi_i \right) \right] \\
           \mathscr{K}_i &= \bar{\mathscr{K}}_i \left[ 1 + \epsilon_i \sin \left( \Omega_i t + \phi_i' \right) \right], \quad \left( i = \text{crp or wd} \right) \\
           D_i &= \frac{\bar{D}_i'}{1 + \epsilon_i \sin \left( \Omega_i t + \phi_i' \right)}, \quad \left( i \neq \text{crp or wd} \right)
         \end{align}
+
         Where $\bar{r}_i$ and $\bar{\mathscr{K}}_i$ are the corresponding periodic means, 
         which can be treated as constants; $\Omega_i$ is the seasonal fluctuation angular frequency, 
         and $T = \frac{2\pi}{\Omega}$ is the seasonal fluctuation period; 
@@ -335,54 +345,6 @@
         When the system is near these points, the ecosystem can recover from small perturbations, 
         reaching a dynamic ecological equilibrium.
       \subsubsection{Soil Fertility}
-        The impact of soil fertility on plant growth is introduced. For simplicity in the model, 
-        the effect of soil fertility on plant growth is divided into 
-        the influence of the concentration of inorganic salts absorbed by the plants and the concentration of carbon dioxide.
-
-        For the concentration of inorganic salts absorbed by the plants, 
-        it is closely related to fertilizer concentration (affected by straw and chemical fertilizers), 
-        decomposer activity, and the plant's growth stage. Taking rice as an example, during the seedling stage, 
-        the concentration of inorganic salts in the plant is relatively low, with the rate of increase being positive; 
-        from the tillering to jointing stage, the demand for inorganic salts rapidly increases, 
-        and the concentration reaches a turning point; from the booting to flowering stage, 
-        the rate of increase slows down until the concentration reaches its maximum; 
-        in the milk to yellow ripening stage, the absorption of inorganic salts decreases, 
-        and the concentration declines.
-        %\cite{ref}.
-
-        We use a Gaussian-like probability density function to fit the trend of inorganic salt concentration in the plant over each agricultural cycle, 
-        expressed as:
-        \begin{equation}
-        C_{isc}(t) = \alpha_{isc} e^{-\frac{(t - T_{mc})^2}{\sigma_{isc}}}
-        \end{equation}
-        \begin{equation}
-        C_{isw}(t) = \alpha_{isw} e^{-\frac{(t - T_{mw})^2}{\sigma_{isw}}}
-        \end{equation}
-        where $T_{mc}, T_{mw}$ represent the moment when the concentration of inorganic salts in the rice or weed reaches its maximum during a certain cycle; 
-        $\alpha_{isc}, \alpha_{isw},  \sigma_{isc}, \sigma_{isw}$ correspond to the model parameters for rice or weeds, 
-        which are determined by the fertilizer concentration (chemical fertilizers and straw), decomposer activity, and the plant's growth stage.
-      \subsubsection{Random Factors}
-        Considering the influence of random factors in nature, we introduce Gaussian white noise \(\sigma_i\) for each population.
-
-        The probability density function of the Gaussian white noise \(\sigma_i(t) = x\) is given by:
-        \begin{equation}
-        f(x) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{x^2}{2\sigma^2}}
-        \end{equation}
-        which means that \(\sigma_i\) follows a normal distribution with a mean of 0.
-        
-        Our generation method is as follows:
-        \begin{itemize}
-            \item Generate two distinct random functions \(U_1(t)\) and \(U_2(t)\) within the interval \([0, 1]\);
-            \item Take \(\eta(t) = -\sqrt{-2 \ln U_1(t)} \cdot \cos(2\pi U_2(t))\), which gives \(\eta(t)\) as the Gaussian white noise function.
-        \end{itemize}
-        The noise corresponding to different species in the equations is shown in \figurename~\ref{fig:GussianNoise}.
-        \begin{figure}[H]
-          \centering
-          \includegraphics[width=0.8\linewidth]{images/GussianNoise.png}
-          \caption{Gussian Noises of Each Population}
-          \label{fig:GussianNoise}
-        \end{figure}
-      \subsubsection{Chemical Use}
         Now, we introduce the effect of soil fertility on plant growth.
         $i$ in the following statements represents rice or weed, $j$ the other.
         For the sake of simplicity in the model, 
@@ -399,9 +361,11 @@
         competition coefficients, and the maximum carrying capacity of the environment. 
         An important consideration here is the effect of \( \mu \) on the environmental maximum biomass carrying capacity, 
         as shown below:
+
         \[
         \frac{\mathrm{d}W_{i}}{\mathrm{d}t} = r_{i} W_{i} \left( 1 - \frac{W_{i} + \beta_{j \rightarrow i} W_{j}}{\mathscr{K}_{i} \cdot \mu_{fri}} \right) - \frac{A_{i} W_{i} W_{ins}}{1 + B_{i} W_{i}}
         \]
+
         For the inorganic salt concentration term, 
         it is closely related to fertilizer concentration (which is influenced by straw and chemical fertilizers), 
         decomposer activity, and the growth stage of the plant. Taking rice as an example: when rice reaches the seedling stage, 
@@ -411,12 +375,83 @@
         during the milk-ripe and yellow-ripe stages, the absorption of inorganic salts decreases gradually, and the concentration drops.\cite{garcia2003logistic}
         
         We use a Gaussian-like probability density function to fit the trend of the inorganic salt concentration in the plant over each agricultural cycle, given by:
+        
         \[
         C_{isi}(t) = \alpha_{isi} e^{-\frac{(t - T_{mc})^2}{\sigma_{isi}}}
         \]
+
         where \( T \) represents the time at which the concentration of inorganic salts in rice or weeds is at its maximum during a cycle; the remaining two parameters correspond to the model constants for rice or weeds, and are determined by fertilizer concentration (from both chemical fertilizers and straw), decomposer activity, and the plant’s growth stage.
 
         Again, for the sake of model simplification, we assume \( \mu_{fri} = \xi_{i} C_{isi} \).
+      \subsubsection{Random Factors}
+        Considering the influence of random factors in nature, we introduce Gaussian white noise \(\sigma_i\) for each population.
+
+        The probability density function of the Gaussian white noise \(\sigma_i(t) = x\) is given by:
+
+        \begin{equation}
+        f(x) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{x^2}{2\sigma^2}}
+        \end{equation}
+
+        which means that \(\sigma_i\) follows a normal distribution with a mean of 0.
+        
+        Our generation method is as follows:
+        \begin{itemize}
+            \item Generate two distinct random functions \(U_1(t)\) and \(U_2(t)\) within the interval \([0, 1]\);
+            \item Take \(\eta(t) = -\sqrt{-2 \ln U_1(t)} \cdot \cos(2\pi U_2(t))\), which gives \(\eta(t)\) as the Gaussian white noise function.
+        \end{itemize}
+        The noise corresponding to different species in the equations is shown in \figurename~\ref{fig:GussianNoise}.
+        \begin{figure}[H]
+          \centering
+          \includegraphics[width=0.8\linewidth]{images/GussianNoise.png}
+          \caption{Gussian Noises of Each Population}
+          \label{fig:GussianNoise}
+        \end{figure}
+      \subsubsection{Chemical Use}
+        For herbicides, considering that the application times of herbicides during rice cultivation are primarily before sowing, 
+        at the seedling stage, and at the tillering stage, we assume that herbicides are applied three times during an agricultural cycle, 
+        with the application occurring at weeks 0, 3, and 8. The herbicide concentration is proportional to the current weed biomass. 
+        Since the application frequency is relatively low, we can ignore the specific negative effects of herbicides on rice 
+        (any minor negative effects can be covered by the random process described in random factors).
+
+        We consider weeds as the "prey" of the herbicides. 
+        Similarly to the straw-insect model mentioned earlier, we can use the modified Lotka-Volterra predator-prey model, where \( r_n \equiv 0 \).
+      
+        For the degradation of the herbicide, we can use an exponential decay model. Thus, we establish the weed-herbicide model as follows:
+      
+        \begin{equation}
+        C_{hc}|_{t=m} = C_{hc}|_{t=m-1} + \alpha_{uh} W_{wd}|_{t=m},
+        \end{equation}
+        \begin{equation}
+        \frac{dW_{wd}}{dt} = r_{wd}W_{wd} \left( 1 - \frac{W_{wd} + \beta_{c \rightarrow w} W_{crp}}{\mathscr{K}_{wd}} \right) - \frac{A_{wd} W_{wd} W_{ins}}{1 + \beta_{wd} W_{wd}} - \frac{A_{hc} W_{wd} C_{hc}}{1 + B_{hc} W_{wd}},
+        \end{equation}
+        \begin{equation}
+        \frac{dC_{hc}}{dt} = - \alpha_{dh} C_{hc}.
+        \end{equation}
+        
+        For insecticides, we can establish an insect-insecticide model that follows a similar mechanism to the weed-herbicide model. 
+        We set the insecticide application times during an agricultural cycle to be at week 4, week 8, and week 12. Unlike the weed-herbicide model, 
+        since there are pests that primarily feed on rice and other insects that primarily feed on weeds, 
+        and the insecticide has a much more significant effect on eliminating pests than on eliminating other insects, 
+        the food composition of insects as a whole changes after insecticide application. Specifically, 
+        the proportion of rice in their diet decreases significantly, while the proportion of weeds increases significantly. 
+        Based on this, we introduce the parameter \( \lambda_{pc} \), which is dominated by the insecticide concentration, 
+        to describe the impact of the insecticide on the insect food composition as follows:
+        
+        \begin{equation}
+          C_{pc}|_{t=m} = C_{pc}|_{t=m-1} + \alpha_{up} W_{ins}|_{t=m}, 
+        \end{equation}
+
+        \begin{equation}
+          \begin{split}
+            \frac{dW_{ins}}{dt} = r_{ins} W_{ins} &\left( 1 - \frac{D_{ins} W_{ins}}{1 + E_{ins} \left[ (0.6 - \lambda_{pc}) W_{crp} + (0.4 + \lambda_{prc}) W_{wd} \right]} \right) \\
+            &-\frac{A_{ins} W_{ins} W_{bd}}{1 + \beta_{ins} W_{ins}} - \frac{A_{pc} W_{ins} C_{pc}}{1 + B_{pc} W_{ins}},
+          \end{split}
+      \end{equation}
+
+        \begin{equation}
+        \frac{dC_{hc}}{dt} = - \alpha_{dp} C_{hc}.
+        \end{equation}
+      
       \subsubsection{Multiple Digestion Delay}
         Due to the time required for energy flow, 
         the impacts of different predation relationships in the food web on system dynamics are actually asynchronous \cite{GUO20142850}. 
@@ -425,18 +460,36 @@
         referred to as the producer digestion delay (PDD) and consumer digestion delay (CDD), respectively.
 
         Mathematically, the PDD and CDD influence the food scarcity term \(L_i\) in the differential equation corresponding to the consumer population \(i\):
+        
         \begin{equation}
         L_i = -r_i \frac{D_i W_i^2}{1 + E_i \cdot \Sigma_{\text{food}} \gamma_i W_{i_j}}
         \end{equation}
+
         where \(\Sigma_{\text{food}} \gamma_i W_{i_j}\) is the weighted sum of the biomass of the populations preyed upon by \(i\), weighted by the predation ratio. 
         After considering the delay, this term is modified as follows and incorporated into the original differential equation:
+        
         \begin{equation}
         L_i' = -\frac{r_i}{t - \tau_i} \cdot \frac{D_i W_i^2}{1 + E_i \cdot \Sigma_{\text{food}} \gamma_i W_{i_j}}
         \end{equation}
+
         where \(\tau_i\) is the digestion delay factor of population \(i\), and \(D_i, E_i\) are the corresponding environmental parameters for population \(i\).
     \subsection{CAGED Model Considering Restatement}
+      As the ecosystem gradually matures, previously existing populations will re-enter the system. We assume that when the biomass of the prey species reaches a certain threshold (a tunable parameter), the species will migrate into the ecosystem, forming a more complex food web. In our model, we only consider the migration of frogs and snakes. After their migration, the previously constructed equations are applicable to describe their biomass dynamics (assuming they are not affected by chemicals).
     \subsection{Model III: SAGED Model}
       SAGED Model represents sustainable Agro-Ecosystem Dynamics Model.
+      When the food web becomes sufficiently complex, humans can begin making agricultural decisions. The agricultural decision considered in our model involves removing herbicides and insecticides, while introducing bats and ducks.
+
+      Bats play a role in promoting pollination; thus, the pollination factor becomes:
+      
+      \[
+      f_{pd} = \begin{cases}
+      1, & \text{non-pollinating period}, \\
+      f_0 + c_1 W_{ins} + c_2 W_{bt}, & \text{pollinating period}.
+      \end{cases}
+      \]
+      
+      Besides this, the modified model only requires the removal of chemicals from the CAGED model, and the introduction of two new populations to form the ultimate food web.
+
   \section{Appication of the Models}
     The process of model establishment has been thoroughly presented in the previous subsection. 
     In this subsection, we will discuss the application of the model.
