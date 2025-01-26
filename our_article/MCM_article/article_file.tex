@@ -5,7 +5,7 @@
 \usepackage{float}
 \usepackage{svg}
 \usepackage{mathrsfs}
-
+\usepackage{fvextra}
 \definecolor{customcolor}{HTML}{429938}
 
 \setControlNumber{2511940}
@@ -19,6 +19,7 @@
 %begin
 \begin{document}
 \showSummarySheet
+\newpage % 添加此行
 \showContents
 
   \section{Introduction}
@@ -102,7 +103,7 @@
         \begin{figure}[H]
           \centering
           \includegraphics[width=0.75\linewidth]{images/PlantMode.jpg}
-          \caption{Agricultural Cycle in Southeast Asia}
+          \caption{Agricultural Cycle in Southeast Asia\cite{IndoRice}}
           \label{fig:PlantMode}
         \end{figure}
 
@@ -199,10 +200,11 @@
         Finally, after the agricultural ecosystem matures, we will introduce human agricultural decisions, 
         such as the removal of pesticides and the intentional introduction of new populations, to construct Model IV.
     
-    \subsection{Model I: LVLG(Lokta-Volterra and Leslie-Gower) Model}
+    \subsection{Model I: LVLG(Lotka-Volterra and Leslie-Gower) Model}
       We will first discuss the initial conditions of the model from the perspective of biological populations. 
       The vertical structure of tropical forests is typically divided into several layers, including the canopy layer, understory, shrub layer, and ground layer. 
       Each layer not only supports different plant species but also provides habitat and food sources for various animals. 
+      
       Deforestation will severely disrupt the vertical structure of the tropical rainforest food web. 
       Therefore, our model assumes that at the initial time point following deforestation, 
       the vertical structure of the ecosystem above the ground retains only a portion of the ground layer. 
@@ -218,14 +220,14 @@
         \centering
           \begin{minipage}[b]{0.45\linewidth}
               \centering
-              \includegraphics[height=5.5cm, keepaspectratio]{images/LGVGField.pdf} % 替换为你的第一张图片路径
+              \includegraphics[height=5cm, keepaspectratio]{images/LGVGField.pdf} % 替换为你的第一张图片路径
               \caption{Schematic map for LGVG Model}
               \label{fig:LGVGField}
           \end{minipage}
         \hspace{0.05\linewidth}
           \begin{minipage}[b]{0.45\linewidth}
               \centering
-              \includegraphics[height=5.5cm, keepaspectratio]{images/SimpleFoodWeb.pdf}
+              \includegraphics[height=5cm, keepaspectratio]{images/SimpleFoodWeb.pdf}
               \caption{Food web in LGVG Model}
               \label{fig:SimpleFoodWeb}
           \end{minipage}
@@ -266,118 +268,171 @@
       the more predators there are, resulting in a slower growth rate of the predator population.
 
       
-      \subsection{Model II: }
-        Model I is quite simple and aims to construct a basic short-term model. 
-        Considering the impact of long-term environmental factors, 
-        in order to better simulate the long-term evolutionary behavior of the ecosystem model, 
-        we will progressively introduce the effects of simplified agricultural cycles, 
-        seasonality, soil fertility, and random factors on the system dynamics model. 
-        Furthermore, we will consider the impact of chemical use, 
-        specifically the application of herbicides and pesticides, on the system, 
-        building upon this natural agricultural ecosystem model.
+    \subsection{Model II: CAGED(Conprehensive Agro-Ecosystem Dynamics) Model}
+      Model I is quite simple and aims to construct a basic short-term model. 
+      Considering the impact of long-term environmental factors, 
+      in order to better simulate the long-term evolutionary behavior of the ecosystem model, 
+      we will progressively introduce the effects of simplified agricultural cycles, 
+      seasonality, soil fertility, and random factors on the system dynamics model. 
+      Furthermore, we will consider the impact of chemical use, 
+      specifically the application of herbicides and pesticides, on the system, 
+      building upon this natural agricultural ecosystem model.
 
-        \subsubsection{Agricultural Cycle}
-          According to rice production in Indonesia(\figurename~\ref{fig:PlantModePlus}), 
-          rice production in Southeast Asia follows a three-crop-per-year pattern. 
-          We assume that February, June, and October are the overlapping periods of two agricultural cycles 
-          (from the last post-harvest period to the new planting period).
-          \begin{figure}[H]
-            \centering
-            \includegraphics[width=0.7\linewidth]{images/PlantModePlus.png}
-            \caption{Overlapping Periods of Two Agricultural Cycles}
-            \label{fig:PlantModePlus}
-          \end{figure}
-          During the overlapping period, the rice population re-enters the food web in the form of seeds after harvesting, 
-          starting a new agricultural cycle. The mature rice straw, as an agricultural byproduct, 
-          remains in the ecosystem after harvesting, and after being treated by methods such as burning or returning to the field, 
-          the rice biomass is decomposed and ingested by decomposers and insects, ultimately decreasing to zero.
-
-          Based on literature review\cite{OLIVER20191139,summers2003biomass}, 
-          the biomass fate of mature rice during each overlapping period can be uniformly described by \figurename~\ref{fig:rice_to}. 
-          \begin{figure}[H]
-            \centering
-            \includegraphics[width=\linewidth]{images/rice_to.pdf}
-            \caption{Biomass Fate of Mature Rice during Each Overlapping Period}
-            \label{fig:rice_to}
-          \end{figure}
-          Since decomposers' biomass is not considered in our food web model, 
-          we only analyze the impact of decomposed rice straw residue(the 36\% part) on the producers—namely rice and weeds—in the new cycle. 
-          For further details, refer to the soil fertility section later in the paper.
-        
-          For simplification of the model, 
-          the biomass change of the rice population during each overlapping period is represented 
-          by a biomass step function at specific time points in the mathematical model (i.e., the system of difference equations). 
-          Since $t=0$ corresponds to the start of the first planting season, with one year assumed to have 52 weeks, 
-          and each week being a time step, based on the rice production pattern \figurename~\ref{fig:PlantModePlus}, 
-          we define the step moments at week 0, week 17, and week 34 of each year. The biomass of rice at these times follows:
-        
-          \begin{equation}
-          W_{crp}|_{t=n}=0.1W_{crp}|_{t=n-1}, \quad n = 52k, 52k+17, 52k+34, \quad (year\, k \geqslant 0, \, week\, n \geqslant 1)
-          \end{equation}
-        
-          When considering the impact of rice straw on insect biomass, 
-          we treat rice straw as the 'prey' of insects and use the modified Lotka-Volterra (LG) predator-prey model to characterize this effect. 
-          At each step moment, rice straw enters the food web model with an initial biomass of $0.09W_{crp}$, and $r_{stw} = 0$. 
-          Thus, the rice straw-insect model is established as:
-          
-          \begin{equation}
-          \frac{\mathrm{d}W_{stw}}{\mathrm{d}t} = \frac{A_{stw} W_{stw} W_{ins}}{1 + B_{stw} W_{stw}} \quad (t \neq n)
-          \end{equation}
-          
-          \begin{equation}
-          W_{stw}|_{t=n} = W_{stw}|_{t=n-1} + 0.09 W_{crp}|_{t=n-1},\\
-          n = 52k, 52k+17, 52k+34, \quad (k \geqslant 0, \, n \geqslant 1)
-          \end{equation}
-          
-          The difference equation for insect biomass is modified as follows:
-          
-          \begin{equation}
-          \frac{\mathrm{d}W_{ins}}{\mathrm{d}t} = r_{ins} W_{ins} \left[ 1 - \frac{D_{ins} W_{ins}}{1 + E_{ins} \left( 0.6 W_{crp} + 0.4 W_{wd} + W_{stw} \right)} \right] - \frac{A_{ins} W_{ins} W_{bd}}{1 + B_{ins} W_{ins}}
-          \end{equation}
-        
-        \subsubsection{Seasonality}
-          The seasonal influences primarily include factors such as light, 
-          climate (temperature, precipitation), and biological habits, 
-          all of which have significant direct effects on both $r$ and $\mathscr{K}$ within populations. 
-          Considering that many of these factors are difficult to quantify precisely, 
-          we set sinusoidal perturbations in the periodic parameter $p(T)$ as follows:
-
-          \begin{equation}
-          p(t) = \bar{p} \left[ 1 + \epsilon \sin (\Omega t + \phi) \right]
-          \end{equation}
-          
-          Specifically, in the LV-LG model mentioned above, 
-          for population $i$, the values of $r_i$ and $K_i$ are defined as follows:
-          
-          \begin{align}
-            r_i &= \bar{r}_i \left[ 1 + \epsilon_i \sin \left( \Omega_i t + \phi_i \right) \right] \\
-            \mathscr{K}_i &= \bar{\mathscr{K}}_i \left[ 1 + \epsilon_i \sin \left( \Omega_i t + \phi_i' \right) \right], \quad \left( i = \text{crp or wd} \right) \\
-            D_i &= \frac{\bar{D}_i'}{1 + \epsilon_i \sin \left( \Omega_i t + \phi_i' \right)}, \quad \left( i \neq \text{crp or wd} \right)
-          \end{align}
-          
-          Where $\bar{r}_i$ and $\bar{\mathscr{K}}_i$ are the corresponding periodic means, 
-          which can be treated as constants; $\Omega_i$ is the seasonal fluctuation angular frequency, 
-          and $T = \frac{2\pi}{\Omega}$ is the seasonal fluctuation period; 
-          $\epsilon_i$ is the seasonal impact parameter. Since $r_i, \mathscr{K}_i \geqslant 0$, 
-          it follows that $-1 \leqslant \epsilon_i \leqslant 1$; $\phi_i$ and $\phi_i'$ are the phases, 
-          with $0 \leqslant \phi_i < 2\pi$, which characterize the asynchronous fluctuations of biomass in different species.
-          
-          It can be mathematically proven that, after incorporating these variations, 
-          the LV-LG model system theoretically possesses non-trivial stable points when the parameters are within a certain range. 
-          When the system is near these points, the ecosystem can recover from small perturbations, 
-          reaching a dynamic ecological equilibrium.
-
-        \subsubsection{Soil Fertility}
-        \subsubsection{Random Factor}
-        \subsubsection{Chemical Use}
-      \subsection{Model III: }
+      \subsubsection{Agricultural Cycle}
+        According to rice production in Indonesia(\figurename~\ref{fig:PlantModePlus}), 
+        rice production in Southeast Asia follows a three-crop-per-year pattern. 
+        We assume that February, June, and October are the overlapping periods of two agricultural cycles 
+        (from the last post-harvest period to the new planting period).
         \begin{figure}[H]
           \centering
-          \includegraphics[width=0.5\linewidth]{images/food_web.pdf}
-          \caption{Food web for NGLG Model}
-          \label{fig:NGLG_FoodWeb}
+          \includegraphics[width=0.7\linewidth]{images/PlantModePlus.png}
+          \caption{Overlapping Periods of Two Agricultural Cycles}
+          \label{fig:PlantModePlus}
         \end{figure}
-      \subsection{Model IV: }
+        During the overlapping period, the rice population re-enters the food web in the form of seeds after harvesting, 
+        starting a new agricultural cycle. The mature rice straw, as an agricultural byproduct, 
+        remains in the ecosystem after harvesting, and after being treated by methods such as burning or returning to the field, 
+        the rice biomass is decomposed and ingested by decomposers and insects, ultimately decreasing to zero.
+
+        Based on literature review\cite{OLIVER20191139,summers2003biomass}, 
+        the biomass fate of mature rice during each overlapping period can be uniformly described by \figurename~\ref{fig:rice_to}. 
+        \begin{figure}[H]
+          \centering
+          \includegraphics[width=\linewidth]{images/rice_to.pdf}
+          \caption{Biomass Fate of Mature Rice during Each Overlapping Period}
+          \label{fig:rice_to}
+        \end{figure}
+        Since decomposers' biomass is not considered in our food web model, 
+        we only analyze the impact of decomposed rice straw residue(the 36\% part) on the producers—namely rice and weeds—in the new cycle. 
+        For further details, refer to the soil fertility section later in the paper.
+      
+        For simplification of the model, 
+        the biomass change of the rice population during each overlapping period is represented 
+        by a biomass step function at specific time points in the mathematical model (i.e., the system of difference equations). 
+        Since $t=0$ corresponds to the start of the first planting season, with one year assumed to have 52 weeks, 
+        and each week being a time step, based on the rice production pattern \figurename~\ref{fig:PlantModePlus}, 
+        we define the step moments at week 0, week 17, and week 34 of each year. The biomass of rice at these times follows:
+      
+        \begin{equation}
+        W_{crp}|_{t=n}=0.1W_{crp}|_{t=n-1}, \quad n = 52k, 52k+17, 52k+34, \quad (year\, k \geqslant 0, \, week\, n \geqslant 1)
+        \end{equation}
+      
+        When considering the impact of rice straw on insect biomass, 
+        we treat rice straw as the 'prey' of insects and use the modified Lotka-Volterra (LG) predator-prey model to characterize this effect. 
+        At each step moment, rice straw enters the food web model with an initial biomass of $0.09W_{crp}$, and $r_{stw} = 0$. 
+        Thus, the rice straw-insect model is established as:
+        
+        \begin{equation}
+          \frac{\mathrm{d}W_{stw}}{\mathrm{d}t} = \frac{A_{stw} W_{stw} W_{ins}}{1 + B_{stw} W_{stw}} \quad (t \neq n)
+        \end{equation}
+        \begin{equation}
+          W_{stw}|_{t=n} = W_{stw}|_{t=n-1} + 0.09 W_{crp}|_{t=n-1},\\
+          n = 52k, 52k+17, 52k+34, \quad (k \geqslant 0, \, n \geqslant 1)
+        \end{equation}
+        
+        The difference equation for insect biomass is modified as follows:
+        
+        \begin{equation}
+          \frac{\mathrm{d}W_{ins}}{\mathrm{d}t} = r_{ins} W_{ins} \left[ 1 - \frac{D_{ins} W_{ins}}{1 + E_{ins} \left( 0.6 W_{crp} + 0.4 W_{wd} + W_{stw} \right)} \right] - \frac{A_{ins} W_{ins} W_{bd}}{1 + B_{ins} W_{ins}}
+        \end{equation}
+      
+      \subsubsection{Seasonality}
+        The seasonal influences primarily include factors such as light, 
+        climate (temperature, precipitation), and biological habits, 
+        all of which have significant direct effects on both $r$ and $\mathscr{K}$ within populations. 
+        Considering that many of these factors are difficult to quantify precisely, 
+        we set sinusoidal perturbations in the periodic parameter $p(T)$ as follows\cite{GAKKHAR20061239}:
+
+        \begin{equation}
+          p(t) = \bar{p} \left[ 1 + \epsilon \sin (\Omega t + \phi) \right]
+        \end{equation}
+        
+        Specifically, in the LV-LG model mentioned above, 
+        for population $i$, the values of $r_i$ and $K_i$ are defined as follows:
+        
+        \begin{align}
+          r_i &= \bar{r}_i \left[ 1 + \epsilon_i \sin \left( \Omega_i t + \phi_i \right) \right] \\
+          \mathscr{K}_i &= \bar{\mathscr{K}}_i \left[ 1 + \epsilon_i \sin \left( \Omega_i t + \phi_i' \right) \right], \quad \left( i = \text{crp or wd} \right) \\
+          D_i &= \frac{\bar{D}_i'}{1 + \epsilon_i \sin \left( \Omega_i t + \phi_i' \right)}, \quad \left( i \neq \text{crp or wd} \right)
+        \end{align}
+        
+        Where $\bar{r}_i$ and $\bar{\mathscr{K}}_i$ are the corresponding periodic means, 
+        which can be treated as constants; $\Omega_i$ is the seasonal fluctuation angular frequency, 
+        and $T = \frac{2\pi}{\Omega}$ is the seasonal fluctuation period; 
+        $\epsilon_i$ is the seasonal impact parameter. Since $r_i, \mathscr{K}_i \geqslant 0$, 
+        it follows that $-1 \leqslant \epsilon_i \leqslant 1$; $\phi_i$ and $\phi_i'$ are the phases, 
+        with $0 \leqslant \phi_i < 2\pi$, which characterize the asynchronous fluctuations of biomass in different species.
+        
+        It can be mathematically proven that, after incorporating these variations, 
+        the LV-LG model system theoretically possesses non-trivial stable points when the parameters are within a certain range. 
+        When the system is near these points, the ecosystem can recover from small perturbations, 
+        reaching a dynamic ecological equilibrium.
+
+      \subsubsection{Soil Fertility}
+        The impact of soil fertility on plant growth is introduced. For simplicity in the model, 
+        the effect of soil fertility on plant growth is divided into 
+        the influence of the concentration of inorganic salts absorbed by the plants and the concentration of carbon dioxide.
+
+        For the concentration of inorganic salts absorbed by the plants, 
+        it is closely related to fertilizer concentration (affected by straw and chemical fertilizers), 
+        decomposer activity, and the plant's growth stage. Taking rice as an example, during the seedling stage, 
+        the concentration of inorganic salts in the plant is relatively low, with the rate of increase being positive; 
+        from the tillering to jointing stage, the demand for inorganic salts rapidly increases, 
+        and the concentration reaches a turning point; from the booting to flowering stage, 
+        the rate of increase slows down until the concentration reaches its maximum; 
+        in the milk to yellow ripening stage, the absorption of inorganic salts decreases, 
+        and the concentration declines.
+        %\cite{ref}.
+
+        We use a Gaussian-like probability density function to fit the trend of inorganic salt concentration in the plant over each agricultural cycle, 
+        expressed as:
+
+        \begin{equation}
+        C_{isc}(t) = \alpha_{isc} e^{-\frac{(t - T_{mc})^2}{\sigma_{isc}}}
+        \end{equation}
+        \begin{equation}
+        C_{isw}(t) = \alpha_{isw} e^{-\frac{(t - T_{mw})^2}{\sigma_{isw}}}
+        \end{equation}
+        where $T_{mc}, T_{mw}$ represent the moment when the concentration of inorganic salts in the rice or weed reaches its maximum during a certain cycle; 
+        $\alpha_{isc}, \alpha_{isw},  \sigma_{isc}, \sigma_{isw}$ correspond to the model parameters for rice or weeds, 
+        which are determined by the fertilizer concentration (chemical fertilizers and straw), decomposer activity, and the plant's growth stage.
+      \subsubsection{Random Factor}
+      \subsubsection{Chemical Use}
+        Considering that the application of herbicides during rice cultivation mainly occurs before sowing, 
+        during the seedling stage, and the tillering stage, 
+        we assume that herbicides are applied three times during an agricultural cycle, 
+        with time points at week 0, week 3, and week 8. The herbicide application concentration is proportional to the current weed biomass. 
+        Since the herbicide application frequency is low in this case, 
+        we can neglect the specific negative effects of herbicides on rice (any minimal negative impact can be covered by the random process in Section 3.3.4).
+
+        We consider weeds as the 'prey' of the herbicide. 
+        Similar to the previous straw-insect model, 
+        we can use a modified Lotka-Volterra predator-prey model, 
+        where \( r_n \equiv 0 \).
+
+        For the degradation of herbicide, we can use an exponential decay model. 
+        This leads to the establishment of the weed-herbicide model:
+
+        \begin{equation}
+        C_{hc}|_{t=m} = C_{hc}|_{t=m-1} + \alpha W_{wd}|_{t=m}
+        \end{equation}
+
+        \begin{equation}
+        \frac{W_{wd}}{dt} = r_{wd}W_{wd}\left(1 - \frac{W_{wd} + \beta_{c \rightarrow w} W_{crp}}{\mathscr{K}_{wd}}\right) - \frac{A_{wd}W_{wd}W_{ins}}{1 + \beta_{wd}W_{wd}} - \frac{A_{hc}W_{wd}C_{hc}}{1 + B_{hc}W_{wd}}
+        \end{equation}
+        
+        \begin{equation}
+        \frac{dC_{hc}}{dt} = -\alpha_{d}C_{hc}
+        \end{equation}
+
+    \subsection{Model III: }
+      \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\linewidth]{images/food_web.pdf}
+        \caption{Food web for NGLG Model}
+        \label{fig:NGLG_FoodWeb}
+      \end{figure}
+    \subsection{Model IV: }
   \section{Application of the Models}
 
   \section{Sensitivity Analysis}

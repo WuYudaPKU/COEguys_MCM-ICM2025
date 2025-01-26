@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.12)  26 JAN 2025 12:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.12)  26 JAN 2025 21:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -671,10 +671,70 @@ File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfsyssoftpath@bigbuffer@items=\count353
 ) (d:/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)) (d:/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+)) (d:/texlive/2024/texmf-dist/tex/latex/fvextra/fvextra.sty
+Package: fvextra 2024/10/16 v1.9.0 fvextra - extensions and patches for fancyvrb
+ (d:/texlive/2024/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
+\FV@CodeLineNo=\count354
+\FV@InFile=\read4
+\FV@TabBox=\box72
+\c@FancyVerbLine=\count355
+\FV@StepNumber=\count356
+\FV@OutFile=\write5
+LaTeX Info: Redefining \UseVerb on input line 1229.
+) (d:/texlive/2024/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
+ (d:/texlive/2024/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+)) (d:/texlive/2024/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2023/05/20 line numbers on paragraphs v5.3
+\linenopenalty=\count357
+\output=\toks55
+\linenoprevgraf=\count358
+\linenumbersep=\dimen287
+\linenumberwidth=\dimen288
+\c@linenumber=\count359
+\c@pagewiselinenumber=\count360
+\c@LN@truepage=\count361
+\c@internallinenumber=\count362
+\c@internallinenumbers=\count363
+\quotelinenumbersep=\dimen289
+\bframerule=\dimen290
+\bframesep=\dimen291
+\bframebox=\box73
+\linenoamsmath@ams@eqpen=\count364
+LaTeX Info: Redefining \\ on input line 3180.
+)
+\c@FancyVerbWriteLine=\count365
+\c@FancyVerbBufferIndex=\count366
+\c@FancyVerbBufferLine=\count367
+\c@FV@TrueTabGroupLevel=\count368
+\c@FV@TrueTabCounter=\count369
+\FV@TabBox@Group=\box74
+\FV@TmpLength=\skip91
+\c@FV@HighlightLinesStart=\count370
+\c@FV@HighlightLinesStop=\count371
+\FV@LoopCount=\count372
+\FV@NCharsBox=\box75
+\FV@BreakIndent=\dimen292
+\FV@BreakIndentNChars=\count373
+\FV@BreakSymbolSepLeft=\dimen293
+\FV@BreakSymbolSepLeftNChars=\count374
+\FV@BreakSymbolSepRight=\dimen294
+\FV@BreakSymbolSepRightNChars=\count375
+\FV@BreakSymbolIndentLeft=\dimen295
+\FV@BreakSymbolIndentLeftNChars=\count376
+\FV@BreakSymbolIndentRight=\dimen296
+\FV@BreakSymbolIndentRightNChars=\count377
+\c@FancyVerbLineBreakLast=\count378
+\FV@LineBox=\box76
+\FV@LineIndentBox=\box77
+\c@FV@BreakBufferDepth=\count379
+\FV@LineWidth=\dimen297
+) (d:/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count354
-\l__pdf_internal_box=\box72
+\l__color_backend_stack_int=\count380
+\l__pdf_internal_box=\box78
 ) (./article_file.aux)
 \openout1 = `article_file.aux'.
 
@@ -698,17 +758,17 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 20.
 LaTeX Font Info:    ... okay on input line 20.
  (d:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count355
-\scratchdimen=\dimen287
-\scratchbox=\box73
-\nofMPsegments=\count356
-\nofMParguments=\count357
-\everyMPshowfont=\toks55
-\MPscratchCnt=\count358
-\MPscratchDim=\dimen288
-\MPnumerator=\count359
-\makeMPintoPDFobject=\count360
-\everyMPtoPDFconversion=\toks56
+\scratchcounter=\count381
+\scratchdimen=\dimen298
+\scratchbox=\box79
+\nofMPsegments=\count382
+\nofMParguments=\count383
+\everyMPshowfont=\toks56
+\MPscratchCnt=\count384
+\MPscratchDim=\dimen299
+\MPnumerator=\count385
+\makeMPintoPDFobject=\count386
+\everyMPtoPDFconversion=\toks57
 ) (d:/texlive/2024/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
  (d:/texlive/2024/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
@@ -752,7 +812,7 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count361
+\c@lstlisting=\count387
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
@@ -763,8 +823,8 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring ON on input line 20.
  (./article_file.out) (./article_file.out)
-\@outlinefile=\write5
-\openout5 = `article_file.out'.
+\@outlinefile=\write6
+\openout6 = `article_file.out'.
 
 LaTeX Font Info:    Trying to load font information for T1+fvs on input line 21.
  (d:/texlive/2024/texmf-dist/tex/latex/bera/t1fvs.fd
@@ -808,8 +868,8 @@ Overfull \hbox (1.98428pt too wide) in paragraph at lines 21--21
 [1
 
 {d:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{d:/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}{d:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] (./article_file.toc)
-\tf@toc=\write6
-\openout6 = `article_file.toc'.
+\tf@toc=\write7
+\openout7 = `article_file.toc'.
 
 
 
@@ -817,12 +877,12 @@ Overfull \hbox (1.98428pt too wide) in paragraph at lines 21--21
 <images/deforestation1.jpg, id=157, 1606.0pt x 903.375pt>
 File: images/deforestation1.jpg Graphic file (type jpg)
 <use images/deforestation1.jpg>
-Package pdftex.def Info: images/deforestation1.jpg  used on input line 37.
+Package pdftex.def Info: images/deforestation1.jpg  used on input line 38.
 (pdftex.def)             Requested size: 202.31786pt x 113.81102pt.
 <images/deforestation2.jpg, id=158, 647.41875pt x 364.36125pt>
 File: images/deforestation2.jpg Graphic file (type jpg)
 <use images/deforestation2.jpg>
-Package pdftex.def Info: images/deforestation2.jpg  used on input line 44.
+Package pdftex.def Info: images/deforestation2.jpg  used on input line 45.
 (pdftex.def)             Requested size: 202.21907pt x 113.81102pt.
 
 
@@ -830,28 +890,42 @@ Package pdftex.def Info: images/deforestation2.jpg  used on input line 44.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.68         \item \textbf
+l.69         \item \textbf
                           {Impact of removing chemicals}: After the ecosyste... [1{d:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./images/deforestation1.jpg> <./images/deforestation2.jpg>]
 <images/AverTemper.png, id=170, 1387.584pt x 703.1871pt>
 File: images/AverTemper.png Graphic file (type png)
 <use images/AverTemper.png>
-Package pdftex.def Info: images/AverTemper.png  used on input line 97.
+Package pdftex.def Info: images/AverTemper.png  used on input line 98.
 (pdftex.def)             Requested size: 455.24411pt x 230.70052pt.
+
+
+LaTeX Warning: Citation `IndoTemper' on page 2 undefined on input line 99.
+
+
+LaTeX Warning: Citation `IndoTemper' on page 2 undefined on input line 99.
+
 
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.101 
+l.102 
        [2]
-<images/PlantMode.jpg, id=180, 797.98125pt x 265.74281pt>
+<images/PlantMode.jpg, id=178, 797.98125pt x 265.74281pt>
 File: images/PlantMode.jpg Graphic file (type jpg)
 <use images/PlantMode.jpg>
-Package pdftex.def Info: images/PlantMode.jpg  used on input line 104.
+Package pdftex.def Info: images/PlantMode.jpg  used on input line 105.
 (pdftex.def)             Requested size: 341.43307pt x 113.70354pt.
 
-Overfull \hbox (11.02791pt too wide) in paragraph at lines 128--161
+
+LaTeX Warning: Citation `IndoRice' on page 3 undefined on input line 106.
+
+
+LaTeX Warning: Citation `IndoRice' on page 3 undefined on input line 106.
+
+
+Overfull \hbox (11.02791pt too wide) in paragraph at lines 129--162
  [][] 
  []
 
@@ -864,23 +938,24 @@ Overfull \hbox (11.02791pt too wide) in paragraph at lines 128--161
 [5]
 
 pdfTeX warning: pdflatex.exe (file ./images/LGVGField.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/LGVGField.pdf, id=209, 622.03993pt x 622.3011pt>
+<images/LGVGField.pdf, id=207, 622.03993pt x 622.3011pt>
 File: images/LGVGField.pdf Graphic file (type pdf)
 <use images/LGVGField.pdf>
-Package pdftex.def Info: images/LGVGField.pdf  used on input line 221.
-(pdftex.def)             Requested size: 156.42079pt x 156.49014pt.
+Package pdftex.def Info: images/LGVGField.pdf  used on input line 223.
+(pdftex.def)             Requested size: 142.20244pt x 142.26378pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./images/SimpleFoodWeb.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/SimpleFoodWeb.pdf, id=210, 581.02673pt x 427.18094pt>
+<images/SimpleFoodWeb.pdf, id=208, 581.02673pt x 427.18094pt>
 File: images/SimpleFoodWeb.pdf Graphic file (type pdf)
 <use images/SimpleFoodWeb.pdf>
-Package pdftex.def Info: images/SimpleFoodWeb.pdf  used on input line 228.
-(pdftex.def)             Requested size: 212.84874pt x 156.49014pt.
+Package pdftex.def Info: images/SimpleFoodWeb.pdf  used on input line 230.
+(pdftex.def)             Requested size: 193.49483pt x 142.26378pt.
 
-Overfull \hbox (7.99028pt too wide) in paragraph at lines 228--229
- [][] 
- []
+LaTeX Warning: Citation `wangersky1978lotka' on page 6 undefined on input line 239.
+
+
+LaTeX Warning: Citation `GUO20142850' on page 6 undefined on input line 239.
 
 
 
@@ -888,58 +963,75 @@ Overfull \hbox (7.99028pt too wide) in paragraph at lines 228--229
 
 pdfTeX warning: pdflatex.exe (file ./images/SimpleFoodWeb.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<images/PlantModePlus.png, id=256, 403.5075pt x 137.01187pt>
+<images/PlantModePlus.png, id=250, 403.5075pt x 137.01187pt>
 File: images/PlantModePlus.png Graphic file (type png)
 <use images/PlantModePlus.png>
-Package pdftex.def Info: images/PlantModePlus.png  used on input line 286.
+Package pdftex.def Info: images/PlantModePlus.png  used on input line 288.
 (pdftex.def)             Requested size: 318.66948pt x 108.20474pt.
 
 
+LaTeX Warning: Citation `OLIVER20191139' on page 7 undefined on input line 297.
+
+
+LaTeX Warning: Citation `summers2003biomass' on page 7 undefined on input line 297.
+
+
+
 pdfTeX warning: pdflatex.exe (file ./images/rice_to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/rice_to.pdf, id=260, 1037.04663pt x 297.45128pt>
+<images/rice_to.pdf, id=252, 1037.04663pt x 297.45128pt>
 File: images/rice_to.pdf Graphic file (type pdf)
 <use images/rice_to.pdf>
-Package pdftex.def Info: images/rice_to.pdf  used on input line 299.
+Package pdftex.def Info: images/rice_to.pdf  used on input line 301.
 (pdftex.def)             Requested size: 455.24411pt x 130.57486pt.
 
 
 [7 <./images/PlantModePlus.png> <./images/rice_to.pdf>]
 
+LaTeX Warning: Citation `GAKKHAR20061239' on page 8 undefined on input line 344.
+
+
+
 [8]
+
+[9]
 
 pdfTeX warning: pdflatex.exe (file ./images/food_web.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 <images/food_web.pdf, id=315, 562.39438pt x 492.20787pt>
 File: images/food_web.pdf Graphic file (type pdf)
 <use images/food_web.pdf>
-Package pdftex.def Info: images/food_web.pdf  used on input line 376.
+Package pdftex.def Info: images/food_web.pdf  used on input line 431.
 (pdftex.def)             Requested size: 227.62206pt x 199.21541pt.
-(./article_file.bbl
+(./article_file.bbl)
 
-[9 <./images/food_web.pdf>])
+[10 <./images/food_web.pdf>]
 
-[10] 
+[11] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./article_file.aux)
  ***********
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `article_file.out' has not changed.
-(rerunfilecheck)             Checksum: BACB7B33955CD23EB91B8FA4923321B1;3813.
+(rerunfilecheck)             Checksum: 8BCABCC10D11806ADE491023902F179A;4078.
  ) 
 Here is how much of TeX's memory you used:
- 19501 strings out of 473362
- 320812 string characters out of 5725050
- 762744 words of memory out of 5000000
- 42114 multiletter control sequences out of 15000+600000
- 599519 words of font info for 92 fonts, out of 8000000 for 9000
+ 20857 strings out of 473362
+ 347237 string characters out of 5725050
+ 793741 words of memory out of 5000000
+ 43450 multiletter control sequences out of 15000+600000
+ 599618 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 94i,12n,93p,2304b,580s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/bera/fvsb8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/bera/fvsr8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on article_file.pdf (12 pages, 1861336 bytes).
+ 94i,12n,93p,2304b,591s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/bera/fvsb8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/bera/fvsr8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on article_file.pdf (13 pages, 1880488 bytes).
 PDF statistics:
- 453 PDF objects out of 1000 (max. 8388607)
- 335 compressed objects within 4 object streams
- 63 named destinations out of 1000 (max. 500000)
+ 468 PDF objects out of 1000 (max. 8388607)
+ 344 compressed objects within 4 object streams
+ 64 named destinations out of 1000 (max. 500000)
  274 words of extra memory for PDF output out of 10000 (max. 10000000)
 

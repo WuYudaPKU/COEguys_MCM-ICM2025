@@ -261,14 +261,14 @@
       {\fontsize{12pt}{14pt}\selectfont \oursummary}
      \par
      %底部留空 
+     \newpage % 添加此行
      \pagestyle{empty}
 }
- 
-
-
 
 \newcommand{\showContents}{\newpage{\centering\tableofcontents}\newpage\pagestyle{fancy}\setcounter{page}{1}}
+
 \newcommand{\showReferences}{ 
+\newpage % 添加此行
 \addcontentsline{toc}{section}{References}
 \bibliographystyle{unsrt}%{brief}%{alpha}%{unsrt}
 \bibliography{article_file}}
