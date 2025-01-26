@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.12)  26 JAN 2025 00:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.12)  26 JAN 2025 09:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -814,12 +814,12 @@ Overfull \hbox (1.98428pt too wide) in paragraph at lines 21--21
 
 
 [2]
-<images/deforestation1.jpg, id=132, 1606.0pt x 903.375pt>
+<images/deforestation1.jpg, id=157, 1606.0pt x 903.375pt>
 File: images/deforestation1.jpg Graphic file (type jpg)
 <use images/deforestation1.jpg>
 Package pdftex.def Info: images/deforestation1.jpg  used on input line 37.
 (pdftex.def)             Requested size: 202.31786pt x 113.81102pt.
-<images/deforestation2.jpg, id=133, 647.41875pt x 364.36125pt>
+<images/deforestation2.jpg, id=158, 647.41875pt x 364.36125pt>
 File: images/deforestation2.jpg Graphic file (type jpg)
 <use images/deforestation2.jpg>
 Package pdftex.def Info: images/deforestation2.jpg  used on input line 44.
@@ -832,7 +832,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
                    \relax 
 l.68         \item \textbf
                           {Impact of removing chemicals}: After the ecosyste... [1{d:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./images/deforestation1.jpg> <./images/deforestation2.jpg>]
-<images/AverTemper.png, id=145, 1387.584pt x 703.1871pt>
+<images/AverTemper.png, id=170, 1387.584pt x 703.1871pt>
 File: images/AverTemper.png Graphic file (type png)
 <use images/AverTemper.png>
 Package pdftex.def Info: images/AverTemper.png  used on input line 97.
@@ -845,13 +845,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has b
                    \relax 
 l.101 
        [2]
-<images/PlantMode.jpg, id=154, 797.98125pt x 265.74281pt>
+<images/PlantMode.jpg, id=180, 797.98125pt x 265.74281pt>
 File: images/PlantMode.jpg Graphic file (type jpg)
 <use images/PlantMode.jpg>
 Package pdftex.def Info: images/PlantMode.jpg  used on input line 104.
 (pdftex.def)             Requested size: 341.43307pt x 113.70354pt.
 
-Overfull \hbox (11.02791pt too wide) in paragraph at lines 128--159
+Overfull \hbox (11.02791pt too wide) in paragraph at lines 128--160
  [][] 
  []
 
@@ -861,67 +861,92 @@ Overfull \hbox (11.02791pt too wide) in paragraph at lines 128--159
 
 [4]
 
+[5]
+
 pdfTeX warning: pdflatex.exe (file ./images/LGVGField.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/LGVGField.pdf, id=178, 622.03993pt x 622.3011pt>
+<images/LGVGField.pdf, id=209, 622.03993pt x 622.3011pt>
 File: images/LGVGField.pdf Graphic file (type pdf)
 <use images/LGVGField.pdf>
-Package pdftex.def Info: images/LGVGField.pdf  used on input line 219.
+Package pdftex.def Info: images/LGVGField.pdf  used on input line 220.
 (pdftex.def)             Requested size: 156.42079pt x 156.49014pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./images/SimpleFoodWeb.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/SimpleFoodWeb.pdf, id=179, 581.02673pt x 427.18094pt>
+<images/SimpleFoodWeb.pdf, id=210, 581.02673pt x 427.18094pt>
 File: images/SimpleFoodWeb.pdf Graphic file (type pdf)
 <use images/SimpleFoodWeb.pdf>
-Package pdftex.def Info: images/SimpleFoodWeb.pdf  used on input line 226.
+Package pdftex.def Info: images/SimpleFoodWeb.pdf  used on input line 227.
 (pdftex.def)             Requested size: 212.84874pt x 156.49014pt.
 
-Overfull \hbox (7.99028pt too wide) in paragraph at lines 226--227
+Overfull \hbox (7.99028pt too wide) in paragraph at lines 227--228
  [][] 
  []
 
 
 
-[5]
-
-pdfTeX warning: pdflatex.exe (file ./images/food_web.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/food_web.pdf, id=188, 562.23552pt x 493.61496pt>
-File: images/food_web.pdf Graphic file (type pdf)
-<use images/food_web.pdf>
-Package pdftex.def Info: images/food_web.pdf  used on input line 270.
-(pdftex.def)             Requested size: 227.62206pt x 199.84517pt.
-
-
 [6 <./images/LGVGField.pdf> <./images/SimpleFoodWeb.pdf
 
 pdfTeX warning: pdflatex.exe (file ./images/SimpleFoodWeb.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] (./article_file.bbl
+>]
 
-[7 <./images/food_web.pdf>])
+LaTeX Warning: Citation `cite' on page 7 undefined on input line 279.
 
-[8] 
+
+LaTeX Warning: Citation `cite' on page 7 undefined on input line 288.
+
+
+LaTeX Warning: Citation `cite' on page 7 undefined on input line 289.
+
+
+LaTeX Warning: Citation `cite' on page 7 undefined on input line 298.
+
+
+
+[7]
+
+LaTeX Warning: Citation `cite' on page 8 undefined on input line 330.
+
+
+
+pdfTeX warning: pdflatex.exe (file ./images/food_web.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<images/food_web.pdf, id=265, 562.23552pt x 493.61496pt>
+File: images/food_web.pdf Graphic file (type pdf)
+<use images/food_web.pdf>
+Package pdftex.def Info: images/food_web.pdf  used on input line 363.
+(pdftex.def)             Requested size: 227.62206pt x 199.84517pt.
+
+
+[8] (./article_file.bbl
+
+[9 <./images/food_web.pdf>])
+
+[10] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./article_file.aux)
  ***********
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `article_file.out' has not changed.
-(rerunfilecheck)             Checksum: C76530C569F166CCC4B0965AB55B700C;3121.
+(rerunfilecheck)             Checksum: BACB7B33955CD23EB91B8FA4923321B1;3813.
  ) 
 Here is how much of TeX's memory you used:
- 19453 strings out of 473362
- 319865 string characters out of 5725050
- 760500 words of memory out of 5000000
- 42087 multiletter control sequences out of 15000+600000
- 597989 words of font info for 90 fonts, out of 8000000 for 9000
+ 19480 strings out of 473362
+ 320262 string characters out of 5725050
+ 760504 words of memory out of 5000000
+ 42097 multiletter control sequences out of 15000+600000
+ 599519 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 94i,13n,93p,2304b,582s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/bera/fvsb8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/bera/fvsr8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on article_file.pdf (10 pages, 1637099 bytes).
+ 94i,13n,93p,2304b,580s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/bera/fvsb8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/bera/fvsr8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on article_file.pdf (12 pages, 1667202 bytes).
 PDF statistics:
- 359 PDF objects out of 1000 (max. 8388607)
- 264 compressed objects within 3 object streams
- 44 named destinations out of 1000 (max. 500000)
- 224 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 415 PDF objects out of 1000 (max. 8388607)
+ 313 compressed objects within 4 object streams
+ 59 named destinations out of 1000 (max. 500000)
+ 264 words of extra memory for PDF output out of 10000 (max. 10000000)
 
