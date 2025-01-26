@@ -9,20 +9,24 @@
 \contentsline {subsection}{\numberline {3.1}Model Development Explanation and Sequence}{4}{subsection.3.1}%
 \contentsline {subsubsection}{\numberline {3.1.1}Notes for Models}{4}{subsubsection.3.1.1}%
 \contentsline {subsubsection}{\numberline {3.1.2}Sequence}{5}{subsubsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.2}Model I: LVLG(Lotka-Volterra and Leslie-Gower) Model}{5}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Model II: CAGED(Conprehensive Agro-Ecosystem Dynamics) Model}{7}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.2}Model I: LVLG Model}{5}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Model II: CAGED Model}{7}{subsection.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.1}Agricultural Cycle}{7}{subsubsection.3.3.1}%
 \contentsline {subsubsection}{\numberline {3.3.2}Seasonality}{8}{subsubsection.3.3.2}%
 \contentsline {subsubsection}{\numberline {3.3.3}Soil Fertility}{9}{subsubsection.3.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.4}Random Factor}{9}{subsubsection.3.3.4}%
-\contentsline {subsubsection}{\numberline {3.3.5}Chemical Use}{9}{subsubsection.3.3.5}%
-\contentsline {subsection}{\numberline {3.4}Model III: }{10}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Model IV: }{11}{subsection.3.5}%
-\contentsline {section}{\numberline {4}Application of the Models}{11}{section.4}%
-\contentsline {section}{\numberline {5}Sensitivity Analysis}{11}{section.5}%
-\contentsline {section}{\numberline {6}Evaluation of the Model}{11}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Strengths}{11}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Weaknesses}{11}{subsection.6.2}%
-\contentsline {section}{\numberline {7}Conclusion}{11}{section.7}%
-\contentsline {section}{References}{11}{section.7}%
+\contentsline {subsubsection}{\numberline {3.3.4}Random Factors}{9}{subsubsection.3.3.4}%
+\contentsline {subsubsection}{\numberline {3.3.5}Chemical Use}{10}{subsubsection.3.3.5}%
+\contentsline {subsubsection}{\numberline {3.3.6}Multiple Digestion Delay}{11}{subsubsection.3.3.6}%
+\contentsline {subsection}{\numberline {3.4}CAGED Model Considering Restatement}{11}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Model III: SAGED Model}{11}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Appication of the Models}{11}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Selection of Parameters}{11}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Situation 1: No Agricultural Activities}{12}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Sutuation 2: Chemicals or Green Agriculture Solutions Used}{12}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Sensitivity Analysis}{14}{section.5}%
+\contentsline {section}{\numberline {6}Evaluation of the Model}{14}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Strengths}{14}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Weaknesses}{14}{subsection.6.2}%
+\contentsline {section}{\numberline {7}Suggestions}{14}{section.7}%
+\contentsline {section}{References}{14}{section.7}%
 \contentsfinish 

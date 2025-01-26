@@ -98,7 +98,7 @@
 %===========目录==============
 \RequirePackage{titlesec}
 \RequirePackage{titletoc}
-\setcounter{tocdepth}{3}    % 目录显示到subsubsection(3)级别,若只需到subsection(2)请自改
+\setcounter{tocdepth}{2}    % 目录显示到subsubsection(3)级别,若只需到subsection(2)请自改
 \RequirePackage[font=small,]{caption}   % 使图表标题字号小一号
 
 %=========表格相关===========

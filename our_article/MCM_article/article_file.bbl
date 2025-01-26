@@ -1,0 +1,48 @@
+\begin{thebibliography}{1}
+
+\bibitem{IndoTemper}
+World~Bank Group.
+\newblock Indonesia temperature.
+\newblock Accessed: 2025-1-25, at
+  \url{https://climateknowledgeportal.worldbank.org/country/indonesia/climate-data-historica}.
+
+\bibitem{IndoRice}
+U.S.~Department of~Agriculture.
+\newblock Indonesia rice.
+\newblock Accessed: 2025-1-26, at
+  \url{https://ipad.fas.usda.gov/countrysummary/Default.aspx?id=ID&crop=Rice}.
+
+\bibitem{wangersky1978lotka}
+Peter~J Wangersky.
+\newblock Lotka-volterra population models.
+\newblock {\em Annual Review of Ecology and Systematics}, 9:189--218, 1978.
+
+\bibitem{GUO20142850}
+Lei Guo, Zi-Gen Song, and Jian Xu.
+\newblock Complex dynamics in the leslie–gower type of the food chain system
+  with multiple delays.
+\newblock {\em Communications in Nonlinear Science and Numerical Simulation},
+  19(8):2850--2865, 2014.
+
+\bibitem{OLIVER20191139}
+Viktoria Oliver, Nicole Cochrane, Julia Magnusson, Erika Brachi, Stefano
+  Monaco, Andrea Volante, Brigitte Courtois, Giampiero Vale, Adam Price, and
+  Yit~Arn Teh.
+\newblock Effects of water management and cultivar on carbon dynamics, plant
+  productivity and biomass allocation in european rice systems.
+\newblock {\em Science of The Total Environment}, 685:1139--1151, 2019.
+
+\bibitem{summers2003biomass}
+MD~Summers, BM~Jenkins, PR~Hyde, JF~Williams, RG~Mutters, SC~Scardacci, and
+  MW~Hair.
+\newblock Biomass production and allocation in rice with implications for straw
+  harvesting and utilization.
+\newblock {\em Biomass and Bioenergy}, 24(3):163--173, 2003.
+
+\bibitem{GAKKHAR20061239}
+Sunita Gakkhar and Brahampal Singh.
+\newblock Dynamics of modified leslie–gower-type prey–predator model with
+  seasonally varying parameters.
+\newblock {\em Chaos, Solitons and Fractals}, 27(5):1239--1255, 2006.
+
+\end{thebibliography}
