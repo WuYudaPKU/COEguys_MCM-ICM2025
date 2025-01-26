@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.12)  26 JAN 2025 09:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.12)  26 JAN 2025 12:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -851,7 +851,7 @@ File: images/PlantMode.jpg Graphic file (type jpg)
 Package pdftex.def Info: images/PlantMode.jpg  used on input line 104.
 (pdftex.def)             Requested size: 341.43307pt x 113.70354pt.
 
-Overfull \hbox (11.02791pt too wide) in paragraph at lines 128--160
+Overfull \hbox (11.02791pt too wide) in paragraph at lines 128--161
  [][] 
  []
 
@@ -867,7 +867,7 @@ pdfTeX warning: pdflatex.exe (file ./images/LGVGField.pdf): PDF inclusion: found
 <images/LGVGField.pdf, id=209, 622.03993pt x 622.3011pt>
 File: images/LGVGField.pdf Graphic file (type pdf)
 <use images/LGVGField.pdf>
-Package pdftex.def Info: images/LGVGField.pdf  used on input line 220.
+Package pdftex.def Info: images/LGVGField.pdf  used on input line 221.
 (pdftex.def)             Requested size: 156.42079pt x 156.49014pt.
 
 
@@ -875,10 +875,10 @@ pdfTeX warning: pdflatex.exe (file ./images/SimpleFoodWeb.pdf): PDF inclusion: f
 <images/SimpleFoodWeb.pdf, id=210, 581.02673pt x 427.18094pt>
 File: images/SimpleFoodWeb.pdf Graphic file (type pdf)
 <use images/SimpleFoodWeb.pdf>
-Package pdftex.def Info: images/SimpleFoodWeb.pdf  used on input line 227.
+Package pdftex.def Info: images/SimpleFoodWeb.pdf  used on input line 228.
 (pdftex.def)             Requested size: 212.84874pt x 156.49014pt.
 
-Overfull \hbox (7.99028pt too wide) in paragraph at lines 227--228
+Overfull \hbox (7.99028pt too wide) in paragraph at lines 228--229
  [][] 
  []
 
@@ -888,35 +888,32 @@ Overfull \hbox (7.99028pt too wide) in paragraph at lines 227--228
 
 pdfTeX warning: pdflatex.exe (file ./images/SimpleFoodWeb.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-
-LaTeX Warning: Citation `cite' on page 7 undefined on input line 279.
-
-
-LaTeX Warning: Citation `cite' on page 7 undefined on input line 288.
-
-
-LaTeX Warning: Citation `cite' on page 7 undefined on input line 289.
+<images/PlantModePlus.png, id=256, 403.5075pt x 137.01187pt>
+File: images/PlantModePlus.png Graphic file (type png)
+<use images/PlantModePlus.png>
+Package pdftex.def Info: images/PlantModePlus.png  used on input line 286.
+(pdftex.def)             Requested size: 318.66948pt x 108.20474pt.
 
 
-LaTeX Warning: Citation `cite' on page 7 undefined on input line 298.
+pdfTeX warning: pdflatex.exe (file ./images/rice_to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<images/rice_to.pdf, id=260, 1037.04663pt x 297.45128pt>
+File: images/rice_to.pdf Graphic file (type pdf)
+<use images/rice_to.pdf>
+Package pdftex.def Info: images/rice_to.pdf  used on input line 299.
+(pdftex.def)             Requested size: 455.24411pt x 130.57486pt.
 
 
+[7 <./images/PlantModePlus.png> <./images/rice_to.pdf>]
 
-[7]
-
-LaTeX Warning: Citation `cite' on page 8 undefined on input line 330.
-
-
+[8]
 
 pdfTeX warning: pdflatex.exe (file ./images/food_web.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/food_web.pdf, id=265, 562.23552pt x 493.61496pt>
+<images/food_web.pdf, id=315, 562.39438pt x 492.20787pt>
 File: images/food_web.pdf Graphic file (type pdf)
 <use images/food_web.pdf>
-Package pdftex.def Info: images/food_web.pdf  used on input line 363.
-(pdftex.def)             Requested size: 227.62206pt x 199.84517pt.
-
-
-[8] (./article_file.bbl
+Package pdftex.def Info: images/food_web.pdf  used on input line 376.
+(pdftex.def)             Requested size: 227.62206pt x 199.21541pt.
+(./article_file.bbl
 
 [9 <./images/food_web.pdf>])
 
@@ -927,26 +924,22 @@ enddocument/afterlastpage: lastpage setting LastPage.
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `article_file.out' has not changed.
 (rerunfilecheck)             Checksum: BACB7B33955CD23EB91B8FA4923321B1;3813.
  ) 
 Here is how much of TeX's memory you used:
- 19480 strings out of 473362
- 320262 string characters out of 5725050
- 760504 words of memory out of 5000000
- 42097 multiletter control sequences out of 15000+600000
+ 19501 strings out of 473362
+ 320812 string characters out of 5725050
+ 762744 words of memory out of 5000000
+ 42114 multiletter control sequences out of 15000+600000
  599519 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 94i,13n,93p,2304b,580s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 94i,12n,93p,2304b,580s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/bera/fvsb8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/bera/fvsr8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on article_file.pdf (12 pages, 1667202 bytes).
+Output written on article_file.pdf (12 pages, 1861336 bytes).
 PDF statistics:
- 415 PDF objects out of 1000 (max. 8388607)
- 313 compressed objects within 4 object streams
- 59 named destinations out of 1000 (max. 500000)
- 264 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 453 PDF objects out of 1000 (max. 8388607)
+ 335 compressed objects within 4 object streams
+ 63 named destinations out of 1000 (max. 500000)
+ 274 words of extra memory for PDF output out of 10000 (max. 10000000)
 

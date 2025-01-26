@@ -133,6 +133,7 @@
           $\mathbf{X}$ & Vector $[N_{wd},N_{crp},N_{pst},N_{ins},...,C_{hc},C_{pc}]^T$ to describe the system,etc. \\
           $wd$ & Subscription for weeds \\
           $crp$ & Subscription for crops \\
+          $stw$ & Subscription for straw \\
           $pst$ & Subscription for pest(who consumes crops) \\
           $ins$ & Subscription for other insects(who consume weeds) \\
           $bd$ & Subscription for small birds(herbivorous) \\
@@ -224,7 +225,7 @@
         \hspace{0.05\linewidth}
           \begin{minipage}[b]{0.45\linewidth}
               \centering
-              \includegraphics[height=5.5cm, keepaspectratio]{images/SimpleFoodWeb.pdf} % 替换为你的第二张图片路径
+              \includegraphics[height=5.5cm, keepaspectratio]{images/SimpleFoodWeb.pdf}
               \caption{Food web in LGVG Model}
               \label{fig:SimpleFoodWeb}
           \end{minipage}
@@ -276,26 +277,38 @@
         building upon this natural agricultural ecosystem model.
 
         \subsubsection{Agricultural Cycle}
-          According to rice production in Indonesia \cite{cite}, 
+          According to rice production in Indonesia(\figurename~\ref{fig:PlantModePlus}), 
           rice production in Southeast Asia follows a three-crop-per-year pattern. 
           We assume that February, June, and October are the overlapping periods of two agricultural cycles 
-          (from the last post-harvest period to the new planting period). 
+          (from the last post-harvest period to the new planting period).
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.7\linewidth]{images/PlantModePlus.png}
+            \caption{Overlapping Periods of Two Agricultural Cycles}
+            \label{fig:PlantModePlus}
+          \end{figure}
           During the overlapping period, the rice population re-enters the food web in the form of seeds after harvesting, 
           starting a new agricultural cycle. The mature rice straw, as an agricultural byproduct, 
           remains in the ecosystem after harvesting, and after being treated by methods such as burning or returning to the field, 
           the rice biomass is decomposed and ingested by decomposers and insects, ultimately decreasing to zero.
 
-          Based on the literature review \cite{cite}, 
-          the biomass fate of mature rice during each overlapping period can be uniformly described by the figure below \cite{cite}. 
+          Based on literature review\cite{OLIVER20191139,summers2003biomass}, 
+          the biomass fate of mature rice during each overlapping period can be uniformly described by \figurename~\ref{fig:rice_to}. 
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=\linewidth]{images/rice_to.pdf}
+            \caption{Biomass Fate of Mature Rice during Each Overlapping Period}
+            \label{fig:rice_to}
+          \end{figure}
           Since decomposers' biomass is not considered in our food web model, 
-          we only analyze the impact of decomposed rice straw residue (1) on the producers—namely rice and weeds—in the new cycle. 
+          we only analyze the impact of decomposed rice straw residue(the 36\% part) on the producers—namely rice and weeds—in the new cycle. 
           For further details, refer to the soil fertility section later in the paper.
         
           For simplification of the model, 
           the biomass change of the rice population during each overlapping period is represented 
           by a biomass step function at specific time points in the mathematical model (i.e., the system of difference equations). 
           Since $t=0$ corresponds to the start of the first planting season, with one year assumed to have 52 weeks, 
-          and each week being a time step, based on the rice production pattern \cite{cite}, 
+          and each week being a time step, based on the rice production pattern \figurename~\ref{fig:PlantModePlus}, 
           we define the step moments at week 0, week 17, and week 34 of each year. The biomass of rice at these times follows:
         
           \begin{equation}
@@ -327,7 +340,7 @@
           climate (temperature, precipitation), and biological habits, 
           all of which have significant direct effects on both $r$ and $\mathscr{K}$ within populations. 
           Considering that many of these factors are difficult to quantify precisely, 
-          we refer to \cite{cite} and set sinusoidal perturbations in the periodic parameter $p(T)$ as follows:
+          we set sinusoidal perturbations in the periodic parameter $p(T)$ as follows:
 
           \begin{equation}
           p(t) = \bar{p} \left[ 1 + \epsilon \sin (\Omega t + \phi) \right]
