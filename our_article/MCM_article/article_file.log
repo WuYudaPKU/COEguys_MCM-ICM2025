@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.12)  27 JAN 2025 21:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.12)  27 JAN 2025 22:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -872,21 +872,19 @@ Overfull \hbox (13.10138pt too wide) in paragraph at lines 24--24
  [][] [][][]\T1/cmr/m/n/12 Comparison be-tween S3 and S4: The De-pen-dency of the Chemical-Agriculture 
  []
 
-
-
-[2])
+)
 \tf@toc=\write7
 \openout7 = `article_file.toc'.
 
 
 
-[3]
-<images/deforestation1.jpg, id=199, 1606.0pt x 903.375pt>
+[2]
+<images/deforestation1.jpg, id=164, 1606.0pt x 903.375pt>
 File: images/deforestation1.jpg Graphic file (type jpg)
 <use images/deforestation1.jpg>
 Package pdftex.def Info: images/deforestation1.jpg  used on input line 39.
 (pdftex.def)             Requested size: 202.31786pt x 113.81102pt.
-<images/deforestation2.jpg, id=200, 647.41875pt x 364.36125pt>
+<images/deforestation2.jpg, id=165, 647.41875pt x 364.36125pt>
 File: images/deforestation2.jpg Graphic file (type jpg)
 <use images/deforestation2.jpg>
 Package pdftex.def Info: images/deforestation2.jpg  used on input line 46.
@@ -906,160 +904,161 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has b
                    \relax 
 l.94       \item W
                   e analyzed the stability of the model from both initial va... [2]
-<images/AverTemper.png, id=216, 1387.584pt x 703.1871pt>
+
+pdfTeX warning: pdflatex.exe (file ./images/FlowCharts.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<images/FlowCharts.pdf, id=180, 1059.49231pt x 593.35213pt>
+File: images/FlowCharts.pdf Graphic file (type pdf)
+<use images/FlowCharts.pdf>
+Package pdftex.def Info: images/FlowCharts.pdf  used on input line 104.
+(pdftex.def)             Requested size: 455.24411pt x 254.95537pt.
+<images/AverTemper.png, id=183, 1387.584pt x 703.1871pt>
 File: images/AverTemper.png Graphic file (type png)
 <use images/AverTemper.png>
-Package pdftex.def Info: images/AverTemper.png  used on input line 117.
+Package pdftex.def Info: images/AverTemper.png  used on input line 123.
 (pdftex.def)             Requested size: 341.43307pt x 173.02806pt.
-<images/PlantMode.jpg, id=220, 797.98125pt x 265.74281pt>
+
+
+[3 <./images/FlowCharts.pdf>]
+<images/PlantMode.jpg, id=278, 797.98125pt x 265.74281pt>
 File: images/PlantMode.jpg Graphic file (type jpg)
 <use images/PlantMode.jpg>
-Package pdftex.def Info: images/PlantMode.jpg  used on input line 123.
+Package pdftex.def Info: images/PlantMode.jpg  used on input line 129.
 (pdftex.def)             Requested size: 341.43307pt x 113.70354pt.
 
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.127         \item \textbf
-                           {Stable Trait Assumption}: The model assumes that... [3 <./images/AverTemper.png>]
-Overfull \hbox (7.66956pt too wide) in paragraph at lines 143--163
+Overfull \hbox (7.66956pt too wide) in paragraph at lines 149--169
  [][] 
  []
 
 
 
-[4 <./images/PlantMode.jpg>]
+[4 <./images/AverTemper.png> <./images/PlantMode.jpg>]
+
+[5]
 
 pdfTeX warning: pdflatex.exe (file ./images/LGVGField.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/LGVGField.pdf, id=246, 622.03993pt x 622.3011pt>
+<images/LGVGField.pdf, id=305, 622.03993pt x 622.3011pt>
 File: images/LGVGField.pdf Graphic file (type pdf)
 <use images/LGVGField.pdf>
-Package pdftex.def Info: images/LGVGField.pdf  used on input line 204.
+Package pdftex.def Info: images/LGVGField.pdf  used on input line 210.
 (pdftex.def)             Requested size: 142.20244pt x 142.26378pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./images/SimpleFoodWeb.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/SimpleFoodWeb.pdf, id=247, 581.02673pt x 427.18094pt>
+<images/SimpleFoodWeb.pdf, id=306, 581.02673pt x 427.18094pt>
 File: images/SimpleFoodWeb.pdf Graphic file (type pdf)
 <use images/SimpleFoodWeb.pdf>
-Package pdftex.def Info: images/SimpleFoodWeb.pdf  used on input line 211.
+Package pdftex.def Info: images/SimpleFoodWeb.pdf  used on input line 217.
 (pdftex.def)             Requested size: 193.49483pt x 142.26378pt.
 
-
-[5]
 
 [6 <./images/LGVGField.pdf> <./images/SimpleFoodWeb.pdf
 
 pdfTeX warning: pdflatex.exe (file ./images/SimpleFoodWeb.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<images/PlantModePlus.png, id=297, 403.5075pt x 137.01187pt>
+<images/PlantModePlus.png, id=349, 403.5075pt x 137.01187pt>
 File: images/PlantModePlus.png Graphic file (type png)
 <use images/PlantModePlus.png>
-Package pdftex.def Info: images/PlantModePlus.png  used on input line 270.
+Package pdftex.def Info: images/PlantModePlus.png  used on input line 276.
 (pdftex.def)             Requested size: 318.66948pt x 108.20474pt.
-
-
-pdfTeX warning: pdflatex.exe (file ./images/rice_to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/rice_to.pdf, id=301, 1037.04663pt x 297.45128pt>
-File: images/rice_to.pdf Graphic file (type pdf)
-<use images/rice_to.pdf>
-Package pdftex.def Info: images/rice_to.pdf  used on input line 283.
-(pdftex.def)             Requested size: 455.24411pt x 130.57486pt.
 
 
 [7 <./images/PlantModePlus.png>]
 
+pdfTeX warning: pdflatex.exe (file ./images/rice_to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<images/rice_to.pdf, id=363, 1037.04663pt x 297.45128pt>
+File: images/rice_to.pdf Graphic file (type pdf)
+<use images/rice_to.pdf>
+Package pdftex.def Info: images/rice_to.pdf  used on input line 289.
+(pdftex.def)             Requested size: 455.24411pt x 130.57486pt.
+
+
 [8 <./images/rice_to.pdf>]
 
-LaTeX Warning: Citation `garcia2003logistic' on page 9 undefined on input line 382.
-
-
-
 [9]
-<images/GussianNoise.png, id=368, 1284.29813pt x 623.83063pt>
+
+LaTeX Warning: Citation `garcia2003logistic' on page 10 undefined on input line 389.
+
+<images/GussianNoise.png, id=425, 1284.29813pt x 623.83063pt>
 File: images/GussianNoise.png Graphic file (type png)
 <use images/GussianNoise.png>
-Package pdftex.def Info: images/GussianNoise.png  used on input line 413.
+Package pdftex.def Info: images/GussianNoise.png  used on input line 420.
 (pdftex.def)             Requested size: 227.62206pt x 110.56175pt.
 
 
-[10 <./images/GussianNoise.png>]
+[10]
 
-[11]
+[11 <./images/GussianNoise.png>]
 
 [12]
-<images/S1S2.png, id=401, 1413.02907pt x 747.54282pt>
+<images/S1S2.png, id=462, 1413.02907pt x 747.54282pt>
 File: images/S1S2.png Graphic file (type png)
 <use images/S1S2.png>
-Package pdftex.def Info: images/S1S2.png  used on input line 539.
+Package pdftex.def Info: images/S1S2.png  used on input line 546.
 (pdftex.def)             Requested size: 455.24411pt x 240.83832pt.
-<images/S2S3.png, id=404, 1411.52344pt x 721.19438pt>
-File: images/S2S3.png Graphic file (type png)
-<use images/S2S3.png>
-Package pdftex.def Info: images/S2S3.png  used on input line 563.
-(pdftex.def)             Requested size: 455.24411pt x 232.60266pt.
 
 
 [13]
-
-[14 <./images/S1S2.png> <./images/S2S3.png>]
-<images/P4_producers.png, id=422, 1279.179pt x 679.338pt>
+<images/S2S3.png, id=472, 1411.52344pt x 721.19438pt>
+File: images/S2S3.png Graphic file (type png)
+<use images/S2S3.png>
+Package pdftex.def Info: images/S2S3.png  used on input line 570.
+(pdftex.def)             Requested size: 455.24411pt x 232.60266pt.
+<images/P4_producers.png, id=474, 1279.179pt x 679.338pt>
 File: images/P4_producers.png Graphic file (type png)
 <use images/P4_producers.png>
-Package pdftex.def Info: images/P4_producers.png  used on input line 584.
+Package pdftex.def Info: images/P4_producers.png  used on input line 591.
 (pdftex.def)             Requested size: 318.66948pt x 169.23285pt.
 
 
+[14 <./images/S1S2.png>]
+
+[15 <./images/S2S3.png> <./images/P4_producers.png>]
+
 pdfTeX warning: pdflatex.exe (file ./images/food_web_chem.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/food_web_chem.pdf, id=424, 746.17166pt x 654.86258pt>
+<images/food_web_chem.pdf, id=492, 746.17166pt x 654.86258pt>
 File: images/food_web_chem.pdf Graphic file (type pdf)
 <use images/food_web_chem.pdf>
-Package pdftex.def Info: images/food_web_chem.pdf  used on input line 610.
+Package pdftex.def Info: images/food_web_chem.pdf  used on input line 617.
 (pdftex.def)             Requested size: 194.5124pt x 170.71652pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./images/food_web.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/food_web.pdf, id=425, 561.32011pt x 493.25632pt>
+<images/food_web.pdf, id=493, 561.32011pt x 493.25632pt>
 File: images/food_web.pdf Graphic file (type pdf)
 <use images/food_web.pdf>
-Package pdftex.def Info: images/food_web.pdf  used on input line 617.
+Package pdftex.def Info: images/food_web.pdf  used on input line 624.
 (pdftex.def)             Requested size: 194.27232pt x 170.71652pt.
-
-
-[15 <./images/P4_producers.png>]
-<images/S3S5.png, id=434, 1600.47937pt x 954.56625pt>
+<images/S3S5.png, id=495, 1600.47937pt x 954.56625pt>
 File: images/S3S5.png Graphic file (type png)
 <use images/S3S5.png>
-Package pdftex.def Info: images/S3S5.png  used on input line 630.
+Package pdftex.def Info: images/S3S5.png  used on input line 637.
 (pdftex.def)             Requested size: 455.24411pt x 271.51529pt.
 
 
 [16 <./images/food_web_chem.pdf> <./images/food_web.pdf
 
 pdfTeX warning: pdflatex.exe (file ./images/food_web.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./images/S3S5.png>]
-<images/benefits_processed.png, id=493, 1613.27719pt x 815.29594pt>
+>]
+<images/benefits_processed.png, id=552, 1613.27719pt x 815.29594pt>
 File: images/benefits_processed.png Graphic file (type png)
 <use images/benefits_processed.png>
-Package pdftex.def Info: images/benefits_processed.png  used on input line 655.
+Package pdftex.def Info: images/benefits_processed.png  used on input line 662.
 (pdftex.def)             Requested size: 455.24411pt x 230.06029pt.
 
 
-[17 <./images/benefits_processed.png>]
-<images/Change_init.png, id=503, 1287.8514pt x 689.4558pt>
+[17 <./images/S3S5.png> <./images/benefits_processed.png>]
+<images/Change_init.png, id=564, 1287.8514pt x 689.4558pt>
 File: images/Change_init.png Graphic file (type png)
 <use images/Change_init.png>
-Package pdftex.def Info: images/Change_init.png  used on input line 689.
+Package pdftex.def Info: images/Change_init.png  used on input line 696.
 (pdftex.def)             Requested size: 341.43307pt x 182.77855pt.
 
 
 [18 <./images/Change_init.png>]
-<images/Change_all.png, id=512, 1409.265pt x 762.59906pt>
+<images/Change_all.png, id=573, 1409.265pt x 762.59906pt>
 File: images/Change_all.png Graphic file (type png)
 <use images/Change_all.png>
-Package pdftex.def Info: images/Change_all.png  used on input line 711.
+Package pdftex.def Info: images/Change_all.png  used on input line 718.
 (pdftex.def)             Requested size: 455.24411pt x 246.34067pt.
 
 
@@ -1088,22 +1087,31 @@ L3 programming layer <2024-11-02>
 
 LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: File `article_file.out' has not changed.
-(rerunfilecheck)             Checksum: EEB3A95689B2E164893329AE0F6E7DE2;6295.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `article_file.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `article_file.out':
+(rerunfilecheck)             Before: D9C74F69309A93C2991B5E6003FE8F34;5404
+(rerunfilecheck)             After:  B7BE2D5668C83B1BF8CB743E95474CCA;5512.
  ) 
 Here is how much of TeX's memory you used:
- 20987 strings out of 473362
- 350080 string characters out of 5725050
- 796631 words of memory out of 5000000
- 43543 multiletter control sequences out of 15000+600000
+ 20991 strings out of 473362
+ 350220 string characters out of 5725050
+ 796686 words of memory out of 5000000
+ 43545 multiletter control sequences out of 15000+600000
  599832 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 94i,18n,93p,2304b,610s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 94i,18n,93p,2304b,616s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/bera/fvsb8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/bera/fvsr8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on article_file.pdf (24 pages, 5637878 bytes).
+Output written on article_file.pdf (23 pages, 6264171 bytes).
 PDF statistics:
- 660 PDF objects out of 1000 (max. 8388607)
- 487 compressed objects within 5 object streams
- 100 named destinations out of 1000 (max. 500000)
- 375 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 721 PDF objects out of 1000 (max. 8388607)
+ 481 compressed objects within 5 object streams
+ 102 named destinations out of 1000 (max. 500000)
+ 332 words of extra memory for PDF output out of 10000 (max. 10000000)
 
