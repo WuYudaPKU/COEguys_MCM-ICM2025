@@ -3,14 +3,14 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 from scipy.interpolate import make_interp_spline
-# ...existing code...
+plt.rcParams['text.usetex'] = True
 
 # 设置全局字体为 Times New Roman
 plt.rcParams['font.family'] = 'Times New Roman'
 
 sns.set(style='whitegrid')
 # 读取 CSV 文件
-file_path = r'D:\2025_PKUCOE_MCM\files_for_practice\seaborn(python)\ourcodes\sensibility\change_competition_1.csv'  # 更新文件路径
+file_path = r'D:\2025_PKUCOE_MCM\files_for_practice\seaborn(python)\ourcodes\sensibility\change_capacity.csv'  # 更新文件路径
 data = pd.read_csv(file_path)
 
 # 检查数据的前几行，确保读取正确
@@ -33,7 +33,7 @@ color_science_dict = {
     '3': (213/255, 166/255, 208/255),   # #D5A6D0
     '4': (0/255, 0/255, 0/255),    # #FE8800
     '5': (102/255, 102/255, 102/255),   # #FFAC33
-    '6': (179/255, 179/255, 179/255)   # #FFCC66
+    '6': (150/255, 150/255, 150/255)   # #FFCC66
 }
 
 
@@ -51,30 +51,30 @@ def smooth_curve(x, y, points=500):
 # 创建图形并绘制 insect, bat 和 duck
 plt.figure(figsize=(10, 8))
 
-x_smooth, y_smooth = smooth_curve(time, data['crop0.1'])
-sns.lineplot(x=x_smooth, y=y_smooth, label='crop0.1',color=color_science_dict['1'],linewidth=3)
+x_smooth, y_smooth = smooth_curve(time, data['K=35000'])
+sns.lineplot(x=x_smooth, y=y_smooth, label=r'$K=35000$',linewidth=4,color=color_science_dict['crop'])
 
-x_smooth, y_smooth = smooth_curve(time, data['crop0.3'])
-sns.lineplot(x=x_smooth, y=y_smooth, label='crop0.3', linewidth=3,color=color_science_dict['2'])
+x_smooth, y_smooth = smooth_curve(time, data['K=30000'])
+sns.lineplot(x=x_smooth, y=y_smooth, label=r'$K=30000$', linewidth=4,color=color_science_dict['weed'])
 
-x_smooth, y_smooth = smooth_curve(time, data['crop0.5'])
-sns.lineplot(x=x_smooth, y=y_smooth, label='crop0.5', linewidth=3,color=color_science_dict['3'])
+x_smooth, y_smooth = smooth_curve(time, data['K=25000'])
+sns.lineplot(x=x_smooth, y=y_smooth, label=r'$K=25000$', linewidth=4,color=color_science_dict['straw'])
 
-x_smooth, y_smooth = smooth_curve(time, data['wd0.1'])
-sns.lineplot(x=x_smooth, y=y_smooth, label='wd0.1', linewidth=3,dashes=[3,2],color=color_science_dict['4'])
+# x_smooth, y_smooth = smooth_curve(time, data['wd0.1'])
+# sns.lineplot(x=x_smooth, y=y_smooth, label='wd,0.1', linewidth=3,dashes=[3,1],color=color_science_dict['6'])
 
-x_smooth, y_smooth = smooth_curve(time, data['wd0.3'])
-sns.lineplot(x=x_smooth, y=y_smooth, label='wd0.3', linewidth=3,dashes=[3,2],color=color_science_dict['5'])
+# x_smooth, y_smooth = smooth_curve(time, data['wd0.3'])
+# sns.lineplot(x=x_smooth, y=y_smooth, label='wd,0.3', linewidth=3,dashes=[3,1],color=color_science_dict['5'])
 
-x_smooth, y_smooth = smooth_curve(time, data['wd0.5'])
-sns.lineplot(x=x_smooth, y=y_smooth, label='wd0.5', linewidth=3,dashes=[3,2],color=color_science_dict['6'])
+# x_smooth, y_smooth = smooth_curve(time, data['wd0.5'])
+# sns.lineplot(x=x_smooth, y=y_smooth, label='wd,0.5', linewidth=3,dashes=[3,1],color=color_science_dict['4'])
 
-plt.title('Compete Weed to Crop', fontsize=30)
-plt.xlabel('t', fontsize=25)
-plt.ylabel('Biomass', fontsize=25)  # 修改单位为 kg
+plt.title('Change of Biomass Capacity of Rice', fontsize=30)
+plt.xlabel('t(Week)', fontsize=25)
+plt.ylabel('Biomass(kg) of Rice', fontsize=25)  # 修改单位为 kg
 plt.xticks(fontsize=25)
 plt.yticks(fontsize=25)
-plt.legend(title='occasion', fontsize=25, title_fontsize=28, loc='best')  # 将图例放在合适位置
+plt.legend(title='Size', fontsize=25, title_fontsize=28, loc='best')  # 将图例放在合适位置
 for spine in plt.gca().spines:
     plt.gca().spines[spine].set_visible(True)
     plt.gca().spines[spine].set_color('black')
