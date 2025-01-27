@@ -142,10 +142,9 @@
           $\mathscr{K}_i$ & Carrying capacity of certain population\\
           $\alpha$ & The effect of chemical concentration on growth rate\\
           $\beta_{i \rightarrow j}$ & Interspecific competition factor\\
-          $\gamma$ & Activity of decomposer\\
-          $A_i,B_i$ & Effect of the predator-prey relationship on population $i$ (specified coefficient).\\
-          $D_i,E_i$ & Effect of shortage of food on population $i$ (specified coefficient)\\
-          $N,P,K$ & Chemical elements\\
+          $\gamma_{i \rightarrow j}$ & Percentage of i in j's total food consumption\\
+          $A_{i\rightarrow j},B_{i\rightarrow j}$ & Effect of $i\rightarrow j$ pred-prey relationship on population $i$ \\
+          $D_i,E_i$ & Effect of shortage of food on population $i$ \\
           \bottomrule
         \end{tabular}
         \label{tab:Notations}
@@ -228,9 +227,9 @@
 
       \begin{equation}
         \begin{aligned}
-          \frac{\mathrm{d}W_{crp}}{\mathrm{d}t}&=r_{crp}W_{crp}\left( 1-\frac{W_{crp}+\beta _{w\rightarrow c}W_{wd}}{\mathscr{K} _{crp}} \right) -\frac{A_{crp}W_{crp}W_{ins}}{1+B_{crp}W_{crp}}\\
-          \frac{\mathrm{d}W_{wd}}{\mathrm{d}t}&=r_{wd}W_{wd}\left( 1-\frac{W_{wd}+\beta _{c\rightarrow w}W_{crp}}{\mathscr{K} _{wd}} \right) -\frac{A_{wd}W_{wd}W_{ins}}{1+B_{wd}W_{wd}}\\
-          \frac{\mathrm{d}W_{ins}}{\mathrm{d}t}&=r_{ins}W_{ins}\left[ 1-\frac{D_{ins}W_{ins}}{1+E_{ins}\left( 0.6W_{crp}+0.4W_{wd} \right)} \right] -\frac{A_{ins}W_{ins}W_{bd}}{1+B_{ins}W_{ins}}\\
+          \frac{\mathrm{d}W_{crp}}{\mathrm{d}t}&=r_{crp}W_{crp}\left( 1-\frac{W_{crp}+\beta _{w\rightarrow c}W_{wd}}{\mathscr{K} _{crp}} \right) -\sum_{{j=pred}}{\frac{A_{crp\rightarrow j}W_{crp}W_{j}}{1+B_{crp\rightarrow j}W_{crp}}}\\
+          \frac{\mathrm{d}W_{wd}}{\mathrm{d}t}&=r_{wd}W_{wd}\left( 1-\frac{W_{wd}+\beta _{c\rightarrow w}W_{crp}}{\mathscr{K} _{wd}} \right) -\sum_{{j=pred}}{\frac{A_{wd\rightarrow j}W_{wd}W_{j}}{1+B_{wd\rightarrow j}W_{wd}}}\\
+          \frac{\mathrm{d}W_{ins}}{\mathrm{d}t}&=r_{ins}W_{ins}\left[ 1-\frac{D_{ins}W_{ins}}{1+E_{ins}\left( 0.6W_{crp}+0.4W_{wd} \right)} \right] -\frac{A_{ins\rightarrow bd}W_{ins}W_{bd}}{1+B_{ins\rightarrow bd}W_{ins}}\\
           \frac{\mathrm{d}W_{bd}}{\mathrm{d}t} &= r_{bd}W_{bd} \left[ 1 - \frac{D_{bd}W_{bd}}{1 + E_{bd}(0.2W_{ins} + 0.2W_{wd} + 0.6W_{crp})} \right]\\
         \end{aligned} 
       \end{equation}
@@ -239,12 +238,22 @@
       The first two equations incorporate the interspecific competition term $\beta_{i \rightarrow j} W_i$, 
       the larger this term, the more intense the interspecific competition, and the slower the biomass growth rate of population $i$. 
       
-      The first three equations consider the effect of predation through the term(e.g. the first one) 
-      $\frac{A_{crp} W_{crp} W_{ins}}{1 + B_{crp} W_{crp}}.$ 
+      For population $i$, the first three equations consider the effect of predation($i\rightarrow j$, which means $j$ hunts $i$) through the term 
+      
+      \begin{equation}
+      \sum_{j=pred}{\frac{A_{i\rightarrow j}W_{i}W_{j}}{1+B_{i\rightarrow j}W_{i}}}
+      \end{equation}
+      
+      In the term above, we can see that when the biomass of predators(here, namely, insects and birds) increases, 
+      the rate of increasing of certain prey will recude due to the hunting effects.
 
       The last two equations(e.g. the third one) include the term 
-        $\frac{D_{ins} W_{ins}}{1 + E_{ins} \left( 0.6 W_{crp} + 0.4 W_{wd} \right)}$,
-      which represents biomass reduction due to food scarcity. 
+
+        \begin{equation}
+          \frac{D_{i} W_{i}}{1 + E_{i} \sum_{j=food}{\gamma_{j\rightarrow i} W_{j}}},
+        \end{equation}
+
+          which represents biomass reduction due to food scarcity. 
       In the denominator, one factor is weighted according to the predation ratio: the less food available, 
       the more predators there are, resulting in a slower growth rate of the predator population.
     \subsection{Model II: CAGED Model}
@@ -302,15 +311,19 @@
         Thus, the rice straw-insect model is established as:
 
         \begin{equation}
-          \frac{\mathrm{d}W_{stw}}{\mathrm{d}t} = \frac{A_{stw} W_{stw} W_{ins}}{1 + B_{stw} W_{stw}} \quad (t \neq n)
+          \frac{\mathrm{d}W_{stw}}{\mathrm{d}t} = \frac{A_{stw\rightarrow ins} W_{stw} W_{ins}}{1 + B_{stw\rightarrow ins} W_{stw}} \quad (t \neq n)
         \end{equation}
+
         \begin{equation}
-          W_{stw}|_{t=n} = W_{stw}|_{t=n-1} + 0.09 W_{crp}|_{t=n-1},\\
-          n = 52k, 52k+17, 52k+34, \quad (k \geqslant 0, \, n \geqslant 1)
+          W_{stw}|_{t=n} = W_{stw}|_{t=n-1} + 0.09 W_{crp}|_{t=n-1},
+        \end{equation}
+        
+        \begin{equation}
+          n = 52k, 52k+17, 52k+34, \quad (k \geqslant 0, \, n \geqslant 1, k,n\ are\ positive\ integers)
         \end{equation}
         The difference equation for insect biomass is modified as follows:
         \begin{equation}
-          \frac{\mathrm{d}W_{ins}}{\mathrm{d}t} = r_{ins} W_{ins} \left[ 1 - \frac{D_{ins} W_{ins}}{1 + E_{ins} \left( 0.6 W_{crp} + 0.4 W_{wd} + W_{stw} \right)} \right] - \frac{A_{ins} W_{ins} W_{bd}}{1 + B_{ins} W_{ins}}
+          \frac{\mathrm{d}W_{ins}}{\mathrm{d}t} = r_{ins} W_{ins} \left[ 1 - \frac{D_{ins} W_{ins}}{1 + E_{ins} \left( 0.6 W_{crp} + 0.4 W_{wd} + W_{stw} \right)} \right] - \frac{A_{ins\rightarrow bd} W_{ins} W_{bd}}{1 + B_{ins\rightarrow bd} W_{ins}}
         \end{equation}
 
       \subsubsection{Seasonality}
@@ -356,14 +369,14 @@
         in our context, can be considered to be surrounded by a vast and complex forest ecosystem, 
         the impact of respiration from the components of the agricultural ecosystem on the atmospheric CO$_2$ concentration can be neglected. 
         Thus, the CO$_2$ concentration is approximated as a constant, \( C_{CO_2} \). 
-        Based on this, we introduce the soil fertility factor \( \mu_{fri} = f(C_{isi}) \). 
+        Based on this, we introduce the soil fertility factor \( \mu_{Fr_i} = f(C_{Is_i}) \). 
         Soil fertility has a complex and profound effect on parameters such as the growth rate of population biomass, 
         competition coefficients, and the maximum carrying capacity of the environment. 
         An important consideration here is the effect of \( \mu \) on the environmental maximum biomass carrying capacity, 
         as shown below:
 
         \[
-        \frac{\mathrm{d}W_{i}}{\mathrm{d}t} = r_{i} W_{i} \left( 1 - \frac{W_{i} + \beta_{j \rightarrow i} W_{j}}{\mathscr{K}_{i} \cdot \mu_{fri}} \right) - \frac{A_{i} W_{i} W_{ins}}{1 + B_{i} W_{i}}
+        \frac{\mathrm{d}W_{i}}{\mathrm{d}t} = r_{i} W_{i} \left( 1 - \frac{W_{i} + \beta_{j \rightarrow i} W_{j}}{\mathscr{K}_{i} \cdot \mu_{Fr_i}} \right) - \sum_{j=pred}{\frac{A_{i\rightarrow j} W_{i} W_{j}}{1 + B_{i\rightarrow j} W_{i}}}
         \]
 
         For the inorganic salt concentration term, 
@@ -377,15 +390,16 @@
         We use a Gaussian-like probability density function to fit the trend of the inorganic salt concentration in the plant over each agricultural cycle, given by:
         
         \[
-        C_{isi}(t) = \alpha_{isi} e^{-\frac{(t - T_{mc})^2}{\sigma_{isi}}}
+        C_{Is_i}(t) = \alpha_{Is_i} e^{-\frac{(t - T_{mc})^2}{\sigma_{Is_i}}}
         \]
 
-        where \( T \) represents the time at which the concentration of inorganic salts in rice or weeds is at its maximum during a cycle; the remaining two parameters correspond to the model constants for rice or weeds, and are determined by fertilizer concentration (from both chemical fertilizers and straw), decomposer activity, and the plant’s growth stage.
+        where \( T \) represents the time at which the concentration of inorganic salts in rice or weeds is at its maximum during a cycle; the remaining two parameters correspond to the model constants for rice or weeds, 
+        and are determined by fertilizer concentration (from both chemical fertilizers and straw), decomposer activity, and the plant's growth stage.
 
-        Again, for the sake of model simplification, we assume \( \mu_{fri} = \xi_{i} C_{isi} \).
+        Again, for the sake of model simplification, we assume \( \mu_{Fr_i} = \xi_{i} C_{Is_i} \).
       \subsubsection{Random Factors}
         Considering the influence of random factors in nature, we introduce Gaussian white noise \(\sigma_i\) for each population.
-
+        
         The probability density function of the Gaussian white noise \(\sigma_i(t) = x\) is given by:
 
         \begin{equation}
@@ -402,7 +416,7 @@
         The noise corresponding to different species in the equations is shown in \figurename~\ref{fig:GussianNoise}.
         \begin{figure}[H]
           \centering
-          \includegraphics[width=0.8\linewidth]{images/GussianNoise.png}
+          \includegraphics[width=0.5\linewidth]{images/GussianNoise.png}
           \caption{Gussian Noises of Each Population}
           \label{fig:GussianNoise}
         \end{figure}
@@ -422,7 +436,7 @@
         C_{hc}|_{t=m} = C_{hc}|_{t=m-1} + \alpha_{uh} W_{wd}|_{t=m},
         \end{equation}
         \begin{equation}
-        \frac{dW_{wd}}{dt} = r_{wd}W_{wd} \left( 1 - \frac{W_{wd} + \beta_{c \rightarrow w} W_{crp}}{\mathscr{K}_{wd}} \right) - \frac{A_{wd} W_{wd} W_{ins}}{1 + \beta_{wd} W_{wd}} - \frac{A_{hc} W_{wd} C_{hc}}{1 + B_{hc} W_{wd}},
+        \frac{dW_{wd}}{dt} = r_{wd}W_{wd} \left( 1 - \frac{W_{wd} + \beta_{c \rightarrow w} W_{crp}}{\mathscr{K}_{wd}} \right) - \sum_{j=pred}{\frac{A_{wd\rightarrow j} W_{wd} W_{j}}{1 + B_{wd\rightarrow j} W_{wd}}} - \frac{A_{hc} W_{wd} C_{hc}}{1 + B_{hc} W_{wd}},
         \end{equation}
         \begin{equation}
         \frac{dC_{hc}}{dt} = - \alpha_{dh} C_{hc}.
@@ -444,7 +458,7 @@
         \begin{equation}
           \begin{split}
             \frac{dW_{ins}}{dt} = r_{ins} W_{ins} &\left( 1 - \frac{D_{ins} W_{ins}}{1 + E_{ins} \left[ (0.6 - \lambda_{pc}) W_{crp} + (0.4 + \lambda_{prc}) W_{wd} \right]} \right) \\
-            &-\frac{A_{ins} W_{ins} W_{bd}}{1 + \beta_{ins} W_{ins}} - \frac{A_{pc} W_{ins} C_{pc}}{1 + B_{pc} W_{ins}},
+            &-\frac{A_{ins\rightarrow bd} W_{ins} W_{bd}}{1 + B_{ins\rightarrow bd} W_{ins}} - \frac{A_{pc} W_{ins} C_{pc}}{1 + B_{pc} W_{ins}},
           \end{split}
       \end{equation}
 
@@ -512,32 +526,48 @@
       \end{table}
       All of the following models will apply these parameters.
       \subsection{Scenarios Statement}
+        Scenarios are stated in Table \ref{tab:Scenarios}, where S represents Scenario, Y for Yes and N for no.
         \begin{table}[H]
           \centering
-          \caption{Notations}
+          \caption{Scenarios}
           \begin{tabular}{lccccccc}
             \toprule
             \rowcolor{customcolor!40} % 设置背景颜色
-            conditions & Description\\
+            conditions & S1 & S2 & S3 & S4 & S5A & S5B & S6 \\
             \midrule
-            Agro-Activities & Y & Y & Y & Y & Y & Y \\
+            Agro-Activities & Y & Y & Y & Y & Y & Y & Y \\
+            Seasonality & Y & Y & Y & Y & Y & Y & Y \\
+            Chemicals & N & Y & Y & N & N & N & N \\
+            Reemergence & N & N & Y & Y & Y & Y & Y \\
+            Bat & N & N & N & N & Y & N & N \\
+            Duck & N & N & N & N & N & Y & N \\
+            other methods & N & N & N & N & N & N & Y \\
 
             \bottomrule
           \end{tabular}
-          \label{tab:Notations}
+          \label{tab:Scenarios}
         \end{table}
-      \subsection{Scenario 1: No Agricultural Activities}
-        This scenario will serve as a control group for familiarizing with the model. 
-        We consider a situation without chemicals, sowing, or harvesting, 
-        but with the migration of other species (since the migration of other species is an inevitable result of ecosystem maturation). 
-        In this situation, we obtained the following population dynamics curve.
-        \begin{figure}[H]
-        \end{figure}
-        From the figure, we can observe that under Scenario 1, the ecosystem develops normally, 
-        but rice cannot survive in the long term, meaning the system cannot evolve into an agricultural ecosystem. 
-        This indicates that the competitive ability of rice against weeds and its resistance to pests are relatively weak, 
-        preventing it from sustainably existing in the ecosystem without human intervention. 
-        This result is consistent with real-world observations and serves as the first validation of the model's accuracy.
+      \subsection{Comparison between S1 and S2: Effects of Chemicals}
+
+      The biomass densities of producers and consumers in S1 and S2 are shown in Figure \ref{fig:S1S2}, respectively.
+
+      \begin{figure}
+      \centering
+      \includegraphics[width=\linewidth]{images/S1S2.png}
+      \caption{Comparison between S1 and S2}
+      \label{fig:S1S2}
+      \end{figure}
+      
+      Analysis reveals that under S1, the ecosystem develops normally; 
+      however, rice cannot survive in the long term, and thus, the system cannot evolve into an agricultural ecosystem. 
+      This suggests that rice has weak competitive abilities against weeds and poor resistance to pests, 
+      making it unable to persist in the ecosystem without human intervention.
+      
+      In the early stages of the agricultural ecosystem, before species re-migrate, 
+      the model corresponds to S2. At this point, the ecosystem develops normally, 
+      rice can survive in the long term, and the system gradually evolves into a mature agricultural ecosystem. 
+      This indicates that the traditional chemical-agriculture model is capable of maintaining an agricultural ecosystem.      
+      
       \subsection{Scenario 2: Chemicals or Green Agriculture Solutions Used}
         In the discussion of Scenario 2, we consider a realistic situation. 
         A farmer has just cleared a forest to plant rice. 
