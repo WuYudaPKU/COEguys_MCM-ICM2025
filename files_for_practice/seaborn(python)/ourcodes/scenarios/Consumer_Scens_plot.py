@@ -10,7 +10,7 @@ plt.rcParams['font.family'] = 'Times New Roman'
 
 sns.set(style='whitegrid')
 # 读取 CSV 文件
-file_path = r'D:\2025_PKUCOE_MCM\files_for_practice\seaborn(python)\ourcodes\scenarios\situation_1_processed.csv'  # 更新文件路径
+file_path = r'D:\2025_PKUCOE_MCM\files_for_practice\seaborn(python)\ourcodes\scenarios\situation_chem_processed.csv'  # 更新文件路径
 data = pd.read_csv(file_path)
 
 # 检查数据的前几行，确保读取正确
@@ -43,13 +43,19 @@ def smooth_curve(x, y, points=500):
     y_smooth = spl(x_smooth)
     return x_smooth, y_smooth
 
-# 创建图形并绘制 rice, weed 和 straw
+# 创建图形并绘制 insect, bat 和 duck
 plt.figure(figsize=(10, 8))
-x_smooth, y_smooth = smooth_curve(time, data['bird'])
-sns.lineplot(x=x_smooth, y=y_smooth, label='bird', color=color_science_dict['bird'], linewidth=8)
+
 x_smooth, y_smooth = smooth_curve(time, data['insect'])
-sns.lineplot(x=x_smooth, y=y_smooth, label='insect', color=color_science_dict['insect'], linewidth=6)
-plt.title('S1 Consumers', fontsize=30)
+sns.lineplot(x=x_smooth, y=y_smooth, label='insect', color=color_science_dict['insect'], linewidth=5)
+
+x_smooth, y_smooth = smooth_curve(time, data['frog'])
+sns.lineplot(x=x_smooth, y=y_smooth, label='frog', color=color_science_dict['frog'], linewidth=5)
+
+x_smooth, y_smooth = smooth_curve(time, data['snake'])
+sns.lineplot(x=x_smooth, y=y_smooth, label='snake', color=color_science_dict['snake'], linewidth=5)
+
+plt.title('S3 Final', fontsize=30)
 plt.xlabel('Time', fontsize=25)
 plt.ylabel('Biomass', fontsize=25)  # 修改单位为 kg
 plt.xticks(fontsize=25)

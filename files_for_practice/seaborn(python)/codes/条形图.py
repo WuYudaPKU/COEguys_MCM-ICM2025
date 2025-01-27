@@ -34,7 +34,16 @@ df = pd.DataFrame(data)
 
 # 绘制条形图
 plt.figure(figsize=(10, 8))
-sns.barplot(x='Category', y='Value', data=df, palette=color_science_normalized)
+ax = sns.barplot(x='Category', y='Value', data=df, palette=color_science_normalized)
+
+# 在每个条形图上方添加数值标签
+for p in ax.patches:
+    ax.annotate(format(p.get_height(), '.1f'), 
+                (p.get_x() + p.get_width() / 2., p.get_height()), 
+                ha = 'center', va = 'center', 
+                xytext = (0, 10), 
+                textcoords = 'offset points',
+                fontsize=20)
 
 # 设置标题和标签
 plt.title('Bar Plot Example', fontsize=30)  # 设置英文标题

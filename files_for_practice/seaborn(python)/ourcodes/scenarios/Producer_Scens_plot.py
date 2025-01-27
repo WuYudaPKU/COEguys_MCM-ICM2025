@@ -10,11 +10,10 @@ plt.rcParams['font.family'] = 'Times New Roman'
 
 sns.set(style='whitegrid')
 # 读取 CSV 文件
-file_path = r'D:\2025_PKUCOE_MCM\files_for_practice\seaborn(python)\ourcodes\scenarios\situation_1_processed.csv'  # 更新文件路径
-data = pd.read_csv(file_path)
-
-# 检查数据的前几行，确保读取正确
-print(data.head())
+file_path1 = r'D:\2025_PKUCOE_MCM\files_for_practice\seaborn(python)\ourcodes\scenarios\situation_bats_ulti.csv'  # 更新文件路径
+file_path2 = r'D:\2025_PKUCOE_MCM\files_for_practice\seaborn(python)\ourcodes\scenarios\situation_ducks_ulti.csv'
+data1 = pd.read_csv(file_path1)
+data2=pd.read_csv(file_path2)
 
 color_science_dict = {
     'crop': (153/255, 55/255, 153/255),      # #993799
@@ -34,7 +33,7 @@ print(color_science_dict)
 
 
 # 假设每一行代表一个时间点
-time = np.arange(len(data))
+time = np.arange(len(data1))
 
 # 创建平滑曲线函数
 def smooth_curve(x, y, points=500):
@@ -45,17 +44,20 @@ def smooth_curve(x, y, points=500):
 
 # 创建图形并绘制 rice, weed 和 straw
 plt.figure(figsize=(10, 8))
-x_smooth, y_smooth = smooth_curve(time, data['crop'])
-sns.lineplot(x=x_smooth, y=y_smooth, label='crop', color=color_science_dict['crop'], linewidth=8)
-x_smooth, y_smooth = smooth_curve(time, data['weed'])
-sns.lineplot(x=x_smooth, y=y_smooth, label='weed', color=color_science_dict['weed'], linewidth=6)
-x_smooth, y_smooth = smooth_curve(time, data['straw'])
-sns.lineplot(x=x_smooth, y=y_smooth, label='straw', color=color_science_dict['straw'], linewidth=6)
-plt.title('S1 Producers', fontsize=30)
+x_smooth1, y_smooth1 = smooth_curve(time, data1['crop'])
+sns.lineplot(x=x_smooth1, y=y_smooth1, label='crop(bat)', color=color_science_dict['crop'], linewidth=5)
+x_smooth2,y_smooth2=smooth_curve(time,data2['crop'])
+sns.lineplot(x=x_smooth2, y=y_smooth2, label='crop(duck)', color=color_science_dict['weed'], linewidth=5)
+# x_smooth, y_smooth = smooth_curve(time, data['weed'])
+# sns.lineplot(x=x_smooth, y=y_smooth, label='weed', color=color_science_dict['weed'], linewidth=8)
+# x_smooth, y_smooth = smooth_curve(time, data['insect'])
+# sns.lineplot(x=x_smooth, y=y_smooth, label='insect', color=color_science_dict['insect'], linewidth=5)
+# plt.title('S3 Final', fontsize=30)
 plt.xlabel('Time', fontsize=25)
 plt.ylabel('Biomass', fontsize=25)  # 修改单位为 kg
 plt.xticks(fontsize=25)
 plt.yticks(fontsize=25)
+plt.title('Crop Harvest Comparison between Duck and Bat',fontsize=30)
 plt.legend(title='Populations', fontsize=25, title_fontsize=28, loc='best')  # 将图例放在合适位置
 for spine in plt.gca().spines:
     plt.gca().spines[spine].set_visible(True)

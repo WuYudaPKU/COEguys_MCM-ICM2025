@@ -7,6 +7,7 @@
 \usepackage{mathrsfs}
 \usepackage{fvextra}
 \usepackage{amsmath}
+\usepackage{longtable}
 \definecolor{customcolor}{HTML}{429938}
 
 \setControlNumber{2511940}
@@ -70,10 +71,33 @@
         \item \textbf{Analysis of the impact of organic farming}: The model should assess the impact of adopting organic farming practices, considering various scenarios and components. The evaluation should include the effects on the overall ecosystem and individual elements, such as pest control, crop health, plant reproduction, biodiversity, long-term sustainability, and cost-effectiveness. The model should analyze the impact of organic practices on pest management, soil health, and biodiversity, while weighing the economic costs and benefits. A comprehensive ecological and economic trade-off analysis should be provided to assess the feasibility of organic farming.
       \end{itemize}
     \subsection{Our Work}
+      To sum up the whole article, we have done the following work.
     \begin{itemize}
-      \item 1
-      \item 2
-      \item 3
+      \item Initially, we utilized difference equation to construct Model I: 
+      LVLG Model, based on the Lotka-Volterra model and the Leslie-Gower model, 
+      under the simplest food web conditions. This model considered producers, primary consumers, and secondary consumers.
+      \item Subsequently, considering that ecosystem gradually developed, we built Model II: CAGED Model. 
+      In this model, we incorporated agricultural cycle (three crops per year), 
+      seasonal rotation (rainy and dry seasons), pollitation, Gussian noise, utilization of chemicals (herbicides and pesticides) and multiple digestion delays. 
+      \item Next, we considered the reemergence of certain populations and their influence on the system. Specifically, we considered the reintroduction of snakes and frogs into the ecosystem, 
+      which results in the formation of a more complex food web.
+      \item After that, we introduced the SAGED Model to discuss the dynamics of ecosystems following farmers' adoption of green agricultural practices.
+      \item We have created several agricultural production scenarios and applied the model developed above for practical analysis, 
+      obtaining data that closely aligns with real-world conditions. 
+      Our findings indicate that while chemical use can partially suppress weeds and pests, 
+      the ecosystem's dependency on it is high and unstable. Reintroduction of species helps enrich the food web, 
+      thereby stabilizing the ecosystem. 
+      Ecological agriculture (e.g., introducing ducks and bats) is more conducive to ecosystem stability than chemical usage and offers long-term benefits. 
+      \item We compared the effects of independently introducing ducks or bats as green agricultural methods on the ecosystem and analyzed integrated economic indicators. 
+      Our findings show that green agriculture yields higher returns than chemical-based agriculture. 
+      Ducks outperform bats in both promoting rice yield and overall economic profitability.
+      \item We analyzed the stability of the model from both initial values and parameters. 
+      We found that the model is insensitive to initial values but highly sensitive to parameters. 
+      We attribute this to the fact that real-world ecosystems are capable of resisting external disturbances (initial values) and maintain stable intrinsic parameters, 
+      which explains the model's high alignment with reality.
+      \item Finally, based on our model and the data derived from it, we have written a letter of recommendations to farmers. 
+      Specifically, we suggest agricultural measures that can maximize both economic and ecological benefits, 
+      and outline policies that can effectively incentivize the sustainable development of agriculture.
     \end{itemize}
   \section{Assumptions and Notations}
     \subsection{Assumptions and Explanations}
@@ -90,7 +114,7 @@
          and the simplicity of crop types makes the model easier to establish.
         \begin{figure}[H]
           \centering
-          \includegraphics[width=\linewidth]{images/AverTemper.png}
+          \includegraphics[width=0.75\linewidth]{images/AverTemper.png}
           \caption{Temperature Data in Southeast Asia\cite{IndoTemper}}
           \label{fig:Temperature}
         \end{figure}
@@ -121,25 +145,13 @@
           \rowcolor{customcolor!40} % 设置背景颜色
           Symbols & Description\\
           \midrule
-          $\mathbf{X}$ & Vector $[N_{wd},N_{crp},N_{pst},N_{ins},...,C_{hc},C_{pc}]^T$ to describe the system,etc. \\
-          $wd$ & Subscription for weeds \\
-          $crp$ & Subscription for crops \\
-          $stw$ & Subscription for straw \\
-          $pst$ & Subscription for pest(who consumes crops) \\
-          $ins$ & Subscription for other insects(who consume weeds) \\
-          $bd$ & Subscription for small birds(herbivorous) \\
-          $Bd$ & Subscription for huge birds(carnivorous) \\
-          $bt$ & Subscription for bats \\
-          $snk$ & Subscription for snake \\
-          $frg$ & Subscription for frog \\
-          $HC$ & Subscription for herbicide \\
-          $PC$ & Subscription for pesticide \\
+          $wd, crp , stw$ & Subscription for weed, crop, straw respectively \\
+          $ins, bd, bt, dk, snk, frg$ & Subscription for insect, bird, bat, duck, snake, frog respectively\\
+          $HC, PC$ & Subscription for herbicide \\
           $C_i$ & Concentration of certain chemical \\
-          $N_i$ & Numbers of certain species \\
           $W_i$ & Density of biomass of certain species \\
-          $w_i$ & Average mass density of individuals of certain individuals \\
-          $r_i$ & Natural growth gate of certain population\\
-          $\mathscr{K}_i$ & Carrying capacity of certain population\\
+          $r_i$ & Natural growth rate of certain population\\
+          $\mathscr{K}_i$ & Biomass density carrying capacity of certain population\\
           $\alpha$ & The effect of chemical concentration on growth rate\\
           $\beta_{i \rightarrow j}$ & Interspecific competition factor\\
           $\gamma_{i \rightarrow j}$ & Percentage of i in j's total food consumption\\
@@ -150,8 +162,7 @@
         \label{tab:Notations}
       \end{table}
   \section{Models}
-    \subsection{Model Development Explanation and Sequence}
-      \subsubsection{Notes for Models}
+    \subsection{Notes for Model Development}
         Before building all the models, here are some notes for all the models.
         
         First, biomass is chosen over population density. This is because rice, 
@@ -170,23 +181,6 @@
         Therefore, biomass is directly proportional to the number of individuals in the population.
         
         It should be noted that at the start time, all the variations and coefficients mentioned above are positive real numbers.
-      \subsubsection{Sequence}  
-        Based on the conditions outlined above, we will gradually develop the model. 
-        Given the numerous factors involved in the final model, we adopt a step-by-step approach, 
-        starting from the simplest and progressing to more complex structures.
-        
-        Initially, we will construct Model I: LVLG Model, based on the Lotka-Volterra model and the Leslie-Gower model, 
-        under the simplest food web conditions. This model will consider only producers, primary consumers, and secondary consumers.
-
-        Subsequently, as the ecosystem gradually develops, we will build Model II. 
-        In this model, we will incorporate agricultural cycle (three crops per year), 
-        seasonal rotation (rainy and dry seasons), Gussian noise, utilization of chemicals (herbicides and pesticides) and multiple digestion delays.
-        
-        Next, we will consider the re-colonization of species and develop a more complex food web to form Model III. 
-        In this model, we will retain the features of Model II while considering the intricate interactions between multiple species and between species and the environment.
-
-        Finally, after the agricultural ecosystem matures, we will introduce human agricultural decisions, 
-        such as the removal of pesticides and the intentional introduction of new populations, to construct Model IV.
     \subsection{Model I: LVLG Model}
       LVLG Model represents the combination of Lotka-Volterra and Leslie-Gower Model. 
       Before establishing the model, We will first discuss the initial conditions of the model from the perspective of biological populations. 
@@ -506,11 +500,17 @@
 
   \section{Appication of the Models}
     The process of model establishment has been thoroughly presented in the previous subsection. 
-    In this subsection, we will discuss the application of the model.
+    In this subsection, we will discuss the application of the models.
+    In the models below, the unit of biomass(considering the entire farm) is kg and the unit of time is week.
+        
+    It should be noted that the graph contains some data points that are less than zero. These values are a result of the interpolation algorithm and do not represent actual negative biomass. 
+        The interpolation process sometimes generates small negative values due to the smoothing of data points, 
+        especially at the boundaries of the data set or during transitions between different states of the system. 
+        These negative values should be interpreted as artifacts of the numerical method and not as realistic biological quantities.
     \subsection{Selection of Parameters}
       After reviewing the literature and aligning the parameters with their real-world significance, 
       we have determined a series of parameters. Due to the large number of parameters, 
-      we will only present the table for the main ones:
+      we present the table for the main ones:
       \begin{table}[H]
         \centering
         \caption{Parameters}
@@ -524,24 +524,26 @@
         \end{tabular}
         \label{tab:Parameters}
       \end{table}
-      All of the following models will apply these parameters.
+      All of the following models will apply these parameters. 
+      
       \subsection{Scenarios Statement}
-        Scenarios are stated in Table \ref{tab:Scenarios}, where S represents Scenario, Y for Yes and N for no.
+        Scenarios are stated in Table \ref{tab:Scenarios}, where S represents Scenario, Y for Yes and N for No.
+
         \begin{table}[H]
           \centering
           \caption{Scenarios}
-          \begin{tabular}{lccccccc}
+          \begin{tabular}{lcccccccc}
             \toprule
             \rowcolor{customcolor!40} % 设置背景颜色
-            conditions & S1 & S2 & S3 & S4 & S5A & S5B & S6 \\
+            conditions & S1 & S2 & S3 & S4 & S5 & S5A & S5B & S6 \\
             \midrule
-            Agro-Activities & Y & Y & Y & Y & Y & Y & Y \\
-            Seasonality & Y & Y & Y & Y & Y & Y & Y \\
-            Chemicals & N & Y & Y & N & N & N & N \\
-            Reemergence & N & N & Y & Y & Y & Y & Y \\
-            Bat & N & N & N & N & Y & N & N \\
-            Duck & N & N & N & N & N & Y & N \\
-            other methods & N & N & N & N & N & N & Y \\
+            Agro-Activities & Y & Y & Y & Y & Y & Y & Y & Y \\
+            Seasonality & Y & Y & Y & Y & Y & Y & Y & Y \\
+            Chemicals & N & Y & Y & N & N & N & N & N \\
+            Reemergence & N & N & Y & Y & Y & Y & Y & Y \\
+            Bat & N & N & N & N & Y & Y & N & N \\
+            Duck & N & N & N & N & Y & N & Y & N \\
+            other methods & N & N & N & N & N & N & N & Y \\
 
             \bottomrule
           \end{tabular}
@@ -566,24 +568,61 @@
       In the early stages of the agricultural ecosystem, before species re-migrate, 
       the model corresponds to S2. At this point, the ecosystem develops normally, 
       rice can survive in the long term, and the system gradually evolves into a mature agricultural ecosystem. 
-      This indicates that the traditional chemical-agriculture model is capable of maintaining an agricultural ecosystem.      
+      This indicates that the traditional chemical-agriculture model is capable of maintaining an agricultural ecosystem. 
       
-      \subsection{Scenario 2: Chemicals or Green Agriculture Solutions Used}
-        In the discussion of Scenario 2, we consider a realistic situation. 
-        A farmer has just cleared a forest to plant rice. 
-        Initially, he uses chemicals such as herbicides and pesticides to suppress weeds and pests as the ecosystem gradually develops. 
-        When the ecosystem matures to a certain extent, some species that had migrated from the forest ecosystem return, 
-        enriching the food web of the farmland ecosystem. After further development, the ecosystem becomes relatively stable, 
-        and the farmer stops using herbicides and pesticides, 
-        instead turning to a green agriculture solution by introducing ducks and bats into the system.
-        Specifically:
+      Furthermore, it has been clearly shown that S2 shows more complex and regular behavior compared to S1, 
+      which indicates that S2 is more suitable for agriculture due to its regularity.
+      
+      \subsection{Comparison between S2 and S3: The Role of Species Migration}
+        After the ecosystem has evolved for a certain period, external species re-migrate, the food web could be seen in Figure \ref{fig:food_web_chem}. 
+        We compare S2 (early development) and S3 (mature development) to examine the ecosystem's stability.
+        The dynamic behaviors of the S2 and S3 systems are shown in Figure \ref{fig:S2S3}.
+        \begin{figure}
+          \centering
+          \includegraphics[width=\linewidth]{images/S2S3.png}
+          \caption{Comparison between S2 and S3}
+          \label{fig:S2S3}
+        \end{figure}
+
+        By comparing the two situations, we can observe that before considering the migration of other species, 
+        the ecosystem in S2 exhibits some periodic fluctuations. However, the amplitude of these fluctuations is large, 
+        and the system cannot remain at a stable level. After considering the migration of other species, 
+        the ecosystem in S3 shows almost identical system states in each cycle, presenting a very stable pattern. 
+        The above comparison indicates that when the migration of other species is taken into account, 
+        the evolutionary pattern of the ecosystem becomes more stable, forming highly regular periodic changes. 
+        This can be explained by the niche theory: as the food web becomes more complex, 
+        even if a particular population is disturbed, 
+        other species overlapping with its niche can temporarily take over its ecological role, 
+        thus maintaining the normal functioning of the ecosystem.
+
+      \subsection{Comparison between S3 and S4: The Dependency of the Chemical-Agriculture Model on Chemicals}
+      After species migration, we consider removing chemicals and compare the ecosystem's situation in the two periods. 
+      The result is shown in Figure \ref{fig:S4}.
+      \begin{figure}
+        \centering
+        \includegraphics[width=0.7\linewidth]{images/P4_producers.png}
+        \caption{Dynamics after Removing Chemicals}
+        \label{fig:S4}
+      \end{figure}
+      
+      By comparing the two situations, we find that in the traditional chemical-agriculture model, 
+      the agricultural ecosystem is highly dependent on chemicals. Once chemicals are removed, 
+      rice begins to lose out in competition with weeds, while pest interference increases. 
+      The agricultural ecosystem's output gradually decreases, 
+      and the ecosystem becomes increasingly unsuitable for agricultural activities.
+      
+      \subsection{Comparison between S3 and S5: The Superiority of the Green Agriculture Model}
+        When the agricultural ecosystem has fully matured, 
+        we can consider adopting green agricultural measures. In this case, 
+        we examine the effect of introducing biological agents as replacements for chemicals, 
+        specifically ducks and bats. The characteristics of ducks and bats are as follows:
         \begin{itemize}
-          \item The physiology of ducks prevents them from eating rice, but they can consume weeds and pests.
-          \item Ducks are introduced two weeks after each sowing season and are harvested simultaneously with rice at the end of the season.
-          \item Bats are introduced all at once and serve as both pollinators and insect predators.
+            \item Ducks' physiological structure prevents them from consuming rice, but they can feed on weeds and pests.
+            \item Ducks are introduced two weeks after each planting season, and they are harvested synchronously with rice at the end of the season.
+            \item Bats are introduced once, serving as both pollinators and insect predators.
         \end{itemize}
-        When the system evolved mature, the final food web of traditional farming mode and green farming mode are shown in 
-        Figure \ref{fig:food_web_chem} and Figure \ref{fig:food_web_green} respectively.
+        When introduced simultaneously, the final food web is shown in Figure \ref{fig:food_web_green}.
+        
         \begin{figure}[H]
           \begin{minipage}[b]{0.45\linewidth}
             \centering
@@ -599,40 +638,56 @@
               \label{fig:food_web_green}
           \end{minipage}
         \end{figure}
-        We will focus on comparing the succession of the ecosystem in the scenarios where humans use chemicals 
-        (conventional scenario) and where humans use green agriculture solutions (target scenario). 
-        In both cases, the ecosystem is unstable during the initial phase, 
-        so we only show the dynamic behavior of the ecosystem after it reaches a stable state.
+        
+          We focus on comparing the dynamic behavior of the ecosystem in scenarios 
+          where chemicals are used (conventional scenario) versus when a green agricultural plan is adopted (target scenario).
 
-        When chemicals are used, 
-        The ecosystem dynamics are as shown in the figure below:
-        \begin{figure}[H]
+          The system comparison between using chemicals for pest control and using green agricultural methods is shown in Figure \ref{fig:S3S5}.
+
+          \begin{figure}
+            \centering
+            \includegraphics[width=\linewidth]{images/S3S5.png}
+            \caption{Comparison between S3 and S5}
+            \label{fig:S3S5}
+          \end{figure}
+          
+          As discussed in the previous section, 
+          when the green agricultural plan is not used, once chemicals are removed, 
+          weeds and pests rapidly proliferate and compete with rice, eventually leading to the demise of the rice crop. 
+          BeSides, the figure illustrates that there is a poor harvest between week 210 to week 240, even though chemicals are used, 
+          which further prove the instability of chemical methods.
+          However, if the green agricultural plan is adopted, even without chemicals, weeds and pests are effectively controlled, 
+          and the system biomass fluctuates very little, maintaining a high level of stability. 
+          This can also be explained by the niche theory previously discussed.
+          
+          In summary, when the model is applied to real-world scenarios, it aligns closely with actual ecological patterns, 
+          demonstrating the model's versatility and accuracy.
+      \subsection{Benifits Analysis}
+        At the time of harvest, we assume that 30\% of the rice biomass is harvested as grain, 
+        with a net profit of 0.5 USD per kilogram of grain. Additionally, we consider the harvest of ducks, 
+        with a net profit of 1 USD per kilogram of duck, taking into account costs such as feeding. 
+        
+        Based on this, we can calculate the total value of the grain in each quarter under different scenarios, 
+        as shown in Figure \ref{fig:Benefits}.
+        \begin{figure}
+          \centering
+          \includegraphics[width=\linewidth]{images/benefits_processed.png}
+          \caption{Benenits of Each Senario}
+          \label{fig:Benefits}
         \end{figure}
-        We find that compared to Scenario 1, human activity can effectively control weed growth and suppress pests, 
-        allowing for continuous rice harvests and forming a viable agricultural system.
+        Overall, bats play a crucial role in maintaining ecosystem stability, 
+        as they both prey on insects and facilitate plant pollination. 
+        While chemical agriculture may provide good returns in the short term, 
+        its resilience to disturbances is relatively weak, 
+        and external disruptions may eventually reduce profits to zero. 
 
-        When green agriculture solutions are used, the ecosystem dynamics are as shown in the figure below:
-        \begin{figure}[H]
-        \end{figure}
-        We find that, similar to Scenario 1, green agriculture solutions can also effectively control weed growth and suppress pests, 
-        allowing for continuous rice harvests and forming a viable agricultural system.
+        It is worth noting that the profit in the second cycle of every three cycles is the lowest. This is because the second cycle corresponds to the dry season, which highlights the strength of the seasonality component in our model. The seasonal variations in environmental conditions, such as water availability, significantly influence the ecosystem's productivity and, consequently, the profitability in different cycles. This feature of the model reflects the realistic influence of seasonal changes on agricultural systems, adding another layer of accuracy to our predictions.
 
-        To compare the differences between chemical use and green agriculture, 
-        we attempt to stop using chemicals after achieving stability (without introducing biological control), 
-        and obtain the following ecosystem dynamics:
-        \begin{figure}[H]
-        \end{figure}
-        We immediately observe that, in the absence of green agriculture solutions, 
-        once chemicals are discontinued, weeds and pests rapidly proliferate and compete with rice. 
-        The system's biomass fluctuates significantly, with low stability. However, 
-        if green agriculture solutions are applied, even without chemicals, weeds and pests are effectively controlled, 
-        the system's biomass fluctuations are minimal, and the system is highly stable. 
-        This is because more components have been introduced, making the food web more complex and the biodiversity stronger. 
-        When one species is at a disadvantage, other species can temporarily take over its ecological niche, 
-        thereby enhancing the system's stability. This aligns well with modern ecological theory.
-
-        In summary, when the model is applied to this scenario, 
-        it closely matches real-world conditions, proving the model's versatility and accuracy.
+        The introduction of ducks not only replaces the role of chemicals but also generates additional profits. 
+        If considered in isolation, the profit from duck harvests is the highest. 
+        However, when taking into account the comprehensive factors, 
+        the combined introduction of both bats and ducks results in the maximum overall profit.
+        
 
   \section{Sensitivity Analysis}
   \section{Evaluation of the Model}
