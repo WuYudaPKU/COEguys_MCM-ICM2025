@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.12)  28 JAN 2025 00:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.12)  28 JAN 2025 04:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -738,24 +738,24 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 ) (./article_file.aux)
 \openout1 = `article_file.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
  (d:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count381
@@ -821,48 +821,43 @@ Package caption Info: longtable package is loaded.
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 22.
+Package hyperref Info: Link coloring ON on input line 63.
  (./article_file.out) (./article_file.out)
 \@outlinefile=\write6
 \openout6 = `article_file.out'.
 
-LaTeX Font Info:    Trying to load font information for T1+fvs on input line 23.
+LaTeX Font Info:    Trying to load font information for T1+fvs on input line 64.
  (d:/texlive/2024/texmf-dist/tex/latex/bera/t1fvs.fd
 File: t1fvs.fd 2004/09/07 scalable font definitions for T1/fvs.
 )
 LaTeX Font Info:    Font shape `T1/fvs/m/n' will be
-(Font)              scaled to size 10.79993pt on input line 23.
+(Font)              scaled to size 10.79993pt on input line 64.
 LaTeX Font Info:    Font shape `T1/fvs/m/n' will be
-(Font)              scaled to size 21.59985pt on input line 23.
+(Font)              scaled to size 21.59985pt on input line 64.
 LaTeX Font Info:    Font shape `T1/fvs/b/n' will be
-(Font)              scaled to size 21.59985pt on input line 23.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 23.
+(Font)              scaled to size 21.59985pt on input line 64.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 64.
  (d:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 23.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 64.
  (d:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 23.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 64.
  (d:/texlive/2024/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 23.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 64.
  (d:/texlive/2024/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    Font shape `T1/fvs/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 23.
+(Font)              scaled to size 10.79993pt on input line 64.
 LaTeX Font Info:    Font shape `T1/fvs/b/n' will be
-(Font)              scaled to size 12.9599pt on input line 23.
+(Font)              scaled to size 12.9599pt on input line 64.
 LaTeX Font Info:    Font shape `T1/fvs/m/n' will be
-(Font)              scaled to size 15.55188pt on input line 23.
-
-Overfull \hbox (1.98428pt too wide) in paragraph at lines 23--23
-[]\T1/cmr/m/n/12 sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary
- []
-
+(Font)              scaled to size 15.55188pt on input line 64.
 
 
 [1
@@ -879,15 +874,15 @@ Overfull \hbox (13.10138pt too wide) in paragraph at lines 25--25
 
 
 [2]
-<images/deforestation1.jpg, id=169, 1606.0pt x 903.375pt>
+<images/deforestation1.jpg, id=168, 1606.0pt x 903.375pt>
 File: images/deforestation1.jpg Graphic file (type jpg)
 <use images/deforestation1.jpg>
-Package pdftex.def Info: images/deforestation1.jpg  used on input line 39.
+Package pdftex.def Info: images/deforestation1.jpg  used on input line 79.
 (pdftex.def)             Requested size: 202.31786pt x 113.81102pt.
-<images/deforestation2.jpg, id=170, 647.41875pt x 364.36125pt>
+<images/deforestation2.jpg, id=169, 647.41875pt x 364.36125pt>
 File: images/deforestation2.jpg Graphic file (type jpg)
 <use images/deforestation2.jpg>
-Package pdftex.def Info: images/deforestation2.jpg  used on input line 46.
+Package pdftex.def Info: images/deforestation2.jpg  used on input line 86.
 (pdftex.def)             Requested size: 202.21907pt x 113.81102pt.
 
 
@@ -895,26 +890,26 @@ Package pdftex.def Info: images/deforestation2.jpg  used on input line 46.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.69         \item \textbf
-                          {Impact of removing chemicals}: After the ecosyste... [1{d:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./images/deforestation1.jpg> <./images/deforestation2.jpg>]
+l.111         \item \textbf
+                           {Impact of removing chemicals}: After the ecosyst... [1{d:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./images/deforestation1.jpg> <./images/deforestation2.jpg>]
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.94       \item W
-                  e analyzed the stability of the model from both initial va... [2]
+l.136       \item W
+                   e analyzed the stability of the model from both initial v... [2]
 
 pdfTeX warning: pdflatex.exe (file ./images/FlowCharts.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 <images/FlowCharts.pdf, id=185, 1059.49231pt x 593.35213pt>
 File: images/FlowCharts.pdf Graphic file (type pdf)
 <use images/FlowCharts.pdf>
-Package pdftex.def Info: images/FlowCharts.pdf  used on input line 104.
+Package pdftex.def Info: images/FlowCharts.pdf  used on input line 146.
 (pdftex.def)             Requested size: 455.24411pt x 254.95537pt.
 <images/AverTemper.png, id=188, 1387.584pt x 703.1871pt>
 File: images/AverTemper.png Graphic file (type png)
 <use images/AverTemper.png>
-Package pdftex.def Info: images/AverTemper.png  used on input line 123.
+Package pdftex.def Info: images/AverTemper.png  used on input line 165.
 (pdftex.def)             Requested size: 341.43307pt x 173.02806pt.
 
 
@@ -922,10 +917,10 @@ Package pdftex.def Info: images/AverTemper.png  used on input line 123.
 <images/PlantMode.jpg, id=283, 797.98125pt x 265.74281pt>
 File: images/PlantMode.jpg Graphic file (type jpg)
 <use images/PlantMode.jpg>
-Package pdftex.def Info: images/PlantMode.jpg  used on input line 129.
+Package pdftex.def Info: images/PlantMode.jpg  used on input line 171.
 (pdftex.def)             Requested size: 341.43307pt x 113.70354pt.
 
-Overfull \hbox (7.66956pt too wide) in paragraph at lines 149--169
+Overfull \hbox (7.66956pt too wide) in paragraph at lines 192--212
  [][] 
  []
 
@@ -936,18 +931,18 @@ Overfull \hbox (7.66956pt too wide) in paragraph at lines 149--169
 [5]
 
 pdfTeX warning: pdflatex.exe (file ./images/LGVGField.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/LGVGField.pdf, id=310, 622.03993pt x 622.3011pt>
+<images/LGVGField.pdf, id=311, 622.03993pt x 622.3011pt>
 File: images/LGVGField.pdf Graphic file (type pdf)
 <use images/LGVGField.pdf>
-Package pdftex.def Info: images/LGVGField.pdf  used on input line 210.
+Package pdftex.def Info: images/LGVGField.pdf  used on input line 253.
 (pdftex.def)             Requested size: 142.20244pt x 142.26378pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./images/SimpleFoodWeb.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/SimpleFoodWeb.pdf, id=311, 581.02673pt x 427.18094pt>
+<images/SimpleFoodWeb.pdf, id=312, 581.02673pt x 427.18094pt>
 File: images/SimpleFoodWeb.pdf Graphic file (type pdf)
 <use images/SimpleFoodWeb.pdf>
-Package pdftex.def Info: images/SimpleFoodWeb.pdf  used on input line 217.
+Package pdftex.def Info: images/SimpleFoodWeb.pdf  used on input line 260.
 (pdftex.def)             Requested size: 193.49483pt x 142.26378pt.
 
 
@@ -955,20 +950,20 @@ Package pdftex.def Info: images/SimpleFoodWeb.pdf  used on input line 217.
 
 pdfTeX warning: pdflatex.exe (file ./images/SimpleFoodWeb.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<images/PlantModePlus.png, id=354, 403.5075pt x 137.01187pt>
+<images/PlantModePlus.png, id=355, 403.5075pt x 137.01187pt>
 File: images/PlantModePlus.png Graphic file (type png)
 <use images/PlantModePlus.png>
-Package pdftex.def Info: images/PlantModePlus.png  used on input line 276.
+Package pdftex.def Info: images/PlantModePlus.png  used on input line 319.
 (pdftex.def)             Requested size: 318.66948pt x 108.20474pt.
 
 
 [7 <./images/PlantModePlus.png>]
 
 pdfTeX warning: pdflatex.exe (file ./images/rice_to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/rice_to.pdf, id=368, 1037.04663pt x 297.45128pt>
+<images/rice_to.pdf, id=369, 1037.04663pt x 297.45128pt>
 File: images/rice_to.pdf Graphic file (type pdf)
 <use images/rice_to.pdf>
-Package pdftex.def Info: images/rice_to.pdf  used on input line 289.
+Package pdftex.def Info: images/rice_to.pdf  used on input line 332.
 (pdftex.def)             Requested size: 455.24411pt x 130.57486pt.
 
 
@@ -976,94 +971,98 @@ Package pdftex.def Info: images/rice_to.pdf  used on input line 289.
 
 [9]
 
-LaTeX Warning: Citation `garcia2003logistic' on page 10 undefined on input line 401.
-
-
-
 [10]
-<images/GussianNoise.png, id=438, 1284.29813pt x 623.83063pt>
+<images/GussianNoise.png, id=442, 1284.29813pt x 623.83063pt>
 File: images/GussianNoise.png Graphic file (type png)
 <use images/GussianNoise.png>
-Package pdftex.def Info: images/GussianNoise.png  used on input line 432.
+Package pdftex.def Info: images/GussianNoise.png  used on input line 475.
 (pdftex.def)             Requested size: 227.62206pt x 110.56175pt.
 
 
 [11 <./images/GussianNoise.png>]
 
 [12]
-<images/S1S2.png, id=466, 1413.02907pt x 747.54282pt>
-File: images/S1S2.png Graphic file (type png)
-<use images/S1S2.png>
-Package pdftex.def Info: images/S1S2.png  used on input line 558.
-(pdftex.def)             Requested size: 455.24411pt x 240.83832pt.
+Overfull \hbox (1.27303pt too wide) in paragraph at lines 561--566
+[]\T1/cmr/m/n/12 SAGED Model rep-re-sents Sus-tain-able Agri-cul-tural Ecosys-tem Dy-nam-ics Model. When
+ []
 
 
-[13]
-<images/S2S3.png, id=476, 1411.52344pt x 721.19438pt>
-File: images/S2S3.png Graphic file (type png)
-<use images/S2S3.png>
-Package pdftex.def Info: images/S2S3.png  used on input line 582.
-(pdftex.def)             Requested size: 455.24411pt x 232.60266pt.
-<images/P4_producers.png, id=478, 1279.179pt x 679.338pt>
-File: images/P4_producers.png Graphic file (type png)
-<use images/P4_producers.png>
-Package pdftex.def Info: images/P4_producers.png  used on input line 603.
-(pdftex.def)             Requested size: 318.66948pt x 169.23285pt.
-
-
-[14 <./images/S1S2.png>]
-
-[15 <./images/S2S3.png> <./images/P4_producers.png>]
 
 pdfTeX warning: pdflatex.exe (file ./images/food_web_chem.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/food_web_chem.pdf, id=496, 746.17166pt x 654.86258pt>
+<images/food_web_chem.pdf, id=471, 746.17166pt x 654.86258pt>
 File: images/food_web_chem.pdf Graphic file (type pdf)
 <use images/food_web_chem.pdf>
-Package pdftex.def Info: images/food_web_chem.pdf  used on input line 629.
+Package pdftex.def Info: images/food_web_chem.pdf  used on input line 581.
 (pdftex.def)             Requested size: 194.5124pt x 170.71652pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./images/food_web.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/food_web.pdf, id=497, 561.32011pt x 493.25632pt>
+<images/food_web.pdf, id=472, 561.32011pt x 493.25632pt>
 File: images/food_web.pdf Graphic file (type pdf)
 <use images/food_web.pdf>
-Package pdftex.def Info: images/food_web.pdf  used on input line 636.
+Package pdftex.def Info: images/food_web.pdf  used on input line 588.
 (pdftex.def)             Requested size: 194.27232pt x 170.71652pt.
-<images/S3S5.png, id=499, 1600.47937pt x 954.56625pt>
-File: images/S3S5.png Graphic file (type png)
-<use images/S3S5.png>
-Package pdftex.def Info: images/S3S5.png  used on input line 649.
-(pdftex.def)             Requested size: 455.24411pt x 271.51529pt.
 
 
-[16 <./images/food_web_chem.pdf> <./images/food_web.pdf
+[13 <./images/food_web_chem.pdf> <./images/food_web.pdf
 
 pdfTeX warning: pdflatex.exe (file ./images/food_web.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<images/benefits_processed.png, id=557, 1613.27719pt x 815.29594pt>
+<images/S1S2.png, id=530, 1413.02907pt x 747.54282pt>
+File: images/S1S2.png Graphic file (type png)
+<use images/S1S2.png>
+Package pdftex.def Info: images/S1S2.png  used on input line 631.
+(pdftex.def)             Requested size: 455.24411pt x 240.83832pt.
+
+
+[14 <./images/S1S2.png>]
+<images/S2S3.png, id=541, 1411.52344pt x 721.19438pt>
+File: images/S2S3.png Graphic file (type png)
+<use images/S2S3.png>
+Package pdftex.def Info: images/S2S3.png  used on input line 655.
+(pdftex.def)             Requested size: 455.24411pt x 232.60266pt.
+<images/P4_producers.png, id=543, 1279.179pt x 679.338pt>
+File: images/P4_producers.png Graphic file (type png)
+<use images/P4_producers.png>
+Package pdftex.def Info: images/P4_producers.png  used on input line 676.
+(pdftex.def)             Requested size: 318.66948pt x 169.23285pt.
+
+
+[15 <./images/S2S3.png>]
+<images/S3S5.png, id=554, 1600.47937pt x 954.56625pt>
+File: images/S3S5.png Graphic file (type png)
+<use images/S3S5.png>
+Package pdftex.def Info: images/S3S5.png  used on input line 706.
+(pdftex.def)             Requested size: 455.24411pt x 271.51529pt.
+
+
+[16 <./images/P4_producers.png>]
+<images/benefits_processed.png, id=564, 1613.27719pt x 815.29594pt>
 File: images/benefits_processed.png Graphic file (type png)
 <use images/benefits_processed.png>
-Package pdftex.def Info: images/benefits_processed.png  used on input line 674.
+Package pdftex.def Info: images/benefits_processed.png  used on input line 731.
 (pdftex.def)             Requested size: 455.24411pt x 230.06029pt.
 
 
-[17 <./images/S3S5.png> <./images/benefits_processed.png>]
-<images/Change_init.png, id=568, 1287.8514pt x 689.4558pt>
+[17 <./images/S3S5.png>]
+
+[18 <./images/benefits_processed.png>]
+<images/Change_init.png, id=580, 1287.8514pt x 689.4558pt>
 File: images/Change_init.png Graphic file (type png)
 <use images/Change_init.png>
-Package pdftex.def Info: images/Change_init.png  used on input line 707.
+Package pdftex.def Info: images/Change_init.png  used on input line 788.
 (pdftex.def)             Requested size: 341.43307pt x 182.77855pt.
 
 
-[18 <./images/Change_init.png>]
-<images/Change_all.png, id=577, 1409.265pt x 762.59906pt>
+[19 <./images/Change_init.png>]
+<images/Change_all.png, id=589, 1409.265pt x 762.59906pt>
 File: images/Change_all.png Graphic file (type png)
 <use images/Change_all.png>
-Package pdftex.def Info: images/Change_all.png  used on input line 729.
+Package pdftex.def Info: images/Change_all.png  used on input line 812.
 (pdftex.def)             Requested size: 455.24411pt x 246.34067pt.
 
 
-[19 <./images/Change_all.png>] (./article_file.bbl
+[20 <./images/Change_all.png>] (./article_file.bbl
 Underfull \hbox (badness 3128) in paragraph at lines 4--8
 []\T1/cmr/m/n/12 World Bank Group.  In-done-sia tem-per-a-ture.  Ac-cessed: 2025-1-25, at [][]
  []
@@ -1075,42 +1074,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--8
 
 
 
-[20])
+[21])
 
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 832--837
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 915--921
 
  []
 
 
 
-[22] 
+[23] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./article_file.aux)
  ***********
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `article_file.out' has not changed.
-(rerunfilecheck)             Checksum: 6C6745E1F0F9B3B232477C0FA6C29C50;5579.
+(rerunfilecheck)             Checksum: C304304E3F9E9DA88A9CCDFF895C0C5F;5860.
  ) 
 Here is how much of TeX's memory you used:
- 20993 strings out of 473362
- 350245 string characters out of 5725050
- 796697 words of memory out of 5000000
+ 20998 strings out of 473362
+ 350316 string characters out of 5725050
+ 795834 words of memory out of 5000000
  43546 multiletter control sequences out of 15000+600000
  599832 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 94i,18n,93p,2304b,616s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 94i,18n,93p,762b,616s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/bera/fvsb8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/bera/fvsr8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on article_file.pdf (24 pages, 6268891 bytes).
+Output written on article_file.pdf (25 pages, 6279745 bytes).
 PDF statistics:
- 731 PDF objects out of 1000 (max. 8388607)
- 490 compressed objects within 5 object streams
- 103 named destinations out of 1000 (max. 500000)
+ 745 PDF objects out of 1000 (max. 8388607)
+ 502 compressed objects within 6 object streams
+ 108 named destinations out of 1000 (max. 500000)
  340 words of extra memory for PDF output out of 10000 (max. 10000000)
 

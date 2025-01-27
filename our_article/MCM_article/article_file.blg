@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2024)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: article_file.aux
+The style file: unsrt.bst
+Database file #1: article_file.bib
+Warning--empty journal in IndoTemper
+Warning--empty year in IndoTemper
+Warning--empty journal in IndoRice
+Warning--empty year in IndoRice
+You've used 8 entries,
+            1791 wiz_defined-function locations,
+            503 strings with 5322 characters,
+and the built_in function-call counts, 1938 in all, are:
+= -- 160
+> -- 103
+< -- 0
++ -- 38
+- -- 30
+* -- 158
+:= -- 328
+add.period$ -- 24
+call.type$ -- 8
+change.case$ -- 8
+chr.to.int$ -- 0
+cite$ -- 12
+duplicate$ -- 70
+empty$ -- 176
+format.name$ -- 30
+if$ -- 406
+int.to.chr$ -- 0
+int.to.str$ -- 8
+missing$ -- 8
+newline$ -- 43
+num.names$ -- 8
+pop$ -- 16
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 25
+stack$ -- 0
+substring$ -- 156
+swap$ -- 6
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 4
+while$ -- 17
+width$ -- 9
+write$ -- 86
+(There were 4 warnings)

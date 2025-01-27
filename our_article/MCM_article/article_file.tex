@@ -13,10 +13,51 @@
 \setControlNumber{2511940}
 \setContestType{MCM}
 \setProblemLetter{E}
-\setPaperTitle{Our Article}
+\setPaperTitle{Sustainable Agricultural Ecosystem Model Based on System Dynamics}
 
 %summary
-\setSummary{ sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary sumary}
+\setSummary{
+  When a forest is cleared, its complex food web is disrupted. The area transitions into agricultural land, 
+  where the ecosystem undergoes succession influenced by both natural processes and human activities, 
+  ultimately forming a new agricultural ecosystem and food web. 
+  This study simulates agricultural ecosystem succession in Southeast Asian triple-crop rice fields, 
+  examining the impact of human decisions on ecosystem components, stability, and economic benefits.
+
+  We first constructed the \textbf{LVLG model}, 
+  combining \textbf{Lotka-Volterra} and \textbf{Leslie-Gower equations} to model interspecific competition and the effects of primary and secondary consumers, 
+  resulting in a \textbf{system of differential equations}. Biomass density of crops, competitors, and consumers serves as indicators of the ecosystem's succession.
+  
+  Next, we expanded the LVLG model to the \textbf{CAGED Model} by incorporating the \textbf{agricultural cycle}, 
+  seasonal rotations, the \textbf{pollination factor}, \textbf{soil fertility}, 
+  \textbf{Gaussian white noise} for disturbances, \textbf{chemical use}, and \textbf{multiple digestion delays}. 
+  We then included the migration of higher-level consumers once biomass thresholds were met, forming a \textbf{complex food web}.
+  
+  Based on the matured ecosystem, we incorporated \textbf{ecological agricultural decisions} in the \textbf{SAGED Model}, 
+  exploring scenarios where \textbf{chemical removal} and the introduction of bats and ducks (as pollinators, natural pest control, and weed management) influenced ecosystem dynamics.
+  
+  In the model's application, we used \textbf{MATLAB Simulink} with \textbf{difference equations} to simulate the system's dynamics, 
+  examining \textbf{evolutionary trends} and \textbf{stability} under varying external conditions. 
+  
+  The LVLG model shows that, without human intervention, 
+  the forest cannot spontaneously succeed into a mature agricultural ecosystem due to competition and predation pressures on crops. 
+  The CAGED model indicates that chemical use can boost short-term crop yield but destabilizes the ecosystem, 
+  leading to dependency and poor stability, while the reemergence of higher-level predators improves stability. 
+  
+  The SAGED model analysis reveals that bats maintain stability but do not significantly increase revenue (\textbf{98.7\%} of chemical revenue). 
+  Ducks increase both stability and revenue, achieving \textbf{130.78\%} of chemical revenue, 
+  while the combination of bats and ducks maximizes revenue at \textbf{140.24\%} of chemical revenue.
+  
+  Finally, we conducted a \textbf{sensitivity analysis} of the model, 
+  considering the changes in the initial biomass \textbf{values} and \textbf{typical environmental parameters} within a time frame of 0-80 weeks. 
+  The analysis shows that systems with different initial biomass values tended to converge over the long term, 
+  indicating that the system has a certain \textbf{self-regulation capacity} to cope with natural disasters and emergencies. 
+  For different values of the four environmental parameters, 
+  the system's development remained consistent, 
+  but large changes in parameters increased the likelihood of species extinction or collapse over time,
+  indicating \textbf{limited stability and resilience}, which aligns with ecological theory.
+  
+  \noindent\textbf{Keywords}: Agricultural ecosystem, Food web; System dynamics; Lotka-Volterra Model; Leslie-Gower Model; Differential equation; Sensitivity analysis
+}
 
 %begin
 \begin{document}
@@ -30,8 +71,7 @@
     Under the conditions where scientific and technological advancements have not been fully adopted, 
     the existing arable land area is insufficient to meet the food demand. 
     As a result, many regions have resorted to deforestation for land conversion, 
-    as shown in \figurename~\ref{fig:deforestation1}. \figurename~\ref{fig:deforestation2} illustrates that when the forest ecosystem is artificially disrupted, 
-    its complex spatial structure is destroyed.
+    as shown in \figurename~\ref{fig:deforestation1}. 
     \begin{figure}[H]
       \centering
         \begin{minipage}[b]{0.45\linewidth}
@@ -48,6 +88,8 @@
             \label{fig:deforestation2}
         \end{minipage}
       \end{figure}
+    \figurename~\ref{fig:deforestation2} illustrates that when the forest ecosystem is artificially disrupted, 
+    its complex spatial structure is destroyed.
     Therefore, the converted forest area must undergo a long process of ecological reconstruction. 
     However, due to the influence of human activities during this process, 
     the post-clearing forest ecosystem can no longer return to its original state, 
@@ -142,6 +184,7 @@
          To ensure the generalizability of the model, natural disasters should not be considered.
       \end{itemize}
         \subsection{Notations}
+          Most symbols are stated in Table \ref{tab:Notations}. The symbols not presented here will be clearly clarified in their context.
       % table
       \begin{table}[H]
         \centering
@@ -153,7 +196,7 @@
           \midrule
           $wd, crp , stw$ & Subscription for weed, crop, straw respectively \\
           $ins, bd, bt, dk, snk, frg$ & Subscription for insect, bird, bat, duck, snake, frog respectively\\
-          $HC, PC$ & Subscription for herbicide \\
+          $HC, PC$ & Subscription for herbicide and pesticide \\
           $C_i$ & Concentration of certain chemical \\
           $W_i$ & Density of biomass of certain species \\
           $r_i$ & Natural growth rate of certain population\\
@@ -169,7 +212,7 @@
       \end{table}
   \section{Models}
     \subsection{Notes for Model Development}
-        Before building all the models, here are some notes for all the models.
+        Before building all the models, here are some notes for all of them.
         
         First, biomass is chosen over population density. This is because rice, 
         as the primary producer in the agricultural ecosystem, 
@@ -257,7 +300,7 @@
       In the denominator, one factor is weighted according to the predation ratio: the less food available, 
       the more predators there are, resulting in a slower growth rate of the predator population.
     \subsection{Model II: CAGED Model}
-      CAGED Model represents Conprehensive Agro-Ecosystem Dynamics Model, and it is the core model of the hole article.
+      CAGED Model represents Conprehensive Agricultural Ecosystem Dynamics Model, and it is the core model of the hole article.
       Model I is quite simple and aims to construct a basic short-term model. 
       Considering the impact of long-term environmental factors, 
       in order to better simulate the long-term evolutionary behavior of the ecosystem model, 
@@ -357,7 +400,7 @@
         the LV-LG model system theoretically possesses non-trivial stable points when the parameters are within a certain range. 
         When the system is near these points, the ecosystem can recover from small perturbations, 
         reaching a dynamic ecological equilibrium.
-      \subsection{Polination}
+      \subsubsection{Polination}
         During the 8th to 12th weeks of rice growth, which corresponds to the pollination period, we consider the promotion of pollination by insects. This can be incorporated into the model by multiplying the natural growth rate by a pollination factor. The form of the pollination factor is given as:
 
         \[
@@ -398,7 +441,7 @@
         its internal inorganic salt concentration is low, and the growth acceleration of the concentration is positive; 
         during the tillering to jointing stage, the demand for inorganic salts increases rapidly, and the concentration reaches a turning point; 
         during the booting to flowering stage, the rate of increase in inorganic salt concentration slows down until it reaches its maximum; 
-        during the milk-ripe and yellow-ripe stages, the absorption of inorganic salts decreases gradually, and the concentration drops.\cite{garcia2003logistic}
+        during the milk-ripe and yellow-ripe stages, the absorption of inorganic salts decreases gradually, and the concentration drops\cite{garcia2003logistic}.
         
         We use a Gaussian-like probability density function to fit the trend of the inorganic salt concentration in the plant over each agricultural cycle, given by:
         
@@ -500,11 +543,26 @@
         \end{equation}
 
         where \(\tau_i\) is the digestion delay factor of population \(i\), and \(D_i, E_i\) are the corresponding environmental parameters for population \(i\).
-    \subsection{CAGED Model Considering Restatement}
-      As the ecosystem gradually matures, previously existing populations will re-enter the system. We assume that when the biomass of the prey species reaches a certain threshold (a tunable parameter), the species will migrate into the ecosystem, forming a more complex food web. In our model, we only consider the migration of frogs and snakes. After their migration, the previously constructed equations are applicable to describe their biomass dynamics (assuming they are not affected by chemicals).
+    \subsection{CAGED Model Considering Reemergence}
+      As the ecosystem gradually matures, 
+      previously existing populations will re-enter the system. 
+      We assume that when the biomass of the prey species reaches a certain threshold,
+      \begin{equation}
+      E_{frg}W_{ins}>Threshold_{frg}
+      \end{equation}
+      \begin{equation}
+      E_{snk}\sum_{i=food}{c_{i}W_{i}}>Threshold_{snk}
+      \end{equation} 
+      the species will migrate into the ecosystem, forming a more complex food web. 
+      In our model, we only consider the migration of frogs and snakes. 
+      After their migration, the previously constructed equations are applicable to describe their biomass dynamics 
+      (assuming they are not affected by chemicals).
     \subsection{Model III: SAGED Model}
-      SAGED Model represents sustainable Agro-Ecosystem Dynamics Model.
-      When the food web becomes sufficiently complex, humans can begin making agricultural decisions. The agricultural decision considered in our model involves removing herbicides and insecticides, while introducing bats and ducks.
+      SAGED Model represents Sustainable Agricultural Ecosystem Dynamics Model.
+      When the food web becomes sufficiently complex, 
+      humans can begin making agricultural decisions. 
+      The agricultural decision considered in our model involves removing herbicides and insecticides, 
+      while introducing bats and ducks.
 
       Bats play a role in promoting pollination; thus, the pollination factor becomes:
       
@@ -515,8 +573,23 @@
       \end{cases}
       \]
       
-      Besides this, the modified model only requires the removal of chemicals from the CAGED model, and the introduction of two new populations to form the ultimate food web.
-
+      Besides this, the modified model only requires the removal of chemicals from the CAGED model, 
+      and the introduction of two new populations to form the ultimate food web as Figure \ref{fig:food_web_green}.
+      \begin{figure}[H]
+        \begin{minipage}[b]{0.45\linewidth}
+          \centering
+          \includegraphics[height=6cm, keepaspectratio]{images/food_web_chem.pdf}
+          \caption{Traditional Mode}
+          \label{fig:food_web_chem}
+        \end{minipage}
+        \hspace{0.05\linewidth}
+        \begin{minipage}[b]{0.45\linewidth}
+            \centering
+            \includegraphics[height=6cm, keepaspectratio]{images/food_web.pdf} % 替换为你的第二张图片路径
+            \caption{Green Mode}
+            \label{fig:food_web_green}
+        \end{minipage}
+      \end{figure}
   \section{Appication of the Models}
     The process of model establishment has been thoroughly presented in the previous subsection. 
     In this subsection, we will discuss the application of the models.
@@ -537,13 +610,13 @@
             \rowcolor{customcolor!40} % 设置背景颜色
             conditions & S1 & S2 & S3 & S4 & S5 & S5A & S5B & S6 \\
             \midrule
-            Agro-Activities & Y & Y & Y & Y & Y & Y & Y & Y \\
+            Agro-activities & Y & Y & Y & Y & Y & Y & Y & Y \\
             Seasonality & Y & Y & Y & Y & Y & Y & Y & Y \\
             Chemicals & N & Y & Y & N & N & N & N & N \\
             Reemergence & N & N & Y & Y & Y & Y & Y & Y \\
             Bat & N & N & N & N & Y & Y & N & N \\
             Duck & N & N & N & N & Y & N & Y & N \\
-            other methods & N & N & N & N & N & N & N & Y \\
+            Other methods & N & N & N & N & N & N & N & Y \\
 
             \bottomrule
           \end{tabular}
@@ -621,24 +694,8 @@
             \item Ducks are introduced two weeks after each planting season, and they are harvested synchronously with rice at the end of the season.
             \item Bats are introduced once, serving as both pollinators and insect predators.
         \end{itemize}
-        When introduced simultaneously, the final food web is shown in Figure \ref{fig:food_web_green}.
-        
-        \begin{figure}[H]
-          \begin{minipage}[b]{0.45\linewidth}
-            \centering
-            \includegraphics[height=6cm, keepaspectratio]{images/food_web_chem.pdf}
-            \caption{Traditional Mode}
-            \label{fig:food_web_chem}
-          \end{minipage}
-          \hspace{0.05\linewidth}
-          \begin{minipage}[b]{0.45\linewidth}
-              \centering
-              \includegraphics[height=6cm, keepaspectratio]{images/food_web.pdf} % 替换为你的第二张图片路径
-              \caption{Green Mode}
-              \label{fig:food_web_green}
-          \end{minipage}
-        \end{figure}
-        
+          When introduced simultaneously, the final food web is shown in Figure \ref{fig:food_web_green}.
+
           We focus on comparing the dynamic behavior of the ecosystem in scenarios 
           where chemicals are used (conventional scenario) versus when a green agricultural plan is adopted (target scenario).
 
@@ -654,7 +711,7 @@
           As discussed in the previous section, 
           when the green agricultural plan is not used, once chemicals are removed, 
           weeds and pests rapidly proliferate and compete with rice, eventually leading to the demise of the rice crop. 
-          BeSides, the figure illustrates that there is a poor harvest between week 210 to week 240, even though chemicals are used, 
+          Besides, the figure illustrates that there is a poor harvest between week 210 to week 240, even though chemicals are used, 
           which further prove the instability of chemical methods.
           However, if the green agricultural plan is adopted, even without chemicals, weeds and pests are effectively controlled, 
           and the system biomass fluctuates very little, maintaining a high level of stability. 
@@ -687,7 +744,31 @@
         If considered in isolation, the profit from duck harvests is the highest. 
         However, when taking into account the comprehensive factors, 
         the combined introduction of both bats and ducks results in the maximum overall profit.
-        
+      \subsection{Feasible Measures for Developing Organic and Green Agriculture}
+        \begin{itemize}
+          \item Introduction of beneficial species. 
+          Based on the results of introducing bats and ducks, 
+          the increase in biodiversity can enhance the stability of ecosystems and the resilience of agricultural ecosystems to white noise disturbance and disasters. 
+          However, the biomass of weeds cannot be completely controlled by introducing ducks alone. By introducing the natural enemies of weeds, 
+          further control of the intermediate competition between weeds and rice can be achieved, thereby increasing rice yield. 
+          In this regard, grass carp and other fish are feasible choices. 
+          They can not only control weeds but also serve as agricultural output and consolidate the ecological stability of ducks through mutualism, 
+          forming a "rice-fish-duck" interaction pattern. 
+          In addition, since the rice in the current model has not yet reached the environmental carrying capacity at harvest, 
+          continuing to introduce pollinating insects to increase rice growth rate is also a good choice.
+          \item Straw reuse. In the model, the residual straw after harvest will remain in the ecosystem, 
+          providing food for some pests and potentially leading to an increase in pest numbers, 
+          thereby suppressing the growth of the next season's rice. 
+          To address this issue, the straw in the paddy fields should be recycled. 
+          While preventing pest development, 
+          the harvested straw can be made into products as output or fermented into fertilizer to promote the yield of the rice.
+          \item Seed predation. 
+          The rapid establishment of numerical advantage of weeds is due to their high natural growth rate on account of rapid reproduction and strong vitality. 
+          Consequently, for the purpose of facilitating the above-mentioned weed control, 
+          we can adjust the composition of birds, small mammals, etc., 
+          so that they reduce the natural growth rate of weeds by their preference for feeding on weed seeds, 
+          thereby weakening their competitiveness.
+        \end{itemize}
   \section{Sensitivity Analysis}
     We consider the effects of changes in two types of model parameters on the system: 
     the initial values of biomass density \( W \) in the dynamic model and typical environmental parameters. 
@@ -713,6 +794,8 @@
       Similar patterns are observed for other populations in the ecosystem. 
       This demonstrates that our agricultural ecosystem model possesses a degree of self-regulation, 
       consistent with the stability and self-recovery capabilities of real-world ecological systems.
+      At the same time, this also demonstrates that the ecosystem possesses a certain capacity for self-repair and gradual stabilization when subjected to a degree of disaster impact, 
+      such as a significant reduction in rice biomass caused by floods or a substantial increase in insect biomass resulting from locust plagues. 
 
     \subsection{Changes in Typical Environmental Parameters}
       Let's examine the effects of changes in four typical environmental parameters that significantly influence the system: 
@@ -829,7 +912,8 @@ Lastly, we encourage you to support and benefit from policies that promote organ
 such as subsidies for green farming practices or tax incentives for organic products. 
 Collaborating with agricultural organizations or participating in organic farming programs could further enhance your farm's sustainability and profitability.
 
-I hope these suggestions will help your farm thrive and bring you long-term success. Wishing you all the best, and I look forward to hearing from you!
+I hope these suggestions will help your farm thrive and bring you long-term success. 
+Wishing you all the best, and I look forward to hearing from you!
 \\
 \\
 Yours sincerely,\\  

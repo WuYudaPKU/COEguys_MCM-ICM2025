@@ -94,6 +94,7 @@
 \MakeUppercase\contentsname}{\MakeUppercase\contentsname}}%
 \vskip 3ex%
 \@starttoc{toc}%
+\thispagestyle{empty}
 }
 %===========目录==============
 \RequirePackage{titlesec}
@@ -258,11 +259,11 @@
     %摘要标题
      \par\centerline{\normalsize\bf Summary}\vskip3pt\par
      %摘要内容 
-      {\fontsize{12pt}{14pt}\selectfont \oursummary}
+      {\fontsize{12pt}{13.3pt}\selectfont \oursummary}
      \par
+     \thispagestyle{empty}
      %底部留空 
      \newpage % 添加此行
-     \pagestyle{empty}
 }
 
 \newcommand{\showContents}{\newpage{\centering\tableofcontents}\newpage\pagestyle{fancy}\setcounter{page}{1}}
