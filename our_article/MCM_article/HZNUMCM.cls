@@ -73,7 +73,7 @@
 \setlength{\abovecaptionskip}{4pt}
 %=====行间与段间距 
 \RequirePackage{setspace}
-\setlength{\parskip}{6pt} %8pt
+\setlength{\parskip}{5.8pt} %8pt
 \setlength{\baselineskip}{20pt}
 %==========数学公式===========
 \RequirePackage{amsthm,amsfonts}        % 定理和字体

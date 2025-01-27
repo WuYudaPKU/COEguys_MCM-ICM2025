@@ -358,6 +358,18 @@
         When the system is near these points, the ecosystem can recover from small perturbations, 
         reaching a dynamic ecological equilibrium.
       \subsection{Polination}
+        During the 8th to 12th weeks of rice growth, which corresponds to the pollination period, we consider the promotion of pollination by insects. This can be incorporated into the model by multiplying the natural growth rate by a pollination factor. The form of the pollination factor is given as:
+
+        \[
+        f_{pd} =
+        \begin{cases}
+        1, & \text{non-pollination period}, \\
+        f_0 + c_1 W_{ins}, & \text{pollination period},
+        \end{cases}
+        \]
+        
+        where \( f_0 \) represents the baseline pollination effect, \( c_1 \) is a coefficient reflecting the contribution of insect biomass to pollination, and \( W_{ins} \) is the biomass of pollinating insects. During the pollination period, the natural growth rate of rice biomass \( r_{crp} \) is thus modified to \( r_{crp} \cdot f_{pd} \), effectively capturing the enhanced growth due to pollination.
+      
       \subsubsection{Soil Fertility}
         Now, we introduce the effect of soil fertility on plant growth.
         $i$ in the following statements represents rice or weed, $j$ the other.
@@ -676,7 +688,6 @@
         However, when taking into account the comprehensive factors, 
         the combined introduction of both bats and ducks results in the maximum overall profit.
         
-
   \section{Sensitivity Analysis}
     We consider the effects of changes in two types of model parameters on the system: 
     the initial values of biomass density \( W \) in the dynamic model and typical environmental parameters. 
@@ -751,16 +762,76 @@
     \end{itemize}
   \section{Evaluation of the Model}
     \subsection{Strengths}
+    The model is complex in composition and considers a sufficient number of factors, 
+    comprehensively simulating the main operating mechanisms of natural ecosystems and farming practices, with good accuracy.
+    
+    The model's stability and sensitivity to initial values and parameters are consistent with real-world ecosystems, 
+    making it interpretable and thus valuable for prediction and application.
+    
+    The model uses discrete system difference equations for calculations, 
+    resulting in high computational efficiency.
     \subsection{Weaknesses}
-  \section{Suggestions}
-
+    The model is based on the specific context of Southeast Asian triple-cropping paddy fields and is difficult to transfer to other agricultural scenarios, 
+    showing weak generalization ability.
+    
+    The model has a large and complex parameter system, 
+    and is highly sensitive to some parameters, 
+    making it challenging to decide them accurately and increasing the difficulty of use.
   %%citation
   % as \figurename~\ref{fig:image1} shows,this is a picture.
   % ...\cite{example1}
   % 123123123\cite{rosenow1983drought}
-
   \addcontentsline{toc}{section}{References}
   \bibliographystyle{unsrt}%{brief}%{alpha}%{unsrt}
   \bibliography{article_file}
 
+\appendix
+\newpage
+\section{Letter for Suggestions}
+\noindent Dear Farmer Friend,  
+
+Hello! I am a member of the Consideration of Mature Agricultural Practices (COMAP) group. 
+Recently, we learned that you are exploring organic farming practices. 
+Our team has established a comprehensive agricultural ecosystem dynamics model, 
+which provides insights into various sustainable and economically effective farming methods. 
+I am writing to share our findings and offer some practical suggestions for your consideration.
+
+We found that farmland newly converted from forest ecosystems tends to be unstable and may become dominated by weeds and pests without proper intervention. 
+If you are starting a farm on such land, we recommend implementing measures like regular weeding to stabilize the ecosystem.  
+
+With appropriate interventions, the ecosystem will mature over approximately two years, 
+attracting the return of certain species and forming a more complex food web. 
+At this stage, you can begin to adopt strategies to promote both sustainability and economic benefits.
+
+However, relying on chemical herbicides and pesticides can lead to dependency and instability, 
+making the ecosystem highly vulnerable to adverse conditions. 
+Exploring green farming methods, as you are doing, is a forward-thinking choice.  
+
+We strongly recommend replacing herbicides and pesticides with ducks (introduced seasonally) and bats (introduced once). 
+This approach offers dual benefits for the ecosystem and your income. Let me explain why.
+
+Ducks are omnivores that feed on weeds and pests without harming crops. 
+They effectively act as natural herbicides and pesticides. 
+Moreover, ducks can be sold as byproducts after each harvest, providing economic returns while enhancing ecological balance.
+
+Bats, on the other hand, feed on pests and act as pollinators, promoting crop growth. 
+Although introducing bats may involve some initial cost, their contributions quickly translate into sustainable income.
+
+When ducks and bats are introduced together, they create a robust and complex food web. 
+If external disturbances affect one species, the other can fill the gap, maintaining ecosystem stability and preventing major losses. 
+This method eliminates the need for chemical inputs while yielding higher and more stable agricultural returns compared to chemical-based or single-species approaches.
+
+Additionally, you could experiment with other beneficial systems, 
+such as a "rice-azolla-frog" ecosystem, to diversify your farm. 
+The key is to create a complex food web and direct energy toward components that are most advantageous to you.
+
+Lastly, we encourage you to support and benefit from policies that promote organic farming, 
+such as subsidies for green farming practices or tax incentives for organic products. 
+Collaborating with agricultural organizations or participating in organic farming programs could further enhance your farm's sustainability and profitability.
+
+I hope these suggestions will help your farm thrive and bring you long-term success. Wishing you all the best, and I look forward to hearing from you!
+\\
+\\
+Yours sincerely,\\  
+The COMAP Team
 \end{document}

@@ -31,6 +31,6 @@
 \contentsline {section}{\numberline {6}Evaluation of the Model}{20}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Strengths}{20}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Weaknesses}{20}{subsection.6.2}%
-\contentsline {section}{\numberline {7}Suggestions}{20}{section.7}%
-\contentsline {section}{References}{20}{section.7}%
+\contentsline {section}{References}{20}{subsection.6.2}%
+\contentsline {section}{\numberline {A}Letter for Suggestions}{22}{appendix.A}%
 \contentsfinish 
