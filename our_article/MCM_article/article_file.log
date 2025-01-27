@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.12)  28 JAN 2025 04:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.12)  28 JAN 2025 06:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -874,12 +874,14 @@ Overfull \hbox (13.10138pt too wide) in paragraph at lines 25--25
 
 
 [2]
-<images/deforestation1.jpg, id=168, 1606.0pt x 903.375pt>
+
+[3]
+<images/deforestation1.jpg, id=178, 1606.0pt x 903.375pt>
 File: images/deforestation1.jpg Graphic file (type jpg)
 <use images/deforestation1.jpg>
 Package pdftex.def Info: images/deforestation1.jpg  used on input line 79.
 (pdftex.def)             Requested size: 202.31786pt x 113.81102pt.
-<images/deforestation2.jpg, id=169, 647.41875pt x 364.36125pt>
+<images/deforestation2.jpg, id=179, 647.41875pt x 364.36125pt>
 File: images/deforestation2.jpg Graphic file (type jpg)
 <use images/deforestation2.jpg>
 Package pdftex.def Info: images/deforestation2.jpg  used on input line 86.
@@ -890,37 +892,41 @@ Package pdftex.def Info: images/deforestation2.jpg  used on input line 86.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.111         \item \textbf
-                           {Impact of removing chemicals}: After the ecosyst... [1{d:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./images/deforestation1.jpg> <./images/deforestation2.jpg>]
+l.107         \item \textbf
+                           {Introduction of bats into the food web}: The mod... [1{d:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./images/deforestation1.jpg> <./images/deforestation2.jpg>]
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.136       \item W
-                   e analyzed the stability of the model from both initial v... [2]
+l.135       \item F
+                   inally, based on our model and the data derived from it, ... [2]
 
 pdfTeX warning: pdflatex.exe (file ./images/FlowCharts.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/FlowCharts.pdf, id=185, 1059.49231pt x 593.35213pt>
+<images/FlowCharts.pdf, id=194, 1059.49231pt x 593.35213pt>
 File: images/FlowCharts.pdf Graphic file (type pdf)
 <use images/FlowCharts.pdf>
-Package pdftex.def Info: images/FlowCharts.pdf  used on input line 146.
+Package pdftex.def Info: images/FlowCharts.pdf  used on input line 141.
 (pdftex.def)             Requested size: 455.24411pt x 254.95537pt.
-<images/AverTemper.png, id=188, 1387.584pt x 703.1871pt>
+<images/AverTemper.png, id=197, 1387.584pt x 703.1871pt>
 File: images/AverTemper.png Graphic file (type png)
 <use images/AverTemper.png>
-Package pdftex.def Info: images/AverTemper.png  used on input line 165.
+Package pdftex.def Info: images/AverTemper.png  used on input line 160.
 (pdftex.def)             Requested size: 341.43307pt x 173.02806pt.
-
-
-[3 <./images/FlowCharts.pdf>]
-<images/PlantMode.jpg, id=283, 797.98125pt x 265.74281pt>
+<images/PlantMode.jpg, id=201, 797.98125pt x 265.74281pt>
 File: images/PlantMode.jpg Graphic file (type jpg)
 <use images/PlantMode.jpg>
-Package pdftex.def Info: images/PlantMode.jpg  used on input line 171.
+Package pdftex.def Info: images/PlantMode.jpg  used on input line 166.
 (pdftex.def)             Requested size: 341.43307pt x 113.70354pt.
 
-Overfull \hbox (7.66956pt too wide) in paragraph at lines 192--212
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.169         \end{figure}
+                           [3 <./images/FlowCharts.pdf>]
+Overfull \hbox (7.66956pt too wide) in paragraph at lines 187--207
  [][] 
  []
 
@@ -931,18 +937,18 @@ Overfull \hbox (7.66956pt too wide) in paragraph at lines 192--212
 [5]
 
 pdfTeX warning: pdflatex.exe (file ./images/LGVGField.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/LGVGField.pdf, id=311, 622.03993pt x 622.3011pt>
+<images/LGVGField.pdf, id=319, 622.03993pt x 622.3011pt>
 File: images/LGVGField.pdf Graphic file (type pdf)
 <use images/LGVGField.pdf>
-Package pdftex.def Info: images/LGVGField.pdf  used on input line 253.
+Package pdftex.def Info: images/LGVGField.pdf  used on input line 248.
 (pdftex.def)             Requested size: 142.20244pt x 142.26378pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./images/SimpleFoodWeb.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/SimpleFoodWeb.pdf, id=312, 581.02673pt x 427.18094pt>
+<images/SimpleFoodWeb.pdf, id=320, 581.02673pt x 427.18094pt>
 File: images/SimpleFoodWeb.pdf Graphic file (type pdf)
 <use images/SimpleFoodWeb.pdf>
-Package pdftex.def Info: images/SimpleFoodWeb.pdf  used on input line 260.
+Package pdftex.def Info: images/SimpleFoodWeb.pdf  used on input line 255.
 (pdftex.def)             Requested size: 193.49483pt x 142.26378pt.
 
 
@@ -950,20 +956,20 @@ Package pdftex.def Info: images/SimpleFoodWeb.pdf  used on input line 260.
 
 pdfTeX warning: pdflatex.exe (file ./images/SimpleFoodWeb.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<images/PlantModePlus.png, id=355, 403.5075pt x 137.01187pt>
+<images/PlantModePlus.png, id=363, 403.5075pt x 137.01187pt>
 File: images/PlantModePlus.png Graphic file (type png)
 <use images/PlantModePlus.png>
-Package pdftex.def Info: images/PlantModePlus.png  used on input line 319.
+Package pdftex.def Info: images/PlantModePlus.png  used on input line 314.
 (pdftex.def)             Requested size: 318.66948pt x 108.20474pt.
 
 
 [7 <./images/PlantModePlus.png>]
 
 pdfTeX warning: pdflatex.exe (file ./images/rice_to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/rice_to.pdf, id=369, 1037.04663pt x 297.45128pt>
+<images/rice_to.pdf, id=377, 1037.04663pt x 297.45128pt>
 File: images/rice_to.pdf Graphic file (type pdf)
 <use images/rice_to.pdf>
-Package pdftex.def Info: images/rice_to.pdf  used on input line 332.
+Package pdftex.def Info: images/rice_to.pdf  used on input line 327.
 (pdftex.def)             Requested size: 455.24411pt x 130.57486pt.
 
 
@@ -972,97 +978,104 @@ Package pdftex.def Info: images/rice_to.pdf  used on input line 332.
 [9]
 
 [10]
-<images/GussianNoise.png, id=442, 1284.29813pt x 623.83063pt>
+<images/GussianNoise.png, id=451, 1284.29813pt x 623.83063pt>
 File: images/GussianNoise.png Graphic file (type png)
 <use images/GussianNoise.png>
-Package pdftex.def Info: images/GussianNoise.png  used on input line 475.
+Package pdftex.def Info: images/GussianNoise.png  used on input line 471.
 (pdftex.def)             Requested size: 227.62206pt x 110.56175pt.
 
 
 [11 <./images/GussianNoise.png>]
 
 [12]
-Overfull \hbox (1.27303pt too wide) in paragraph at lines 561--566
-[]\T1/cmr/m/n/12 SAGED Model rep-re-sents Sus-tain-able Agri-cul-tural Ecosys-tem Dy-nam-ics Model. When
+Overfull \hbox (229.72354pt too wide) detected at line 568
+[]
  []
 
 
 
 pdfTeX warning: pdflatex.exe (file ./images/food_web_chem.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/food_web_chem.pdf, id=471, 746.17166pt x 654.86258pt>
+<images/food_web_chem.pdf, id=478, 746.17166pt x 654.86258pt>
 File: images/food_web_chem.pdf Graphic file (type pdf)
 <use images/food_web_chem.pdf>
 Package pdftex.def Info: images/food_web_chem.pdf  used on input line 581.
-(pdftex.def)             Requested size: 194.5124pt x 170.71652pt.
+(pdftex.def)             Requested size: 145.88431pt x 128.0374pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./images/food_web.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<images/food_web.pdf, id=472, 561.32011pt x 493.25632pt>
+<images/food_web.pdf, id=479, 561.32011pt x 493.25632pt>
 File: images/food_web.pdf Graphic file (type pdf)
 <use images/food_web.pdf>
 Package pdftex.def Info: images/food_web.pdf  used on input line 588.
-(pdftex.def)             Requested size: 194.27232pt x 170.71652pt.
+(pdftex.def)             Requested size: 145.69997pt x 128.0374pt.
+
+Overfull \hbox (1.27303pt too wide) in paragraph at lines 573--592
+[]\T1/cmr/m/n/12 SAGED Model rep-re-sents Sus-tain-able Agri-cul-tural Ecosys-tem Dy-nam-ics Model. When
+ []
+
 
 
 [13 <./images/food_web_chem.pdf> <./images/food_web.pdf
 
 pdfTeX warning: pdflatex.exe (file ./images/food_web.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<images/S1S2.png, id=530, 1413.02907pt x 747.54282pt>
+<images/S1S2.png, id=543, 1413.02907pt x 747.54282pt>
 File: images/S1S2.png Graphic file (type png)
 <use images/S1S2.png>
-Package pdftex.def Info: images/S1S2.png  used on input line 631.
+Package pdftex.def Info: images/S1S2.png  used on input line 661.
 (pdftex.def)             Requested size: 455.24411pt x 240.83832pt.
 
 
-[14 <./images/S1S2.png>]
-<images/S2S3.png, id=541, 1411.52344pt x 721.19438pt>
+[14]
+<images/S2S3.png, id=554, 1411.52344pt x 721.19438pt>
 File: images/S2S3.png Graphic file (type png)
 <use images/S2S3.png>
-Package pdftex.def Info: images/S2S3.png  used on input line 655.
+Package pdftex.def Info: images/S2S3.png  used on input line 685.
 (pdftex.def)             Requested size: 455.24411pt x 232.60266pt.
-<images/P4_producers.png, id=543, 1279.179pt x 679.338pt>
+<images/P4_producers.png, id=556, 1279.179pt x 679.338pt>
 File: images/P4_producers.png Graphic file (type png)
 <use images/P4_producers.png>
-Package pdftex.def Info: images/P4_producers.png  used on input line 676.
-(pdftex.def)             Requested size: 318.66948pt x 169.23285pt.
+Package pdftex.def Info: images/P4_producers.png  used on input line 706.
+(pdftex.def)             Requested size: 364.19667pt x 193.41638pt.
 
 
-[15 <./images/S2S3.png>]
-<images/S3S5.png, id=554, 1600.47937pt x 954.56625pt>
+[15 <./images/S1S2.png>]
+
+[16 <./images/S2S3.png> <./images/P4_producers.png>]
+<images/S3S5.png, id=576, 1600.47937pt x 954.56625pt>
 File: images/S3S5.png Graphic file (type png)
 <use images/S3S5.png>
-Package pdftex.def Info: images/S3S5.png  used on input line 706.
+Package pdftex.def Info: images/S3S5.png  used on input line 736.
 (pdftex.def)             Requested size: 455.24411pt x 271.51529pt.
 
 
-[16 <./images/P4_producers.png>]
-<images/benefits_processed.png, id=564, 1613.27719pt x 815.29594pt>
+[17 <./images/S3S5.png>]
+<images/benefits_processed.png, id=585, 1613.27719pt x 815.29594pt>
 File: images/benefits_processed.png Graphic file (type png)
 <use images/benefits_processed.png>
-Package pdftex.def Info: images/benefits_processed.png  used on input line 731.
+Package pdftex.def Info: images/benefits_processed.png  used on input line 761.
 (pdftex.def)             Requested size: 455.24411pt x 230.06029pt.
 
 
-[17 <./images/S3S5.png>]
-
 [18 <./images/benefits_processed.png>]
-<images/Change_init.png, id=580, 1287.8514pt x 689.4558pt>
+<images/Change_init.png, id=594, 1287.8514pt x 689.4558pt>
 File: images/Change_init.png Graphic file (type png)
 <use images/Change_init.png>
-Package pdftex.def Info: images/Change_init.png  used on input line 788.
-(pdftex.def)             Requested size: 341.43307pt x 182.77855pt.
+Package pdftex.def Info: images/Change_init.png  used on input line 818.
+(pdftex.def)             Requested size: 273.14923pt x 146.23126pt.
 
 
-[19 <./images/Change_init.png>]
-<images/Change_all.png, id=589, 1409.265pt x 762.59906pt>
+[19]
+<images/Change_all.png, id=602, 1409.265pt x 762.59906pt>
 File: images/Change_all.png Graphic file (type png)
 <use images/Change_all.png>
-Package pdftex.def Info: images/Change_all.png  used on input line 812.
+Package pdftex.def Info: images/Change_all.png  used on input line 843.
 (pdftex.def)             Requested size: 455.24411pt x 246.34067pt.
 
 
-[20 <./images/Change_all.png>] (./article_file.bbl
+[20 <./images/Change_init.png>]
+
+[21 <./images/Change_all.png>] (./article_file.bbl
 Underfull \hbox (badness 3128) in paragraph at lines 4--8
 []\T1/cmr/m/n/12 World Bank Group.  In-done-sia tem-per-a-ture.  Ac-cessed: 2025-1-25, at [][]
  []
@@ -1072,12 +1085,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--8
 \T1/cmtt/m/n/12 h t t p s : / / c l i m a t e k n o w l e d g e p o r t a l . w o r l d b a n k . o r g / c o u n t r y / i n d o n e s i a / c l i
  []
 
-
-
-[21])
+)
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 915--921
+Underfull \hbox (badness 10000) in paragraph at lines 946--952
 
  []
 
@@ -1090,22 +1101,38 @@ enddocument/afterlastpage: lastpage setting LastPage.
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
  ***********
-Package rerunfilecheck Info: File `article_file.out' has not changed.
-(rerunfilecheck)             Checksum: C304304E3F9E9DA88A9CCDFF895C0C5F;5860.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `article_file.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `article_file.out':
+(rerunfilecheck)             Before: B1DED366BBA7D446E529B0A809F98A99;5990
+(rerunfilecheck)             After:  C304304E3F9E9DA88A9CCDFF895C0C5F;5860.
  ) 
 Here is how much of TeX's memory you used:
- 20998 strings out of 473362
- 350316 string characters out of 5725050
- 795834 words of memory out of 5000000
- 43546 multiletter control sequences out of 15000+600000
+ 21006 strings out of 473362
+ 350418 string characters out of 5725050
+ 800868 words of memory out of 5000000
+ 43548 multiletter control sequences out of 15000+600000
  599832 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 94i,18n,93p,762b,616s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/bera/fvsb8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/bera/fvsr8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on article_file.pdf (25 pages, 6279745 bytes).
+ 94i,22n,93p,762b,614s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{page.29} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.A.1} has been referenced but does not exist, replaced by a fixed one
+
+<d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/bera/fvsb8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/bera/fvsr8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on article_file.pdf (26 pages, 6292180 bytes).
 PDF statistics:
- 745 PDF objects out of 1000 (max. 8388607)
- 502 compressed objects within 6 object streams
- 108 named destinations out of 1000 (max. 500000)
- 340 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 766 PDF objects out of 1000 (max. 8388607)
+ 520 compressed objects within 6 object streams
+ 114 named destinations out of 1000 (max. 500000)
+ 348 words of extra memory for PDF output out of 10000 (max. 10000000)
 

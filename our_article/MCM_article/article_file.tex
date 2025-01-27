@@ -67,9 +67,9 @@
   \section{Introduction}
     \subsection{Background}
     In the past few decades, with the rapid population growth, 
-    food supply has become one of the most pressing global issues. 
+    agriculture has become one of the most pressing global issues. 
     Under the conditions where scientific and technological advancements have not been fully adopted, 
-    the existing arable land area is insufficient to meet the food demand. 
+    the existing arable land area is insufficient to meet the agricultural demand. 
     As a result, many regions have resorted to deforestation for land conversion, 
     as shown in \figurename~\ref{fig:deforestation1}. 
     \begin{figure}[H]
@@ -90,12 +90,7 @@
       \end{figure}
     \figurename~\ref{fig:deforestation2} illustrates that when the forest ecosystem is artificially disrupted, 
     its complex spatial structure is destroyed.
-    Therefore, the converted forest area must undergo a long process of ecological reconstruction. 
-    However, due to the influence of human activities during this process, 
-    the post-clearing forest ecosystem can no longer return to its original state, 
-    but instead continuously undergoes succession into a stable agricultural ecosystem. 
-    To achieve both economic and ecological benefits and fulfill sustainable development goals, 
-    it is necessary to examine the ecological succession from converted forest to agricultural ecosystems and explore how green agriculture can bring dual benefits in terms of economic and ecological indicators.
+    Therefore, the converted forest area must undergo a long process of ecological reconstruction, going through continuously succession into a stable agricultural ecosystem with the effect of farming activities. To achieve both economic and ecological benefits and fulfill sustainable development goals, it is necessary to analyze the ecological succession from converted forest to agricultural ecosystems and explore how green agriculture can bring dual benefits in terms of economic and ecological indicators.
     \subsection{Problem Analysis}
       The basic requirements of the project are to establish a model that reflects the ecological succession process from a converted forest area to a mature agricultural ecosystem over time. 
       The model should incorporate both natural processes and human agricultural activities. 
@@ -108,14 +103,14 @@
             \item \textbf{Impact of chemicals}: The model should account for the effects of chemicals such as herbicides and pesticides on plants, insects, bats, birds, and the stability of the ecosystem.
           \end{itemize}
         \item \textbf{Reemergence of species during ecosystem maturation}: As the ecosystem matures, the model should consider the reemergence of two species and their impact on the ecosystem.
-        \item \textbf{Impact of removing chemicals}: After the ecosystem matures, humans will attempt to remove chemicals. The model should assess the stability of the ecosystem after herbicides are removed, with the effects reflected through producers and consumers.
+        \item \textbf{Impact of removing chemicals}: After the ecosystem matures, humans attempt to remove chemicals. The model should assess the stability of ecosystem after herbicides are removed, with the effects reflected through producers and consumers.
         \item \textbf{Introduction of bats into the food web}: The model should examine how bats, as insectivores and pollinators, interact with plants, insects, and predators, and how their inclusion influences the stability of the ecosystem. Additionally, the model should identify another species that could benefit the ecosystem and compare the effects of different species.
         \item \textbf{Analysis of the impact of organic farming}: The model should assess the impact of adopting organic farming practices, considering various scenarios and components. The evaluation should include the effects on the overall ecosystem and individual elements, such as pest control, crop health, plant reproduction, biodiversity, long-term sustainability, and cost-effectiveness. The model should analyze the impact of organic practices on pest management, soil health, and biodiversity, while weighing the economic costs and benefits. A comprehensive ecological and economic trade-off analysis should be provided to assess the feasibility of organic farming.
       \end{itemize}
     \subsection{Our Work}
       To sum up the whole article, we have done the following work.
     \begin{itemize}
-      \item Initially, we utilized difference equation to construct Model I: 
+      \item Initially, we utilized differential equation to construct Model I: 
       LVLG Model, based on the Lotka-Volterra model and the Leslie-Gower model, 
       under the simplest food web conditions. This model considered producers, primary consumers, and secondary consumers.
       \item Subsequently, considering that ecosystem gradually developed, we built Model II: CAGED Model. 
@@ -153,7 +148,7 @@
         \item \textbf{Accurate Data Assumption}: The model assumes that the data used are accurate.\\
         \textbf{Explanation}: The data used in the model are sourced from official databases, and we believe the data to be accurate and reliable.
         \item \textbf{Geographic Applicability Assumption}: The model assumes that the applicable region is Southeast Asia,
-         where two crops of rice are planted each year in the farmland.\\
+         where three crops of rice are planted each year in the farmland.\\
         \textbf{Explanation}: The climate of Southeast Asia is rather simple, 
         with only two seasons-rainy and dry. Additionally, as is shown in \figurename~\ref{fig:Temperature},
         the temperature variation within a year is minimal, which has a trivial effect on the ecosystem.
@@ -339,7 +334,7 @@
       
         For simplification of the model, 
         the biomass change of the rice population during each overlapping period is represented 
-        by a biomass step function at specific time points in the mathematical model (i.e., the system of difference equations). 
+        by a biomass step function at specific time points in the mathematical model (i.e., the system of differential equations). 
         Since $t=0$ corresponds to the start of the first planting season, with one year assumed to have 52 weeks, 
         and each week being a time step, based on the rice production pattern \figurename~\ref{fig:PlantModePlus}, 
         we define the step moments at week 0, week 17, and week 34 of each year. The biomass of rice at these times follows:
@@ -364,7 +359,7 @@
         \begin{equation}
           n = 52k, 52k+17, 52k+34, \quad (k \geqslant 0, \, n \geqslant 1, k,n\ are\ positive\ integers)
         \end{equation}
-        The difference equation for insect biomass is modified as follows:
+        The differential equation for insect biomass is modified as follows:
         \begin{equation}
           \frac{\mathrm{d}W_{ins}}{\mathrm{d}t} = r_{ins} W_{ins} \left[ 1 - \frac{D_{ins} W_{ins}}{1 + E_{ins} \left( 0.6 W_{crp} + 0.4 W_{wd} + W_{stw} \right)} \right] - \frac{A_{ins\rightarrow bd} W_{ins} W_{bd}}{1 + B_{ins\rightarrow bd} W_{ins}}
         \end{equation}
@@ -374,7 +369,8 @@
         climate (temperature, precipitation), and biological habits, 
         all of which have significant direct effects on both $r$ and $\mathscr{K}$ within populations. 
         Considering that many of these factors are difficult to quantify precisely, 
-        we set sinusoidal perturbations in the periodic parameter $p(T)$ as follows\cite{GAKKHAR20061239}:
+        we refer to the seasonally-varying dynamic equations modeled by Sunita Gakkhar and Brahampal Singh \cite{GAKKHAR20061239}, 
+        setting sinusoidal perturbations in the periodic parameter $p(T)$ as follows:
 
         \begin{equation}
           p(t) = \bar{p} \left[ 1 + \epsilon \sin (\Omega t + \phi) \right]
@@ -454,7 +450,7 @@
 
         Again, for the sake of model simplification, we assume \( \mu_{Fr_i} = \xi_{i} C_{Is_i} \).
       \subsubsection{Random Factors}
-        Considering the influence of random factors in nature, we introduce Gaussian white noise \(\sigma_i\) for each population.
+        Considering the influence of random factors in nature, we introduce Gaussian white noise $\sigma_i$ for each population, which is appended to each corresponding equation as an adding term.
         
         The probability density function of the Gaussian white noise \(\sigma_i(t) = x\) is given by:
 
@@ -523,11 +519,10 @@
         \end{equation}
       
       \subsubsection{Multiple Digestion Delay}
-        Due to the time required for energy flow, 
-        the impacts of different predation relationships in the food web on system dynamics are actually asynchronous \cite{GUO20142850}. 
-        Considering this asynchrony, 
-        we introduce multiple digestion delays corresponding to the digestion periods of the consumer-eat-producer and predator-eat-consumer interactions, 
-        referred to as the producer digestion delay (PDD) and consumer digestion delay (CDD), respectively.
+        Due to the time required for energy flow, the impacts of different predation relationships in the food web on system dynamics are actually asynchronous. 
+        Considering this asynchrony, we refer to the Leslie-Gower type of the food chain system with multiple delays modeled by Lei Guo, Zi-Gen Song and Jian Xu \cite{GUO20142850}, 
+        introducing multiple digestion delays corresponding to the digestion periods of the consumer-eat-producer and predator-eat-consumer interactions, 
+        which can be described as the producer digestion delay (PDD) and consumer digestion delay (CDD), respectively.
 
         Mathematically, the PDD and CDD influence the food scarcity term \(L_i\) in the differential equation corresponding to the consumer population \(i\):
         
@@ -539,7 +534,7 @@
         After considering the delay, this term is modified as follows and incorporated into the original differential equation:
         
         \begin{equation}
-        L_i' = -\frac{r_i}{t - \tau_i} \cdot \frac{D_i W_i^2}{1 + E_i \cdot \Sigma_{\text{food}} \gamma_i W_{i_j}}
+        \frac{dL_i}{dt} = -\frac{r_i}{t - \tau_i} \cdot \frac{D_i W_i^2}{1 + E_i \cdot \Sigma_{\text{food}} \gamma_i W_{i_j}}
         \end{equation}
 
         where \(\tau_i\) is the digestion delay factor of population \(i\), and \(D_i, E_i\) are the corresponding environmental parameters for population \(i\).
@@ -557,13 +552,44 @@
       In our model, we only consider the migration of frogs and snakes. 
       After their migration, the previously constructed equations are applicable to describe their biomass dynamics 
       (assuming they are not affected by chemicals).
+      At the same time, due to changes in the food web structure caused by the migration of new species, 
+      the equations for insects and birds in the model have been modified. 
+      Here, the aforementioned considerations are summarized, 
+      and the differential equations for all components in the model are presented as follows: 
+      (In this context, herbicides are treated as a type of herbivore that feeds on weeds, incorporated as part of the summation terms in their respective differential equations.)
+      \begin{align}
+        \frac{\mathrm{d}W_i}{\mathrm{d}t}=f_{pol}\boldsymbol{r}_iW_i\left( 1+\sigma _i-\frac{W_i+\beta _{i\rightarrow j}W_j}{\mathscr{K} _i\mu _{Fr_i}} \right) -\sum_{herb\rightarrow j}{\frac{A_{i\rightarrow j}W_iW_j}{1+B_{i\rightarrow j}W_i}}
+      \end{align}
+      \begin{equation}
+        \begin{split}
+        \frac{\mathrm{d}W_{ins}}{\mathrm{d}t}=\boldsymbol{r}_{ins}W_{ins}\left( 1+\sigma _{ins}-\frac{D_{ins}W_{ins}}{1+E_{ins}\left[ \left( 0.6-\lambda _{ptc} \right) W_{crp}+\left( 0.4+\lambda \right) W_{wd} \right]}\cdot \frac{1}{t-\tau _{ins}} \right)\\
+        -\frac{A_{ins\rightarrow bd}W_{ins}W_{bd}}{1+B_{ins\rightarrow bd}W_{ins}}-\frac{A_{ins\rightarrow frg}W_{ins}W_{frg}}{1+B_{ins\rightarrow frg}W_{ins}}-\frac{A_{ptc}W_{ins}W_{ptc}}{1+B_{ptc}W_{ins}}&\hphantom{\sigma _{ins}-\frac{D_{ins}W_{ins}}{1+E_{ins}\left[ \left( 0.6-\lambda _{ptc} \right) W_{crp}+\left( 0.4+\lambda \right) W_{wd} \right]}}
+        \end{split}
+      \end{equation}
+        \begin{align}  
+        \frac{\mathrm{d}W_k}{\mathrm{d}t}=\boldsymbol{r}_kW_k\left( 1+\sigma _k-\frac{D_kW_k}{\left( t-\tau _k \right) \left( 1+E_k\cdot \sum_{l=food}{\gamma _lW_{k_l}} \right)} \right) -\sum_{m=pred}{\frac{A_{k\rightarrow m}W_kW_m}{1+B_{k\rightarrow m}W_k}}
+      \end{align}
     \subsection{Model III: SAGED Model}
       SAGED Model represents Sustainable Agricultural Ecosystem Dynamics Model.
       When the food web becomes sufficiently complex, 
       humans can begin making agricultural decisions. 
       The agricultural decision considered in our model involves removing herbicides and insecticides, 
       while introducing bats and ducks.
-
+      \begin{figure}[H]
+        \begin{minipage}[b]{0.45\linewidth}
+          \centering
+          \includegraphics[height=4.5cm, keepaspectratio]{images/food_web_chem.pdf}
+          \caption{Traditional Mode}
+          \label{fig:food_web_chem}
+        \end{minipage}
+        \hspace{0\linewidth}
+        \begin{minipage}[b]{0.45\linewidth}
+            \centering
+            \includegraphics[height=4.5cm, keepaspectratio]{images/food_web.pdf} % 替换为你的第二张图片路径
+            \caption{Green Mode}
+            \label{fig:food_web_green}
+        \end{minipage}
+      \end{figure}
       Bats play a role in promoting pollination; thus, the pollination factor becomes:
       
       \[
@@ -575,26 +601,30 @@
       
       Besides this, the modified model only requires the removal of chemicals from the CAGED model, 
       and the introduction of two new populations to form the ultimate food web as Figure \ref{fig:food_web_green}.
-      \begin{figure}[H]
-        \begin{minipage}[b]{0.45\linewidth}
-          \centering
-          \includegraphics[height=6cm, keepaspectratio]{images/food_web_chem.pdf}
-          \caption{Traditional Mode}
-          \label{fig:food_web_chem}
-        \end{minipage}
-        \hspace{0.05\linewidth}
-        \begin{minipage}[b]{0.45\linewidth}
-            \centering
-            \includegraphics[height=6cm, keepaspectratio]{images/food_web.pdf} % 替换为你的第二张图片路径
-            \caption{Green Mode}
-            \label{fig:food_web_green}
-        \end{minipage}
-      \end{figure}
+
   \section{Appication of the Models}
     The process of model establishment has been thoroughly presented in the previous subsection. 
-    In this subsection, we will discuss the application of the models.
-    In the models below, the unit of biomass(considering the entire farm) is kg and the unit of time is week.
-        
+    In this subsection, we will discuss the application of the models. 
+    We use MATLAB Simulink to simulate the system's dynamics. 
+    For computational convenience and efficiency, 
+    we utilize difference equations with an interval of one week as a substitute for differential equations. 
+    In the models below, the unit of biomass (considering the entire farm) is kg and the unit of time is week.
+    
+    Table \ref{tab:Parameters} lists the key environmental parameters, which are applicable to all subsequent models.
+    \begin{table}[H]
+      \centering
+      \caption{Parameters}
+      \begin{tabular}{lccccccccc}
+        \toprule
+        \rowcolor{customcolor!40} % 设置背景颜色
+        Parameters & $\mathscr{K}_{crp}$ & $\mathscr{K}_{wd}$ & $r_{crp}$ $r_{wd}$ & $\beta_{crp\rightarrow wd}$ & $\beta_{wd\rightarrow crp}$ & $\sigma$ & 0.05 & $W_{crp}$ & $W_{wd}$\\
+        \midrule
+        Values & 30000 & 24000 & 0.32 & 0.44 & 0.4 & 0.3 & 0.05 & 2000 & 1000\\
+        \bottomrule
+      \end{tabular}
+      \label{tab:Parameters}
+    \end{table}
+
     It should be noted that the graph contains some data points that are less than zero. 
     These values are a result of the interpolation algorithm and do not represent actual negative biomass. 
         
@@ -673,7 +703,7 @@
       The result is shown in Figure \ref{fig:S4}.
       \begin{figure}
         \centering
-        \includegraphics[width=0.7\linewidth]{images/P4_producers.png}
+        \includegraphics[width=0.8\linewidth]{images/P4_producers.png}
         \caption{Dynamics after Removing Chemicals}
         \label{fig:S4}
       \end{figure}
@@ -785,7 +815,7 @@
 
       \begin{figure}[H]
         \centering
-        \includegraphics[width=0.75\linewidth]{images/Change_init.png}
+        \includegraphics[width=0.6\linewidth]{images/Change_init.png}
         \caption{Impact of Initial Biomass Density Changes on System Dynamics}
         \label{fig:Change_init}
       \end{figure}
@@ -808,7 +838,8 @@
       In the plots related to \( \beta_{c\rightarrow w} \), 
       we also include the time evolution of weed biomass for comparison with rice.
 
-    \begin{figure}[H]
+    \begin{figure}[ht]
+      \centering
       \includegraphics[width=\linewidth]{images/Change_all.png}
       \caption{Impact of Changes in Key Environmental Parameters on System Dynamics}
       \label{fig:Change_all}
