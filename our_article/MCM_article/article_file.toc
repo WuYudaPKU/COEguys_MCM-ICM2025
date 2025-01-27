@@ -18,16 +18,15 @@
 \contentsline {subsection}{\numberline {3.4}CAGED Model Considering Restatement}{12}{subsection.3.4}%
 \contentsline {subsection}{\numberline {3.5}Model III: SAGED Model}{12}{subsection.3.5}%
 \contentsline {section}{\numberline {4}Appication of the Models}{13}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Selection of Parameters}{13}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Scenarios Statement}{13}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Comparison between S1 and S2: Effects of Chemicals}{13}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Comparison between S2 and S3: The Role of Species Migration}{14}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Comparison between S3 and S4: The Dependency of the Chemical-Agriculture Model on Chemicals}{15}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Comparison between S3 and S5: The Superiority of the Green Agriculture Model}{16}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}Benifits Analysis}{17}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.1}Scenarios Statement}{13}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Comparison between S1 and S2: Effects of Chemicals}{13}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Comparison between S2 and S3: The Role of Species Migration}{14}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Comparison between S3 and S4: The Dependency of the Chemical-Agriculture Model on Chemicals}{15}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Comparison between S3 and S5: The Superiority of the Green Agriculture Model}{15}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Benifits Analysis}{17}{subsection.4.6}%
 \contentsline {section}{\numberline {5}Sensitivity Analysis}{18}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Changes in Initial Biomass Density}{18}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Changes in Typical Environmental Parameters}{19}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.2}Changes in Typical Environmental Parameters}{18}{subsection.5.2}%
 \contentsline {section}{\numberline {6}Evaluation of the Model}{20}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Strengths}{20}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Weaknesses}{20}{subsection.6.2}%

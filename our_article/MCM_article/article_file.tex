@@ -503,28 +503,9 @@
     In this subsection, we will discuss the application of the models.
     In the models below, the unit of biomass(considering the entire farm) is kg and the unit of time is week.
         
-    It should be noted that the graph contains some data points that are less than zero. These values are a result of the interpolation algorithm and do not represent actual negative biomass. 
-        The interpolation process sometimes generates small negative values due to the smoothing of data points, 
-        especially at the boundaries of the data set or during transitions between different states of the system. 
-        These negative values should be interpreted as artifacts of the numerical method and not as realistic biological quantities.
-    \subsection{Selection of Parameters}
-      After reviewing the literature and aligning the parameters with their real-world significance, 
-      we have determined a series of parameters. Due to the large number of parameters, 
-      we present the table for the main ones:
-      \begin{table}[H]
-        \centering
-        \caption{Parameters}
-        \begin{tabular}{cc}
-          \toprule
-          \rowcolor{customcolor!40} % 设置背景颜色
-          Symbols & Description\\
-          \midrule
-          $123$ & 123\\
-          \bottomrule
-        \end{tabular}
-        \label{tab:Parameters}
-      \end{table}
-      All of the following models will apply these parameters. 
+    It should be noted that the graph contains some data points that are less than zero. 
+    These values are a result of the interpolation algorithm and do not represent actual negative biomass. 
+        
       
       \subsection{Scenarios Statement}
         Scenarios are stated in Table \ref{tab:Scenarios}, where S represents Scenario, Y for Yes and N for No.
