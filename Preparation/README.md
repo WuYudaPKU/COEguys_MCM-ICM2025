@@ -6,11 +6,11 @@
 
 article_model是论文模版；
 
-BMPFiles是配色方案（我们采用Science期刊的配色）；
+BMPFiles是配色方案（在ourwork-plotfiles里面，我们采用Science期刊的配色）；
 
 files_for _practice是作者的练习文件，可以略过；
 
-math_model是从其他仓库抄来的代码；
+math_model是从其他仓库借鉴的代码；
 
 our_article是我们本次比赛的论文；
 
@@ -28,5 +28,16 @@ tools是画图指南。
 
 代码：MATLAB，python
 
+参考仓库：
 
+https://github.com/BENAGP/Models-for-ICM-MCM
 
+https://github.com/personqianduixue/Math_Model
+
+https://github.com/HuangCongQing/Algorithms_MathModels
+
+https://github.com/CQULeaf/MCM-ICM_Study_Resources
+
+https://github.com/hznu-maguochun/HZNUMCM
+
+https://github.com/machinelearninglab/mathematical-modeling
