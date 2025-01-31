@@ -1,1 +1,0 @@
-绘图指南：https://github.com/CQULeaf/MCM-ICM_Study_Resources/tree/main/MCM%20Preparation%20Material/Advanced%20Drawing%20and%20Visualization
